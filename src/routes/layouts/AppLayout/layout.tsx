@@ -1,7 +1,13 @@
 import { Outlet, Link, data } from "react-router-dom";
 import { AppChip } from "@/common/appChip/appChip";
 import { AppButton } from "../../../common/appButon/appButton";
-import { AppTable } from "../../../common/appTable/appTable";
+import {
+  AppTable,
+  productTableHeaders,
+  tableColumnsHeaders,
+  tableData,
+  productData,
+} from "../../../common/appTable/appTable";
 
 export default function Layout() {
   return (
@@ -17,7 +23,16 @@ export default function Layout() {
           onClick={() => alert("Button Clicked")}
           status="view"
         />
-        <AppTable columns={[]} data={[]} loading={false} />
+        <AppTable
+          columns={tableColumnsHeaders}
+          data={tableData}
+          loading={false}
+        />
+        <AppTable
+          columns={productTableHeaders}
+          data={productData}
+          loading={false}
+        />
 
         <Outlet />
       </main>
