@@ -12,7 +12,11 @@ export default function Layout() {
         <AppChip chipText="This is an App Chip" status="active">
           Click Here
         </AppChip>
-        <AppButton text="view" onClick={() => alert("Button Clicked")} />
+        <AppButton
+          text="view"
+          onClick={() => alert("Button Clicked")}
+          status="view"
+        />
         <AppTable columns={[]} data={[]} loading={false} />
 
         <Outlet />

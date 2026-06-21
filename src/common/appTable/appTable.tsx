@@ -1,36 +1,23 @@
-export type TableColumn = {
-  header: string;
-  accessor: (row: Record<string, any>) => React.ReactNode;
-  render?: (value: any, row: Record<string, any>) => React.ReactNode; //render is an optional function that takes a value and a row and returns a React node
-};
-
-interface AppTableProps {
-  columns: TableColumn[];
-  data: Record<string, any>[]; //data is an array of objects with string keys and any values
-  loading?: boolean; //loading is an optional boolean that indicates whether the table is loading
+export interface AppTableProps {
+  columns: any[]; // Define the type for columns, you can replace 'any' with a more specific type based on your column structure
+  data: any[];
+  loading: boolean;
 }
-export const AppTable = ({ columns, data, loading = true }: AppTableProps) => {
+
+export const AppTable = () => {
   return (
     <table>
       <thead>
         <tr>
-          {columns.map((column) => (
-            <th key={column.header}>{column.header}</th>
-          ))}
+          <th>Header</th>
+          <th>Header</th>
         </tr>
       </thead>
       <tbody>
-        {data.map((row, rowIndex) => (
-          <tr key={rowIndex}>
-            {columns.map((column) => (
-              <td key={column.header}>
-                {column.render
-                  ? column.render(column.accessor(row), row)
-                  : column.accessor(row)}
-              </td>
-            ))}
-          </tr>
-        ))}
+        <tr>
+          <td>Data</td>
+          <td>Data</td>
+        </tr>
       </tbody>
     </table>
   );
