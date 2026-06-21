@@ -1,6 +1,6 @@
 export type TableColumn = {
   header: string;
-  accessor: (row: T) => React.ReactNode;
+  accessor: (row: Record<string, any>) => React.ReactNode;
   render?: (value: any, row: Record<string, any>) => React.ReactNode; //render is an optional function that takes a value and a row and returns a React node
 };
 
