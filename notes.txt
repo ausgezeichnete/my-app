@@ -1,0 +1,4 @@
+# Next Session 28/06/2026
+## Complete Navbar 
+## Complete sidebar
+## Optional ==> addd ar + en intl (internationalization) with menu change lang
