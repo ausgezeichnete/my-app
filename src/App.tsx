@@ -1,11 +1,12 @@
 import './App.css'
-import { AppLayout } from './routes/layouts/appLayout/appLayout'
-
+import { AppRouter } from './routes/layouts/Router'
 export function App() {
 
   return (
     <>
-      <AppLayout />
+      {/* <AppLayout /> */}
+      <AppRouter />
+      asd
     </>
 
   )
