@@ -35,3 +35,12 @@ export const AppSidebar = () => {
   )
 }
 
+
+// TYPE ANNOTATION interface type
+//  Omit
+//  Pick
+// Some Types React.Node CSSPRoperties
+// children
+//  React.Element
+// <T>
+// Type Assertion ==> as

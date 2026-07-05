@@ -1,4 +1,9 @@
 # Next Session 28/06/2026
+## Complete sidebar Done
 ## Complete Navbar 
-## Complete sidebar
 ## Optional ==> addd ar + en intl (internationalization) with menu change lang
+## Solve Types error in clients
+# Tasks To Do
+ ==> Try to complete clients table and another table
+ ==> collect all question to ask in nex Session
+ 
