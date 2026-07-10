@@ -1,0 +1,82 @@
+[
+  {
+    "orderNumber": "ORD-1001",
+    "clientName": "John Smith",
+    "product": "Wireless Mouse",
+    "paymentOption": "Online",
+    "orderStatus": "Delivered",
+    "receipt": "RCT-1001.pdf"
+  },
+  {
+    "orderNumber": "ORD-1002",
+    "clientName": "Emma Johnson",
+    "product": "Mechanical Keyboard",
+    "paymentOption": "Cash on Delivery",
+    "orderStatus": "Processing",
+    "receipt": "RCT-1002.pdf"
+  },
+  {
+    "orderNumber": "ORD-1003",
+    "clientName": "Michael Brown",
+    "product": "27-inch Monitor",
+    "paymentOption": "Online",
+    "orderStatus": "Shipped",
+    "receipt": "RCT-1003.pdf"
+  },
+  {
+    "orderNumber": "ORD-1004",
+    "clientName": "Sophia Davis",
+    "product": "USB-C Hub",
+    "paymentOption": "Online",
+    "orderStatus": "Pending",
+    "receipt": null
+  },
+  {
+    "orderNumber": "ORD-1005",
+    "clientName": "Daniel Wilson",
+    "product": "Gaming Headset",
+    "paymentOption": "Cash on Delivery",
+    "orderStatus": "Cancelled",
+    "receipt": null
+  },
+  {
+    "orderNumber": "ORD-1006",
+    "clientName": "Olivia Martinez",
+    "product": "Laptop Stand",
+    "paymentOption": "Online",
+    "orderStatus": "Delivered",
+    "receipt": "RCT-1006.pdf"
+  },
+  {
+    "orderNumber": "ORD-1007",
+    "clientName": "James Anderson",
+    "product": "External SSD 1TB",
+    "paymentOption": "Online",
+    "orderStatus": "Returned",
+    "receipt": "RCT-1007.pdf"
+  },
+  {
+    "orderNumber": "ORD-1008",
+    "clientName": "Ava Thomas",
+    "product": "Bluetooth Speaker",
+    "paymentOption": "Cash on Delivery",
+    "orderStatus": "Out for Delivery",
+    "receipt": "RCT-1008.pdf"
+  },
+  {
+    "orderNumber": "ORD-1009",
+    "clientName": "William Taylor",
+    "product": "Smart Watch",
+    "paymentOption": "Online",
+    "orderStatus": "Delivered",
+    "receipt": "RCT-1009.pdf"
+  },
+  {
+    "orderNumber": "ORD-1010",
+    "clientName": "Isabella Moore",
+    "product": "Webcam HD",
+    "paymentOption": "Online",
+    "orderStatus": "Processing",
+    "receipt": "RCT-1010.pdf"
+  }
+]

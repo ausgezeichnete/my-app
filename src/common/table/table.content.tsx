@@ -2,7 +2,7 @@ import {
   useReactTable,
   getCoreRowModel,
   flexRender,
-  type ColumnDef,
+  type ColumnDef, //
 } from "@tanstack/react-table";
 import type { CSSProperties } from "react";
 
@@ -28,10 +28,10 @@ const tableStyles: CSSProperties = {
 const theadStyles: CSSProperties = {
   height: 70,
   backgroundColor: "#01C0AA26",
+  textAlign: "left",
 };
 const thStyles: CSSProperties = {
   padding: 24,
-  textAlign: "center",
   fontSize: 12,
   textTransform: "uppercase",
   whiteSpace: "nowrap",
@@ -57,7 +57,7 @@ const tdStyles: CSSProperties = {
   height: 80,
 };
 
-// TODO:: 
+// TODO::
 export default function AppTable<T>({
   data,
   columns,
