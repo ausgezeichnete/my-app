@@ -7,24 +7,30 @@ export const useProductOrderColumns = () => {
   return [
     columnHelper.accessor("orderNumber", {
       header: () => <span>Order Number</span>,
-      cell: (info) => <div>{info.getValue()}</div>,
+      cell: (info) => (
+        <div className="flex justify-start gap-4">{info.getValue()}</div>
+      ),
     }),
 
     columnHelper.accessor("clientName", {
       header: () => <span>Client Name</span>,
-      cell: (info) => <div>{info.getValue()}</div>,
+      cell: (info) => (
+        <div className="flex justify-start gap-4">{info.getValue()}</div>
+      ),
     }),
 
     columnHelper.accessor("product", {
       header: () => <span>Product</span>,
-      cell: (info) => <div>{info.getValue()}</div>,
+      cell: (info) => (
+        <div className="flex justify-start gap-4">{info.getValue()}</div>
+      ),
     }),
 
     columnHelper.accessor("paymentOption", {
       header: () => <span>Payment</span>,
       cell: (info) => (
         <span
-          className={`px-2 py-1 rounded-full text-xs font-medium ${
+          className={`flex justify-start gap-4 px-2 py-1 rounded-full text-xs font-medium ${
             info.getValue() === "Online"
               ? "bg-blue-100 text-blue-700"
               : "bg-orange-100 text-orange-700"
@@ -52,7 +58,7 @@ export const useProductOrderColumns = () => {
 
         return (
           <span
-            className={`px-2 py-1 rounded-full text-xs font-medium ${
+            className={`flex justify-start gap-4 px-2 py-1 rounded-full text-xs font-medium ${
               statusClasses[status] ?? "bg-gray-100 text-gray-700"
             }`}
           >
@@ -66,11 +72,13 @@ export const useProductOrderColumns = () => {
       header: () => <span>Receipt</span>,
       cell: (info) =>
         info.getValue() ? (
-          <button className="text-blue-600 hover:underline">
+          <button className="text-blue-600 hover:underline flex justify-start gap-4">
             View Receipt
           </button>
         ) : (
-          <span className="text-gray-400">Not Available</span>
+          <span className="text-gray-400 flex justify-start gap-4">
+            Not Available
+          </span>
         ),
     }),
   ];

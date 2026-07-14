@@ -1,6 +1,7 @@
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "./appSidebar";
 import { Navbar } from "./navbar";
+import { Input } from "@/components/ui/input";
 
 import { Outlet } from "react-router-dom";
 

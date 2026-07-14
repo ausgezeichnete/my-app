@@ -15,7 +15,7 @@ export const AppSidebar = () => {
   return (
     <Sidebar>
       <SidebarHeader className="bg-blue-950">
-        <img src={logoImg} alt="" />
+        <img src={logoImg} alt="Logo" />
       </SidebarHeader>
 
       <SidebarContent className="bg-blue-950">
@@ -27,7 +27,7 @@ export const AppSidebar = () => {
                   <SidebarMenuButton asChild className="pr-5">
                     <NavLink to={url} className="group text-amber-50">
                       <Icon />
-                      <span className=" uppercase">{id}</span>
+                      <span className="uppercase">{id}</span>
                     </NavLink>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
