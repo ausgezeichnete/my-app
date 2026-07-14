@@ -12,12 +12,7 @@ type AppTableProps<T> = {
   data: T[];
   columns: ColumnDef<T>[];
 };
-const wrapperStyles: CSSProperties = {
-  width: "100%",
-  overflowX: "auto",
-  borderTopLeftRadius: 12,
-  borderTopRightRadius: 12,
-};
+
 
 const tableStyles: CSSProperties = {
   minWidth: "100%",
@@ -27,7 +22,7 @@ const tableStyles: CSSProperties = {
 
 const theadStyles: CSSProperties = {
   height: 70,
-  backgroundColor: "#01C0AA26",
+  // backgroundColor: "#01C0AA26",
   textAlign: "left",
 };
 const thStyles: CSSProperties = {
@@ -57,6 +52,7 @@ const tdStyles: CSSProperties = {
   height: 80,
 };
 
+
 // TODO::
 export default function AppTable<T>({
   data,
@@ -68,9 +64,9 @@ export default function AppTable<T>({
     getCoreRowModel: getCoreRowModel(),
   });
   return (
-    <div style={wrapperStyles}>
+    <div className="rounded-tl-xl rounded-tr-xl overflow-x-auto w-full">
       <table style={tableStyles}>
-        <thead style={theadStyles}>
+        <thead style={theadStyles} className="bg-secondary">
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>
               {headerGroup.headers.map((header) => (

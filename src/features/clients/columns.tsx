@@ -1,6 +1,7 @@
 import { createColumnHelper } from "@tanstack/react-table";
 import type { ClientTypes } from "./clients.types";
 import { AvatarImage, Avatar } from "@/components/ui/avatar";
+import { AppChip } from "@/common/appChip/appChip";
 
 const columnHelper = createColumnHelper<ClientTypes>();
 
@@ -52,7 +53,8 @@ export const useClientColumns = () => {
       header: () => <span>status</span>,
       cell: (info) => (
         <div className="flex justify-start items-center gap-4">
-          <div>{info.getValue()}</div>
+          {/* <div>{info.getValue()}</div> */}
+          <AppChip chipText="asdsadadadsd" status="inActive" />
         </div>
       ),
     }),
