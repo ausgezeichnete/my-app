@@ -25,4 +25,10 @@ export const items = [
     url: "/reports",
     icon: File,
   },
+  {
+    id: "shipments",
+    title: "sidebar.shipments",
+    url: "/shipments",
+    icon: ShoppingCart,
+  },
 ];
