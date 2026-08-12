@@ -19,12 +19,7 @@ export const items = [
     url: "/product-orders",
     icon: ShoppingCart,
   },
-  {
-    id: "reports",
-    title: "sidebar.reports",
-    url: "/reports",
-    icon: File,
-  },
+
   {
     id: "shipments",
     title: "sidebar.shipments",
