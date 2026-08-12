@@ -44,7 +44,7 @@ const thDivStyles: CSSProperties = {
 
 const tBodyStyles: CSSProperties = {
   backgroundColor: "#FFFFFF",
-  textAlign: "center",
+  textAlign: "left",
 };
 const trStyles: CSSProperties = {
   borderBottom: "1px solid #E5E7EB",
@@ -55,6 +55,7 @@ const tdStyles: CSSProperties = {
   paddingBlock: 16,
   fontSize: 16,
   height: 80,
+  minWidth: 150,
 };
 
 // TODO::

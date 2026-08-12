@@ -33,7 +33,7 @@ export const useDeliveryMenColumns = () => {
     }),
 
     columnHelper.accessor("activityType", {
-      header: () => <span>Activity Type</span>,
+      header: () => <span>Activity</span>,
       cell: (info) => {
         const activityType = info.getValue();
 
@@ -45,7 +45,7 @@ export const useDeliveryMenColumns = () => {
 
         return (
           <span
-            className={`flex justify-start gap-4 px-2 py-1 rounded-full text-xs font-medium ${
+            className={` justify-start gap-4 px-2 py-1 rounded-full text-xs text-center font-medium ${
               activityClasses[activityType] ?? "bg-gray-100 text-gray-700"
             }`}
           >
@@ -58,8 +58,8 @@ export const useDeliveryMenColumns = () => {
     columnHelper.accessor("profile", {
       header: () => <span>Profile</span>,
       cell: (info) => (
-        <div className="max-w-[300px] whitespace-normal break-words">
-          {info.getValue()}
+        <div className=" bg-green-100 text-green-600  gap-4 px-2 py-1 rounded-full text-xs font-medium text-center">
+          View Profile
         </div>
       ),
     }),
