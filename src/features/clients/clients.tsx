@@ -9,7 +9,6 @@ export const Clients = () => {
   const columns = useClientColumns();
   return (
     <div>
-      <SearchBox />
       <AppTable
         data={CLIENT_MOCK_DATA}
         columns={columns as ColumnDef<ClientTypes>[]}
