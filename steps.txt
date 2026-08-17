@@ -1,0 +1,17 @@
+1- install React,Vite,Tailwind,Shadecn and a dynamic table library(i forgot the name??) and edit the config files and make sure that all files are under src
+-when installing shadcn a folder called components/ui will be created inside the src which have all the tsx i needed like the btns and sidebar and extra
+2-created folders :
+common to contain all repeated components like buttons,tables,forms etc
+features to contain all features needed for the project like clients ,products etc
+lib ????
+Routes which containes a Router.tsx file to define the routes needed for the app
+and inside it we have a folder called layouts which containes all the needed layouts like applayout,client layout and adminlayout
+
+and we have to change the app.tsx and main.tsx to be able to read the new routes we created 
+
+i need to wrap the App coponent in main.tsx inside this  <BrowserRouter>
+      <App />
+    </BrowserRouter>   and inside the App.tsx i will call the AppRouter component from the router.tsx file i created 
+
+
+

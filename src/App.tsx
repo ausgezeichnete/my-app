@@ -1,21 +1,10 @@
-import { Routes, Route } from "react-router-dom";
-import { AppRouter } from "./routes/layouts/AppRouter";
-import {
-  useQuery,
-  useMutation,
-  useQueryClient,
-  QueryClient,
-  QueryClientProvider,
-} from "@tanstack/react-query";
-
-const queryClient = new QueryClient();
-
-function App() {
+import "./App.css";
+import { AppRouter } from "./routes/layouts/Router";
+export function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <App />
-    </QueryClientProvider>
+    <>
+      {/* <AppLayout /> */}
+      <AppRouter />
+    </>
   );
 }
-
-
