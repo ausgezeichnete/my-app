@@ -20,9 +20,14 @@ export const items = [
     icon: ShoppingCart,
   },
   {
-    id: "reports",
-    title: "sidebar.reports",
-    url: "/reports",
+    id: "delivery men",
+    title: "sidebar.delivery_men",
+    url: "/delivery-men",
     icon: File,
+  },
+  {
+    id: "shipments",
+    title: "sidebar.shipments",
+    url: "/shipments",
   },
 ];

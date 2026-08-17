@@ -1,0 +1,92 @@
+[
+  {
+    "shipmentNumber": "SHP-10001",
+    "clientName": "Ahmed Hassan",
+    "address": "25 Tahrir Street, Cairo",
+    "deliveryMan": "Mohamed Ali",
+    "shippingDeliveryDate": "2026-08-10",
+    "shipmentStatus": "Delivered",
+    "shipmentDetails": "Electronics order - 2 packages"
+  },
+  {
+    "shipmentNumber": "SHP-10002",
+    "clientName": "Sara Mohamed",
+    "address": "15 Nasr City, Cairo",
+    "deliveryMan": "Omar Khaled",
+    "shippingDeliveryDate": "2026-08-11",
+    "shipmentStatus": "Out for Delivery",
+    "shipmentDetails": "Clothing order - 1 package"
+  },
+  {
+    "shipmentNumber": "SHP-10003",
+    "clientName": "Omar Ahmed",
+    "address": "10 Dokki Street, Giza",
+    "deliveryMan": "Ahmed Samir",
+    "shippingDeliveryDate": "2026-08-12",
+    "shipmentStatus": "Pending",
+    "shipmentDetails": "Household items - 3 packages"
+  },
+  {
+    "shipmentNumber": "SHP-10004",
+    "clientName": "Mona Ibrahim",
+    "address": "8 Heliopolis Street, Cairo",
+    "deliveryMan": "Mahmoud Hassan",
+    "shippingDeliveryDate": "2026-08-12",
+    "shipmentStatus": "In Transit",
+    "shipmentDetails": "Office supplies - 5 packages"
+  },
+  {
+    "shipmentNumber": "SHP-10005",
+    "clientName": "Youssef Adel",
+    "address": "22 Zamalek Street, Cairo",
+    "deliveryMan": "Karim Mostafa",
+    "shippingDeliveryDate": "2026-08-13",
+    "shipmentStatus": "Delayed",
+    "shipmentDetails": "Fragile items - 2 packages"
+  },
+  {
+    "shipmentNumber": "SHP-10006",
+    "clientName": "Nour El Din",
+    "address": "30 Maadi Street, Cairo",
+    "deliveryMan": "Ibrahim Fathy",
+    "shippingDeliveryDate": "2026-08-13",
+    "shipmentStatus": "Cancelled",
+    "shipmentDetails": "Customer requested cancellation"
+  },
+  {
+    "shipmentNumber": "SHP-10007",
+    "clientName": "Laila Hassan",
+    "address": "12 Mohandessin Street, Giza",
+    "deliveryMan": "Mostafa Ahmed",
+    "shippingDeliveryDate": "2026-08-14",
+    "shipmentStatus": "Pending",
+    "shipmentDetails": "Beauty products - 4 packages"
+  },
+  {
+    "shipmentNumber": "SHP-10008",
+    "clientName": "Karim Adel",
+    "address": "45 New Cairo, Cairo",
+    "deliveryMan": "Hassan Mahmoud",
+    "shippingDeliveryDate": "2026-08-14",
+    "shipmentStatus": "Out for Delivery",
+    "shipmentDetails": "Electronic accessories - 3 packages"
+  },
+  {
+    "shipmentNumber": "SHP-10009",
+    "clientName": "Hana Mostafa",
+    "address": "18 Faisal Street, Giza",
+    "deliveryMan": "Yasser Mohamed",
+    "shippingDeliveryDate": "2026-08-15",
+    "shipmentStatus": "In Transit",
+    "shipmentDetails": "Food products - 6 packages"
+  },
+  {
+    "shipmentNumber": "SHP-10010",
+    "clientName": "Khaled Samir",
+    "address": "7 Abbas El Akkad Street, Cairo",
+    "deliveryMan": "Ali Hassan",
+    "shippingDeliveryDate": "2026-08-15",
+    "shipmentStatus": "Delivered",
+    "shipmentDetails": "Personal care products - 2 packages"
+  }
+]

@@ -13,13 +13,13 @@ export const Clients = () => {
   return (
     <div>
       {/* <SearchBox  /> */}
-          <AppSearchBar query={searchQuery} onQueryChange={setSearchQuery} />
+      <AppSearchBar query={searchQuery} onQueryChange={setSearchQuery} />
 
       <AppTable
         data={CLIENT_MOCK_DATA}
         columns={columns as ColumnDef<ClientTypes>[]}
       />
-      {console.log(searchQuery)}
+      {/* {console.log(searchQuery)} */}
       {console.log(setSearchQuery)}
     </div>
   );
