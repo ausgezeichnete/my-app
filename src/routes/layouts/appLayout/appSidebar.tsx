@@ -10,28 +10,51 @@ import {
 } from "@/components/ui/sidebar";
 import logoImg from "@/assets/newlogo.png";
 import { items } from "./sidebarConfig";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+
 export const AppSidebar = () => {
+  const location = useLocation();
+  {
+    console.log(location);
+  }
+
+  const itemActive = (id?: string) => {
+    if (id === "main") return location.pathname === "/";
+    return (
+      location.pathname === `/${id}` || location.pathname.startsWith(`/${id}/`)
+    );
+  };
+
   return (
     <Sidebar>
-      <SidebarHeader className="bg-blue-950">
+      <SidebarHeader className="bg-primary">
         <img src={logoImg} alt="Logo" />
       </SidebarHeader>
 
-      <SidebarContent className="bg-blue-950">
+      <SidebarContent className="bg-primary">
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu>
-              {items.map(({ id, icon: Icon, title, url }) => (
-                <SidebarMenuItem key={title}>
-                  <SidebarMenuButton asChild className="pr-5">
-                    <NavLink to={url} className="group text-amber-50">
-                      <Icon />
-                      <span className="uppercase">{id}</span>
-                    </NavLink>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
+              {items.map(({ id, icon: Icon, title, url }) => {
+                const active = itemActive(id);
+                return (
+                  <SidebarMenuItem key={title}>
+                    <SidebarMenuButton
+                      asChild
+                      className={active ? "active pr-5 bg " : "pr-5"}
+                    >
+                      <NavLink
+                        to={url}
+                        onClick={() => id}
+                        className="group text-amber-50 "
+                      >
+                        <Icon />
+                        <span className="uppercase">{id}</span>
+                      </NavLink>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                );
+              })}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
