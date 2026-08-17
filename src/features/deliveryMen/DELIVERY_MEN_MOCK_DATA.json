@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Mohamed Ali",
+    "telephone": "+20 100 123 4567",
+    "email": "mohamed.ali@example.com",
+    "activityType": "Full Time",
+    "profile": "Active delivery man with 3 years of experience"
+  },
+  {
+    "id": 2,
+    "name": "Omar Khaled",
+    "telephone": "+20 101 234 5678",
+    "email": "omar.khaled@example.com",
+    "activityType": "Part Time",
+    "profile": "Part-time delivery man"
+  },
+  {
+    "id": 3,
+    "name": "Ahmed Samir",
+    "telephone": "+20 102 345 6789",
+    "email": "ahmed.samir@example.com",
+    "activityType": "Full Time",
+    "profile": "Experienced delivery man specializing in local deliveries"
+  },
+  {
+    "id": 4,
+    "name": "Mahmoud Hassan",
+    "telephone": "+20 103 456 7890",
+    "email": "mahmoud.hassan@example.com",
+    "activityType": "Full Time",
+    "profile": "Senior delivery man"
+  },
+  {
+    "id": 5,
+    "name": "Karim Mostafa",
+    "telephone": "+20 104 567 8901",
+    "email": "karim.mostafa@example.com",
+    "activityType": "Part Time",
+    "profile": "Part-time delivery man for evening shifts"
+  },
+  {
+    "id": 6,
+    "name": "Ibrahim Fathy",
+    "telephone": "+20 105 678 9012",
+    "email": "ibrahim.fathy@example.com",
+    "activityType": "Full Time",
+    "profile": "Full-time delivery man"
+  },
+  {
+    "id": 7,
+    "name": "Mostafa Ahmed",
+    "telephone": "+20 106 789 0123",
+    "email": "mostafa.ahmed@example.com",
+    "activityType": "Contract",
+    "profile": "Contract delivery man"
+  },
+  {
+    "id": 8,
+    "name": "Hassan Mahmoud",
+    "telephone": "+20 107 890 1234",
+    "email": "hassan.mahmoud@example.com",
+    "activityType": "Full Time",
+    "profile": "Experienced delivery man"
+  },
+  {
+    "id": 9,
+    "name": "Yasser Mohamed",
+    "telephone": "+20 108 901 2345",
+    "email": "yasser.mohamed@example.com",
+    "activityType": "Part Time",
+    "profile": "Part-time delivery man"
+  },
+  {
+    "id": 10,
+    "name": "Ali Hassan",
+    "telephone": "+20 109 012 3456",
+    "email": "ali.hassan@example.com",
+    "activityType": "Full Time",
+    "profile": "Full-time delivery man with 2 years of experience"
+  }
+]
