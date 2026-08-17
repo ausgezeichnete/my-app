@@ -1,8 +1,21 @@
 import { Routes, Route } from "react-router-dom";
 import { AppRouter } from "./routes/layouts/AppRouter";
+import {
+  useQuery,
+  useMutation,
+  useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+} from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 function App() {
-  return <AppRouter />;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <App />
+    </QueryClientProvider>
+  );
 }
 
 export default App;
