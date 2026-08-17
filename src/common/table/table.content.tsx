@@ -6,7 +6,7 @@ import {
 } from "@tanstack/react-table";
 import type { CSSProperties } from "react";
 
-// const columns = [{ accessorKey: 'name', header: 'Name' }]
+const columns = [{ accessorKey: 'name', header: 'Name' }]
 
 type AppTableProps<T> = {
   data: T[];
