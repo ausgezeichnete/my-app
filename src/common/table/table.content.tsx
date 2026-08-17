@@ -6,7 +6,7 @@ import {
 } from "@tanstack/react-table";
 import type { CSSProperties } from "react";
 
-// const columns = [{ accessorKey: 'name', header: 'Name' }]
+const columns = [{ accessorKey: 'name', header: 'Name' }]
 
 type AppTableProps<T> = {
   data: T[];
@@ -34,7 +34,7 @@ const thStyles: CSSProperties = {
   padding: 24,
   fontSize: 12,
   textTransform: "uppercase",
-  //whiteSpace: "nowrap",
+  // whiteSpace: "nowrap",
 };
 const thDivStyles: CSSProperties = {
   color: "#000",

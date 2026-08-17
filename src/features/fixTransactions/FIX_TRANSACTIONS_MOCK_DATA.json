@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "deliveryManName": "Ahmed Hassan",
+    "numberOfShipments": 45,
+    "numberOfSales": 38,
+    "commission": 1200,
+    "collectedAmount": 18500
+  },
+  {
+    "id": 2,
+    "deliveryManName": "Mohamed Ali",
+    "numberOfShipments": 52,
+    "numberOfSales": 47,
+    "commission": 1450,
+    "collectedAmount": 22300
+  },
+  {
+    "id": 3,
+    "deliveryManName": "Omar Khaled",
+    "numberOfShipments": 31,
+    "numberOfSales": 26,
+    "commission": 900,
+    "collectedAmount": 14200
+  },
+  {
+    "id": 4,
+    "deliveryManName": "Karim Mostafa",
+    "numberOfShipments": 67,
+    "numberOfSales": 61,
+    "commission": 1800,
+    "collectedAmount": 30100
+  },
+  {
+    "id": 5,
+    "deliveryManName": "Mahmoud Samir",
+    "numberOfShipments": 28,
+    "numberOfSales": 24,
+    "commission": 750,
+    "collectedAmount": 11700
+  }
+]

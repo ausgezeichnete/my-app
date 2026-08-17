@@ -25,4 +25,9 @@ export const items = [
     url: "/delivery-men",
     icon: File,
   },
+  {
+    id: "shipments",
+    title: "sidebar.shipments",
+    url: "/shipments",
+  },
 ];
