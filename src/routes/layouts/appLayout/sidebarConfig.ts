@@ -20,9 +20,8 @@ export const items = [
     icon: ShoppingCart,
   },
   {
-    id: "fix transactions",
-    title: "sidebar.fix_transactions",
-    url: "/fix-transactions",
-    icon: File,
+    id: "shipments",
+    title: "sidebar.shipments",
+    url: "/shipments",
   },
 ];

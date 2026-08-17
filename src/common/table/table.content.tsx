@@ -34,7 +34,7 @@ const thStyles: CSSProperties = {
   padding: 24,
   fontSize: 12,
   textTransform: "uppercase",
-  //whiteSpace: "nowrap",
+  // whiteSpace: "nowrap",
 };
 const thDivStyles: CSSProperties = {
   color: "#000",
