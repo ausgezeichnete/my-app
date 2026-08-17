@@ -14,9 +14,9 @@ import { NavLink, useLocation } from "react-router-dom";
 
 export const AppSidebar = () => {
   const location = useLocation();
-  {
-    console.log(location);
-  }
+  // {
+  //   console.log(location);
+  // }
 
   const itemActive = (id?: string) => {
     if (id === "main") return location.pathname === "/";

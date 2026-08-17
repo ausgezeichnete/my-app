@@ -1,4 +1,4 @@
-import { Home, ShoppingCart, Users, File } from "lucide-react";
+import { Home, ShoppingCart, Users, File, LayoutDashboard } from "lucide-react";
 
 export const items = [
   {
@@ -29,5 +29,6 @@ export const items = [
     id: "shipments",
     title: "sidebar.shipments",
     url: "/shipments",
+    icon: LayoutDashboard,
   },
 ];
