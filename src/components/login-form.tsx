@@ -14,36 +14,47 @@ import {
   FieldLabel,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+import logoImg from "@/assets/logo.svg";
 
 export function LoginForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
   return (
-    <div className={cn("flex flex-col gap-3", className)} {...props}>
-      <Card>
-        <CardHeader className="flex justify-center">
-          <CardTitle>Login to your account</CardTitle>
+    <div
+      className={cn("flex flex-col gap-3 bg-[#1F263E] ", className)}
+      {...props}
+    >
+      <Card className="h-screen">
+        <CardHeader className="flex justify-center ">
+          <CardTitle>
+            <img src={logoImg} alt="Logo" className="w-100 mx-auto" />
+          </CardTitle>
           <CardDescription></CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent className=" w-xl mx-auto">
           <form>
             <FieldGroup>
               <Field>
-                <FieldLabel htmlFor="email">Email</FieldLabel>
+                <FieldLabel htmlFor="email" hidden>
+                  Email
+                </FieldLabel>
                 <Input
                   id="email"
                   type="email"
-                  placeholder="m@example.com"
+                  placeholder="Email"
+                  className="bg-[#ffffff] text-[#1F263E]"
                   required
                 />
               </Field>
               <Field>
                 <div className="flex items-center">
-                  <FieldLabel htmlFor="password">Password</FieldLabel>
+                  <FieldLabel htmlFor="Password" hidden>
+                    Password
+                  </FieldLabel>
                   <a
                     href="#"
-                    className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
+                    className="ml-auto inline-block text-sm underline-offset-4 hover:underline text-white"
                   >
                     Forgot your password?
                   </a>
@@ -53,6 +64,7 @@ export function LoginForm({
                   type="password"
                   required
                   placeholder="password"
+                  className="bg-[#ffffff] text-[#1F263E]"
                 />
               </Field>
               <Field>
@@ -63,7 +75,7 @@ export function LoginForm({
                   Login
                 </Button>
 
-                <FieldDescription className="text-center">
+                <FieldDescription className="text-center text-white">
                   Don&apos;t have an account? <a href="#">Sign up</a>
                 </FieldDescription>
               </Field>
