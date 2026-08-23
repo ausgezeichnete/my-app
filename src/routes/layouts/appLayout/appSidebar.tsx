@@ -50,6 +50,7 @@ export const AppSidebar = () => {
                         className="group text-amber-50 "
                       >
                         <Icon />
+
                         <span className="uppercase">{id}</span>
                       </NavLink>
                     </SidebarMenuButton>
