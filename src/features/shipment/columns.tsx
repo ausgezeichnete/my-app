@@ -1,5 +1,6 @@
 import { createColumnHelper } from "@tanstack/react-table";
 import type { ShipmentType } from "./shipmentTypes";
+import { AppChip } from "@/common/appChip/appChip";
 
 const columnHelper = createColumnHelper<ShipmentType>();
 
@@ -45,23 +46,12 @@ export const useShipmentColumns = () => {
       cell: (info) => {
         const status = info.getValue();
 
-        const statusClasses: Record<string, string> = {
-          Pending: "bg-yellow-100 text-yellow-700",
-          "In Transit": "bg-indigo-100 text-indigo-700",
-          "Out for Delivery": "bg-cyan-100 text-cyan-700",
-          Delivered: "bg-green-100 text-green-700",
-          Delayed: "bg-orange-100 text-orange-700",
-          Cancelled: "bg-red-100 text-red-700",
-        };
-
         return (
-          <span
-            className={`flex justify-start gap-4 px-2 py-1 rounded-full text-xs font-medium ${
-              statusClasses[status] ?? "bg-gray-100 text-gray-700"
-            }`}
-          >
-            {status}
-          </span>
+          <AppChip
+            chipText={status}
+            status={status}
+            className={`justify-start gap-4 px-2 py-1 rounded-full text-xs text-center font-medium `}
+          />
         );
       },
     }),

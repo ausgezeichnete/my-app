@@ -2,6 +2,8 @@ import { createColumnHelper } from "@tanstack/react-table";
 import type { ClientTypes } from "./clients.types";
 import { AvatarImage, Avatar } from "@/components/ui/avatar";
 import { AppChip } from "@/common/appChip/appChip";
+import { Button } from "@/components/ui/button";
+import { AppButton } from "@/common/appButton/appButton";
 
 const columnHelper = createColumnHelper<ClientTypes>();
 
@@ -48,15 +50,19 @@ export const useClientColumns = () => {
         </div>
       ),
     }),
-
     columnHelper.accessor("status", {
-      header: () => <span>status</span>,
-      cell: (info) => (
-        <div className="flex justify-start items-center gap-4">
-          {/* <div>{info.getValue()}</div> */}
-          <AppChip chipText="asdsadadadsd" status="inActive" />
-        </div>
-      ),
+      header: () => <span>Status</span>,
+
+      cell: (info) => {
+        const status = info.getValue();
+        return (
+          <AppChip
+            chipText={status}
+            status={status}
+            className={`justify-start gap-4 px-2 py-1 rounded-full text-xs text-center font-medium `}
+          />
+        );
+      },
     }),
     columnHelper.accessor("number_of_purchases", {
       header: () => <span>Purchase</span>,
@@ -65,6 +71,14 @@ export const useClientColumns = () => {
           <div>{info.getValue()}</div>
         </div>
       ),
+    }),
+    columnHelper.accessor("profile", {
+      header: () => <span>Profile</span>,
+      cell: (info) => {
+        return (
+          <AppButton buttonText="View" variant="contained" width="medium" />
+        );
+      },
     }),
   ];
 };

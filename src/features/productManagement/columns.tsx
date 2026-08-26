@@ -1,6 +1,7 @@
 import { createColumnHelper } from "@tanstack/react-table";
 import { Button } from "@/components/ui/button";
 import type { ProductType } from "./productTypes";
+import { AppButton } from "@/common/appButton/appButton";
 
 const columnHelper = createColumnHelper<ProductType>();
 
@@ -52,18 +53,8 @@ export const useProductColumns = () => {
       id: "actions",
       header: () => <span>Action</span>,
       cell: ({ row }) => (
-        <Button
-          size="sm"
-          className="bg-accepted hover:bg-accepted/60 text-white flex items-center gap-2 rounded-md px-4"
-        >
-          <span>Edit</span>
-        </Button>
+        <AppButton buttonText="Edit" variant="contained" width="medium" />
       ),
     }),
   ];
-};
-
-// Example handler function for the action button
-const handleEdit = (id: string) => {
-  console.log("Edit product:", id);
 };

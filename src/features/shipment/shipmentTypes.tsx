@@ -6,11 +6,11 @@ export type ShipmentType = {
   deliveryMan: string;
   shippingDeliveryDate: string;
   shipmentStatus:
-    | "Pending"
-    | "In Transit"
-    | "Out for Delivery"
-    | "Delivered"
-    | "Delayed"
-    | "Cancelled";
+    | "pending"
+    | "inTransit"
+    | "outForDelivery"
+    | "delivered"
+    | "delayed"
+    | "cancelled";
   shipmentDetails: string;
 };
