@@ -1,14 +1,17 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, UserCheck, Package, Truck } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const reportCards = [
-  { title: "Customers", icon: Users },
-  { title: "Agents", icon: UserCheck },
-  { title: "Products", icon: Package },
-  { title: "Shipments", icon: Truck },
+  { title: "Clients", icon: Users, to: "/clients" },
+  { title: "Delivery Men", icon: UserCheck, to: "/delivery-men" },
+  { title: "Products", icon: Package, to: "/products" },
+  { title: "Shipments", icon: Truck, to: "/shipments" },
 ];
 
 export function Reports() {
+  const navigate = useNavigate();
+
   return (
     <div className="p-8">
       {/* Title */}
@@ -24,6 +27,7 @@ export function Reports() {
             <Card
               key={index}
               className="hover:shadow-md transition-shadow duration-200 cursor-pointer border-slate-200"
+              onClick={() => navigate(card.to)}
             >
               <CardContent className="flex flex-col items-center justify-center p-8 text-center space-y-4">
                 <Icon className="w-12 h-12 text-teal-400 stroke-[1.5]" />
