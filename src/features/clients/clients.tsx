@@ -12,7 +12,11 @@ export const Clients = () => {
   return (
     <div>
       {/* <SearchBox  /> */}
-      <AppSearchBar query={searchQuery} onQueryChange={setSearchQuery} />
+      <AppSearchBar
+        query={searchQuery}
+        onQueryChange={setSearchQuery}
+        placeholder="search clients"
+      />
 
       <AppTable
         data={CLIENT_MOCK_DATA}

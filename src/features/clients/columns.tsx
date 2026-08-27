@@ -2,7 +2,6 @@ import { createColumnHelper } from "@tanstack/react-table";
 import type { ClientTypes } from "./clients.types";
 import { AvatarImage, Avatar } from "@/components/ui/avatar";
 import { AppChip } from "@/common/appChip/appChip";
-import { Button } from "@/components/ui/button";
 import { AppButton } from "@/common/appButton/appButton";
 
 const columnHelper = createColumnHelper<ClientTypes>();
