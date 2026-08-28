@@ -53,9 +53,11 @@ export const AppButton = ({
   variant = "contained",
   color = "primary",
   width,
+  ...props
 }: AppButtonProps) => {
   return (
     <button
+      {...props}
       style={{
         ...baseStyle,
         ...variantStyles[variant](color),

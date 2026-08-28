@@ -6,13 +6,12 @@ import {
 } from "@tanstack/react-table";
 import type { CSSProperties } from "react";
 
-const columns = [{ accessorKey: 'name', header: 'Name' }]
+const columns = [{ accessorKey: "name", header: "Name" }];
 
 type AppTableProps<T> = {
   data: T[];
   columns: ColumnDef<T>[];
 };
-
 
 const tableStyles: CSSProperties = {
   minWidth: "100%",
@@ -50,9 +49,8 @@ const tdStyles: CSSProperties = {
   paddingBlock: 16,
   fontSize: 16,
   height: 80,
-  minWidth: 150,
+  //minWidth: 150,
 };
-
 
 // TODO::
 export default function AppTable<T>({
