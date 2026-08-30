@@ -8,15 +8,16 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import logoImg from "@/assets/newlogo.png";
+//import logoImg from "@/assets/newlogo.png";
+import logoImg from "@/assets/logo.svg";
 import { items } from "./sidebarConfig";
 import { NavLink, useLocation } from "react-router-dom";
 
 export const AppSidebar = () => {
   const location = useLocation();
-  {
-    console.log(location);
-  }
+  // {
+  //   console.log(location);
+  // }
 
   const itemActive = (id?: string) => {
     if (id === "main") return location.pathname === "/";
@@ -28,7 +29,7 @@ export const AppSidebar = () => {
   return (
     <Sidebar>
       <SidebarHeader className="bg-primary">
-        <img src={logoImg} alt="Logo" />
+        <img src={logoImg} alt="Logo" className="bg-transparent" />
       </SidebarHeader>
 
       <SidebarContent className="bg-primary">
@@ -49,6 +50,7 @@ export const AppSidebar = () => {
                         className="group text-amber-50 "
                       >
                         <Icon />
+
                         <span className="uppercase">{id}</span>
                       </NavLink>
                     </SidebarMenuButton>

@@ -1,4 +1,16 @@
-import { Home, ShoppingCart, Users, File } from "lucide-react";
+import {
+  Home,
+  Users,
+  PackageCheck,
+  Truck,
+  UserCheck,
+  CircleDollarSign,
+  PackageSearch,
+  FileText,
+  Settings,
+  LogOut,
+  LogIn,
+} from "lucide-react";
 
 export const items = [
   {
@@ -14,20 +26,51 @@ export const items = [
     icon: Users,
   },
   {
-    id: "products orders",
+    id: "product_orders",
     title: "sidebar.product_orders",
     url: "/product-orders",
-    icon: ShoppingCart,
-  },
-  {
-    id: "delivery men",
-    title: "sidebar.delivery_men",
-    url: "/delivery-men",
-    icon: File,
+    icon: PackageCheck,
   },
   {
     id: "shipments",
     title: "sidebar.shipments",
     url: "/shipments",
+    icon: Truck,
+  },
+  {
+    id: "delivery_men",
+    title: "sidebar.delivery_men",
+    url: "/delivery-men",
+    icon: UserCheck,
+  },
+  {
+    id: "fix-transactions",
+    title: "sidebar.transactions",
+    url: "/fix-transactions",
+    icon: CircleDollarSign,
+  },
+  {
+    id: "product_management",
+    title: "sidebar.product_management",
+    url: "/product-management",
+    icon: PackageSearch,
+  },
+  {
+    id: "reports",
+    title: "sidebar.reports",
+    url: "/reports",
+    icon: FileText,
+  },
+  {
+    id: "settings",
+    title: "sidebar.settings",
+    url: "/settings",
+    icon: Settings,
+  },
+  {
+    id: "login",
+    title: "sidebar.login",
+    url: "/login",
+    icon: LogIn,
   },
 ];
