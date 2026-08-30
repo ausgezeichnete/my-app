@@ -1,5 +1,7 @@
 import { createColumnHelper } from "@tanstack/react-table";
 import type { ProductOrderType } from "./productOrderTypes";
+import { Button } from "@/components/ui/button";
+import { AppButton } from "@/common/appButton/appButton";
 
 const columnHelper = createColumnHelper<ProductOrderType>();
 
@@ -30,7 +32,7 @@ export const useProductOrderColumns = () => {
       header: () => <span>Payment</span>,
       cell: (info) => (
         <span
-          className={`flex justify-start gap-4 px-2 py-1 rounded-full text-xs font-medium ${
+          className={`flex justify-center gap-4 px-2 py-1 rounded-full text-xs w-30 font-medium ${
             info.getValue() === "Online"
               ? "bg-blue-100 text-blue-700"
               : "bg-orange-100 text-orange-700"
@@ -58,7 +60,7 @@ export const useProductOrderColumns = () => {
 
         return (
           <span
-            className={`flex justify-start gap-4 px-2 py-1 rounded-full text-xs font-medium ${
+            className={`flex justify-center gap-4 px-2 py-1 rounded-full text-xs w-30 font-medium ${
               statusClasses[status] ?? "bg-gray-100 text-gray-700"
             }`}
           >
@@ -70,16 +72,11 @@ export const useProductOrderColumns = () => {
 
     columnHelper.accessor("receipt", {
       header: () => <span>Receipt</span>,
-      cell: (info) =>
-        info.getValue() ? (
-          <button className="text-blue-600 hover:underline flex justify-start gap-4">
-            View Receipt
-          </button>
-        ) : (
-          <span className="text-gray-400 flex justify-start gap-4">
-            Not Available
-          </span>
-        ),
+      cell: (info) => {
+        return (
+          <AppButton buttonText="View" variant="contained" width="medium" />
+        );
+      },
     }),
   ];
 };

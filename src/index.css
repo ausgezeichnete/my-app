@@ -6,20 +6,27 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --primary-color: #1F263E;
+  --primary-color: #1f263e;
   --secondary-color: rgb(1 192 170 / 15%);
 
   --accepted-color: #3aa3a3;
   --accepted-bg: #3aa3a326;
+
   --pending-color: #ffc246;
   --pending-bg: #ffc24626;
-  /* --secondary-color : rgba(1, 192, 170, 15%); */
+
+  /* Add your button colors */
+  --button-color: #14b8a6;
+  --button-hover-color: #0d9488;
 }
-
-
 
 @theme {
   --color-primary: var(--primary-color);
   --color-secondary: var(--secondary-color);
 
+  --color-accepted: var(--accepted-color);
+  --color-accepted-bg: var(--accepted-bg);
+
+  --color-pending: var(--pending-color);
+  --color-pending-bg: var(--pending-bg);
 }

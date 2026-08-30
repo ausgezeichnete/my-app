@@ -21,6 +21,7 @@ const baseStyle = {
   fontWeight: 300,
   cursor: "pointer",
   border: "3px solid transparent",
+  height: "30px",
 };
 
 // color:   red

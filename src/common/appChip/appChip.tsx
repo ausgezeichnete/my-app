@@ -1,6 +1,16 @@
 import type { CSSProperties, HTMLAttributes } from "react";
 
-type Status = "disabled" | "active" | "inActive" | "suspended";
+type Status =
+  | "disabled"
+  | "active"
+  | "inActive"
+  | "suspended"
+  | "inTransit"
+  | "pending"
+  | "outForDelivery"
+  | "delivered"
+  | "delayed"
+  | "cancelled";
 
 type AppChipPros = {
   status?: Status;
@@ -12,7 +22,9 @@ const baseStyle: CSSProperties = {
   borderRadius: "10px",
   display: "inline-flex",
   alignItems: "center",
+  justifyContent: "center",
   height: "38px",
+  width: "100px",
 };
 
 const colorStyles: Record<
@@ -21,8 +33,14 @@ const colorStyles: Record<
 > = {
   active: { background: "#3aa3a326", color: "#3aa3a3" },
   inActive: { background: "#ffc24626", color: "#ffc246" },
-  suspended: { background: "red", color: "red" },
-  disabled: { background: "gray",  color: "black", cursor: "not-allowed" },
+  suspended: { background: "pink", color: "red" },
+  disabled: { background: "gray", color: "black", cursor: "not-allowed" },
+  inTransit: { background: "#e0e7ff", color: "#4f46e5" },
+  pending: { background: "#fef3c7", color: "#b45309" },
+  outForDelivery: { background: "#cffafe", color: "#0891b2" },
+  delivered: { background: "#d1fae5", color: "#047857" },
+  delayed: { background: "#ffedd5", color: "#ea580c" },
+  cancelled: { background: "#fee2e2", color: "#dc2626" },
 };
 
 export const AppChip = ({

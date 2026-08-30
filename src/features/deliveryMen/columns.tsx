@@ -1,5 +1,7 @@
 import { createColumnHelper } from "@tanstack/react-table";
 import type { DeliveryMenType } from "./deliveryMenTypes";
+import { Button } from "@/components/ui/button";
+import { AppButton } from "@/common/appButton/appButton";
 
 const columnHelper = createColumnHelper<DeliveryMenType>();
 
@@ -58,9 +60,7 @@ export const useDeliveryMenColumns = () => {
     columnHelper.accessor("profile", {
       header: () => <span>Profile</span>,
       cell: (info) => (
-        <div className=" bg-green-100 text-green-600  gap-4 px-2 py-1 rounded-full text-xs font-medium text-center">
-          View Profile
-        </div>
+        <AppButton buttonText="View" variant="contained" width="medium" />
       ),
     }),
   ];
