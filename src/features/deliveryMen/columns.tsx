@@ -45,7 +45,7 @@ export const useDeliveryMenColumns = () => {
 
     columnHelper.accessor("profile", {
       header: () => <span>Profile</span>,
-      cell: (info) => (
+      cell: () => (
         <AppButton buttonText="View" variant="contained" width="medium" />
       ),
     }),
