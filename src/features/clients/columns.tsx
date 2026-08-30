@@ -54,13 +54,7 @@ export const useClientColumns = (onView: (clientId: number) => void) => {
 
       cell: (info) => {
         const status = info.getValue();
-        return (
-          <AppChip
-            chipText={status}
-            status={status}
-            className={`justify-start gap-4 px-2 py-1 rounded-full text-xs text-center font-medium `}
-          />
-        );
+        return <AppChip chipText={status} status={status} />;
       },
     }),
     columnHelper.accessor("number_of_purchases", {

@@ -26,7 +26,7 @@ export const items = [
     icon: Users,
   },
   {
-    id: "product_orders",
+    id: "product orders",
     title: "sidebar.product_orders",
     url: "/product-orders",
     icon: PackageCheck,
@@ -38,19 +38,19 @@ export const items = [
     icon: Truck,
   },
   {
-    id: "delivery_men",
+    id: "delivery men",
     title: "sidebar.delivery_men",
     url: "/delivery-men",
     icon: UserCheck,
   },
   {
-    id: "fix-transactions",
+    id: "fix transactions",
     title: "sidebar.transactions",
     url: "/fix-transactions",
     icon: CircleDollarSign,
   },
   {
-    id: "product_management",
+    id: "product management",
     title: "sidebar.product_management",
     url: "/product-management",
     icon: PackageSearch,

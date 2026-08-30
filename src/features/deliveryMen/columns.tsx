@@ -1,7 +1,7 @@
 import { createColumnHelper } from "@tanstack/react-table";
 import type { DeliveryMenType } from "./deliveryMenTypes";
-import { Button } from "@/components/ui/button";
 import { AppButton } from "@/common/appButton/appButton";
+import { AppChip } from "@/common/appChip/appChip";
 
 const columnHelper = createColumnHelper<DeliveryMenType>();
 
@@ -39,21 +39,7 @@ export const useDeliveryMenColumns = () => {
       cell: (info) => {
         const activityType = info.getValue();
 
-        const activityClasses: Record<string, string> = {
-          "Full Time": "bg-green-100 text-green-700",
-          "Part Time": "bg-blue-100 text-blue-700",
-          Contract: "bg-orange-100 text-orange-700",
-        };
-
-        return (
-          <span
-            className={` justify-start gap-4 px-2 py-1 rounded-full text-xs text-center font-medium ${
-              activityClasses[activityType] ?? "bg-gray-100 text-gray-700"
-            }`}
-          >
-            {activityType}
-          </span>
-        );
+        return <AppChip chipText={activityType} status={activityType} />;
       },
     }),
 
