@@ -10,7 +10,7 @@ export function AppLayout() {
       <AppSidebar />
 
       <section className="bg-[#F3F6FE] w-full">
-        <div className="h-17.5 flex items-center justify-between">
+        <div className="h-10 flex items-center justify-between bg-white w-1">
           <Navbar />
         </div>
 

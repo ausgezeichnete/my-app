@@ -10,7 +10,10 @@ type Status =
   | "outForDelivery"
   | "delivered"
   | "delayed"
-  | "cancelled";
+  | "cancelled"
+  | "Full Time"
+  | "Part Time"
+  | "Contract";
 
 type AppChipPros = {
   status?: Status;
@@ -18,7 +21,7 @@ type AppChipPros = {
 } & HTMLAttributes<HTMLDivElement>;
 
 const baseStyle: CSSProperties = {
-  fontSize: "16px",
+  fontSize: "12px",
   borderRadius: "10px",
   display: "inline-flex",
   alignItems: "center",
@@ -41,6 +44,9 @@ const colorStyles: Record<
   delivered: { background: "#d1fae5", color: "#047857" },
   delayed: { background: "#ffedd5", color: "#ea580c" },
   cancelled: { background: "#fee2e2", color: "#dc2626" },
+  "Full Time": { background: "#4ade80", color: "#166534" },
+  "Part Time": { background: "#3b82f6", color: "#1d4ed8" },
+  Contract: { background: "#f59e0b", color: "#924005" },
 };
 
 export const AppChip = ({

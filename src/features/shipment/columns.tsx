@@ -4,6 +4,15 @@ import { AppChip } from "@/common/appChip/appChip";
 
 const columnHelper = createColumnHelper<ShipmentType>();
 
+const shipmentStatusTitles: Record<ShipmentType["shipmentStatus"], string> = {
+  pending: "Pending",
+  inTransit: "In Transit",
+  outForDelivery: "Out for Delivery",
+  delivered: "Delivered",
+  delayed: "Delayed",
+  cancelled: "Cancelled",
+};
+
 export const useShipmentColumns = () => {
   return [
     columnHelper.accessor("shipmentNumber", {
@@ -45,12 +54,13 @@ export const useShipmentColumns = () => {
       header: () => <span>Status</span>,
       cell: (info) => {
         const status = info.getValue();
+        const title = shipmentStatusTitles[status];
 
         return (
           <AppChip
-            chipText={status}
+            chipText={title}
             status={status}
-            className={`justify-start gap-4 px-2 py-1 rounded-full text-xs text-center font-medium `}
+            className="justify-start gap-4 px-2 py-1 rounded-full text-xs text-center font-medium"
           />
         );
       },
