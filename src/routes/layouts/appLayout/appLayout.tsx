@@ -15,8 +15,8 @@ export function AppLayout() {
         </div>
 
         {/* Content */}
-        <div className="grid grid-cols-12 grid-row-12 mx-10">
-          <div className="col-start-1 col-end-13 row-start-1 row-end-13">
+        <div className="flex flex-col gap-4 p-4 flex-wrap">
+          <div className="w-auto">
             <Outlet />
           </div>
         </div>
