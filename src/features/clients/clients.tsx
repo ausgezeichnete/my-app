@@ -14,11 +14,16 @@ export const Clients = () => {
     navigate(`/client-orders/${clientId}`);
   });
 
+  //filter the data based on the search query
+  const filteredData = CLIENT_MOCK_DATA.filter((client) =>
+    client.name.toLowerCase().includes(searchQuery.toLowerCase()),
+  );
+
   return (
     <div>
       <AppSearchBar query={searchQuery} onQueryChange={setSearchQuery} />
 
-      <AppTable data={CLIENT_MOCK_DATA} columns={columns} />
+      <AppTable data={filteredData} columns={columns} />
     </div>
   );
 };

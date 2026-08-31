@@ -10,15 +10,17 @@ export const useClientColumns = (onView: (clientId: number) => void) => {
   return [
     columnHelper.accessor("name", {
       header: () => <span>name</span>,
-      cell: (info) => (
-        <div className="flex justify-start items-center gap-4">
-          <Avatar>
-            <AvatarImage src={info.row.original.image} />
-          </Avatar>
-          <div>{info.row.original.name}</div>
-          {/* <div>{info.getValue()}</div> */}
-        </div>
-      ),
+      cell: (info) => {
+        return (
+          <div className="flex justify-start items-center gap-4">
+            <Avatar>
+              <AvatarImage src={info.row.original?.image ?? " "} />
+            </Avatar>
+            <div>{info.row.original.name}</div>
+            {/* <div>{info.getValue()}</div> */}
+          </div>
+        );
+      },
     }),
 
     columnHelper.accessor("phone", {
