@@ -2,12 +2,11 @@ import { createColumnHelper } from "@tanstack/react-table";
 import type { ClientTypes } from "./clients.types";
 import { AvatarImage, Avatar } from "@/components/ui/avatar";
 import { AppChip } from "@/common/appChip/appChip";
-import { Button } from "@/components/ui/button";
 import { AppButton } from "@/common/appButton/appButton";
 
 const columnHelper = createColumnHelper<ClientTypes>();
 
-export const useClientColumns = () => {
+export const useClientColumns = (onView: (clientId: number) => void) => {
   return [
     columnHelper.accessor("name", {
       header: () => <span>name</span>,
@@ -72,11 +71,19 @@ export const useClientColumns = () => {
         </div>
       ),
     }),
-    columnHelper.accessor("profile", {
+    columnHelper.display({
+      id: "profile",
       header: () => <span>Profile</span>,
-      cell: (info) => {
+      cell: ({ row }) => {
+        const clientId = row.original.id;
+
         return (
-          <AppButton buttonText="View" variant="contained" width="medium" />
+          <AppButton
+            buttonText="View"
+            variant="contained"
+            width="medium"
+            onClick={() => onView(clientId)}
+          />
         );
       },
     }),
