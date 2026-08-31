@@ -8,7 +8,6 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-//import logoImg from "@/assets/newlogo.png";
 import logoImg from "@/assets/logo.svg";
 import { items } from "./sidebarConfig";
 import { NavLink, useLocation } from "react-router-dom";
@@ -27,7 +26,7 @@ export const AppSidebar = () => {
   };
 
   return (
-    <Sidebar>
+    <Sidebar className="bg-primary w-54.5">
       <SidebarHeader className="bg-primary">
         <img src={logoImg} alt="Logo" className="bg-transparent" />
       </SidebarHeader>

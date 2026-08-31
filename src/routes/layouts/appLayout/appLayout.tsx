@@ -9,13 +9,13 @@ export function AppLayout() {
     <SidebarProvider>
       <AppSidebar />
 
-      <section className="bg-[#F3F6FE] w-full">
+      <section className="bg-[#F3F6FE] w-full font-open-sans text-base font-normal">
         <div className="h-10 flex items-center justify-between bg-white w-1">
           <Navbar />
         </div>
 
         {/* Content */}
-        <div className="grid grid-cols-12 grid-row-12 mx-10">
+        <div className="grid grid-cols-12 grid-row-12 mx-10 font-open-sans text-base font-normal">
           <div className="col-start-1 col-end-13 row-start-1 row-end-13">
             <Outlet />
           </div>
