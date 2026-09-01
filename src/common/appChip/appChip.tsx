@@ -21,8 +21,9 @@ type AppChipPros = {
 } & HTMLAttributes<HTMLDivElement>;
 
 const baseStyle: CSSProperties = {
-  fontSize: "12px",
-  borderRadius: "10px",
+  fontSize: "16px",
+  fontWeight: "light",
+  borderRadius: "12px",
   display: "inline-flex",
   alignItems: "center",
   justifyContent: "center",

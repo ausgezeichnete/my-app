@@ -1,6 +1,21 @@
+/* =========================================================
+   Tailwind / Plugins
+   ========================================================= */
+
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
+
+/* =========================================================
+   Custom Variants
+   ========================================================= */
+
+@custom-variant dark (&:is(.dark *));
+
+/* =========================================================
+   Fonts
+   ========================================================= */
+
 @font-face {
   font-family: "Open Sans";
   src: url("./assets/fonts/OpenSans-Regular.woff2") format("woff2");
@@ -24,43 +39,151 @@
   font-style: normal;
   font-display: swap;
 }
-@custom-variant dark (&:is(.dark *));
+
+/* =========================================================
+   Design Tokens
+   ========================================================= */
 
 :root {
-  --primary-color: #1f263e;
-  --secondary-color: rgb(1 192 170 / 15%);
-  --navbar-color: #1f263e;
-  --navbar-text-color: #b1b3bc;
-  --navbar-hover-text-color: #ffffff;
-  --navbar-hover-bg-color: #4a598b;
-  --navbar-active-text-color: #ffffff;
-  --navbar-active-bg-color: #4a598b;
+  /* -------------------------------------------------------
+     Brand
+     ------------------------------------------------------- */
 
-  --accepted-color: #3aa3a3;
-  --accepted-bg: #3aa3a326;
+  --primary: #1f263e;
+  --secondary: rgb(1 192 170 / 15%);
+  --accent: #3984e3;
 
-  --pending-color: #ffc246;
-  --pending-bg: #ffc24626;
+  /* -------------------------------------------------------
+     Sidebar
+     ------------------------------------------------------- */
 
-  /* Add your button colors */
-  --button-color: #14b8a6;
-  --button-hover-color: #0d9488;
+  --sidebar: #1f263e;
+
+  --sidebar-foreground: #b1b3bc;
+  --sidebar-foreground-hover: #ffffff;
+  --sidebar-foreground-active: #ffffff;
+
+  --sidebar-accent: #4a598b;
+  --sidebar-accent-foreground: #ffffff;
+
+  --sidebar-border: #3aa3a3;
+
+  /* -------------------------------------------------------
+     Button
+     ------------------------------------------------------- */
+  --button-primary: #14b8a6;
+  --button-secondary: #3984e3;
+  --button-primary-hover: #14b8a5b1;
+  --button-secondary-hover: #3984e3;
+
+  /* -------------------------------------------------------
+     Semantic Status Colors
+     ------------------------------------------------------- */
+
+  --success: #3aa3a3;
+  --success-muted: rgb(58 163 163 / 15%);
+
+  --warning: #ffc246;
+  --warning-muted: rgb(255 194 70 / 15%);
+
+  --error: #ef4444;
+  --error-muted: rgb(239 68 68 / 15%);
+
+  /* -------------------------------------------------------
+     UI
+     ------------------------------------------------------- */
+
+  --background: #ffffff;
+  --foreground: #1f263e;
+
+  --muted: #f5f6f8;
+  --muted-foreground: #6b7280;
+
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+
+  --ring: #3984e3;
+
+  /* -------------------------------------------------------
+     Border Radius
+     ------------------------------------------------------- */
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
 }
 
-@theme {
-  --font-open-sans: "Open Sans", sans-serif;
+/* =========================================================
+   Tailwind Theme
+   ========================================================= */
 
-  --color-primary: var(--primary-color);
-  --color-secondary: var(--secondary-color);
-  --color-navbar-text: var(--navbar-text-color);
-  --color-navbar-text-hover: var(--navbar-hover-text-color);
-  --color-navbar-hover-bg: var(--navbar-hover-bg-color);
-  --color-navbar-text-active: var(--navbar-hover-text-color);
-  --color-navbar-active-bg: var(--navbar-hover-bg-color);
+@theme inline {
+  /* -------------------------------------------------------
+     Typography
+     ------------------------------------------------------- */
 
-  --color-accepted: var(--accepted-color);
-  --color-accepted-bg: var(--accepted-bg);
+  --font-sans: "Open Sans", sans-serif;
 
-  --color-pending: var(--pending-color);
-  --color-pending-bg: var(--pending-bg);
+  /* -------------------------------------------------------
+     Brand
+     ------------------------------------------------------- */
+
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-button-primary: var(--button-primary);
+  --color-button-primary-hover: var(--button-primary-hover);
+
+  --color-button-secondary: var(--button-secondary);
+  --color-button-secondary-hover: var(--button-secondary-hover);
+  /* -------------------------------------------------------
+     Sidebar
+     ------------------------------------------------------- */
+
+  --color-sidebar: var(--sidebar);
+
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-foreground-hover: var(--sidebar-foreground-hover);
+  --color-sidebar-foreground-active: var(--sidebar-foreground-active);
+
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+
+  --color-sidebar-border: var(--sidebar-border);
+
+  /* -------------------------------------------------------
+     Semantic Status Colors
+     ------------------------------------------------------- */
+
+  --color-success: var(--success);
+  --color-success-muted: var(--success-muted);
+
+  --color-warning: var(--warning);
+  --color-warning-muted: var(--warning-muted);
+
+  --color-error: var(--error);
+  --color-error-muted: var(--error-muted);
+
+  /* -------------------------------------------------------
+     UI
+     ------------------------------------------------------- */
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+
+  --color-ring: var(--ring);
+
+  /* -------------------------------------------------------
+     Border Radius
+     ------------------------------------------------------- */
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
 }

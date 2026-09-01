@@ -39,15 +39,15 @@ export const AppSidebar = () => {
                         className={`
                                     group
                                     text-navbar-text
-                                    hover:text-navbar-text-hover
-                                    hover:bg-navbar-hover-bg
-                                    hover:border-accepted
+                                    hover:text-sidebar-accent-foreground
+                                    hover:bg-sidebar
+                                    hover:border-sidebar-border
                                     rounded-none
                                     border-l-4
                                     p-2.5
                                     ${
                                       isActive
-                                        ? "bg-navbar-active-bg text-navbar-text-active border-accepted"
+                                        ? "bg-sidebar text-sidebar-foreground border-sidebar-border"
                                         : "border-transparent"
                                     }
                                   `}
