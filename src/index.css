@@ -29,6 +29,12 @@
 :root {
   --primary-color: #1f263e;
   --secondary-color: rgb(1 192 170 / 15%);
+  --navbar-color: #1f263e;
+  --navbar-text-color: #b1b3bc;
+  --navbar-hover-text-color: #ffffff;
+  --navbar-hover-bg-color: #4a598b;
+  --navbar-active-text-color: #ffffff;
+  --navbar-active-bg-color: #4a598b;
 
   --accepted-color: #3aa3a3;
   --accepted-bg: #3aa3a326;
@@ -46,6 +52,11 @@
 
   --color-primary: var(--primary-color);
   --color-secondary: var(--secondary-color);
+  --color-navbar-text: var(--navbar-text-color);
+  --color-navbar-text-hover: var(--navbar-hover-text-color);
+  --color-navbar-hover-bg: var(--navbar-hover-bg-color);
+  --color-navbar-text-active: var(--navbar-hover-text-color);
+  --color-navbar-active-bg: var(--navbar-hover-bg-color);
 
   --color-accepted: var(--accepted-color);
   --color-accepted-bg: var(--accepted-bg);

@@ -10,47 +10,50 @@ import {
 } from "@/components/ui/sidebar";
 import logoImg from "@/assets/logo.svg";
 import { items } from "./sidebarConfig";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, matchPath } from "react-router-dom";
 
 export const AppSidebar = () => {
-  const location = useLocation();
-  // {
-  //   console.log(location);
-  // }
-
-  const itemActive = (id?: string) => {
-    if (id === "main") return location.pathname === "/";
-    return (
-      location.pathname === `/${id}` || location.pathname.startsWith(`/${id}/`)
-    );
-  };
+  const { pathname } = useLocation();
 
   return (
-    <Sidebar className="bg-primary w-54.5">
+    <Sidebar className="bg-primary w-54.5 ">
       <SidebarHeader className="bg-primary">
         <img src={logoImg} alt="Logo" className="bg-transparent" />
       </SidebarHeader>
 
-      <SidebarContent className="bg-primary">
-        <SidebarGroup>
+      <SidebarContent className="bg-primary ">
+        <SidebarGroup className="m-0 p-0">
           <SidebarGroupContent>
             <SidebarMenu>
-              {items.map(({ id, icon: Icon, title, url }) => {
-                const active = itemActive(id);
+              {items.map(({ id, icon: Icon, title, url, name }) => {
+                const isActive = !!matchPath(
+                  { path: url, end: true },
+                  pathname,
+                );
+
                 return (
                   <SidebarMenuItem key={title}>
-                    <SidebarMenuButton
-                      asChild
-                      className={active ? "active pr-5 bg " : "pr-5"}
-                    >
+                    <SidebarMenuButton asChild isActive={isActive}>
                       <NavLink
                         to={url}
-                        onClick={() => id}
-                        className="group text-amber-50 "
+                        className={`
+                                    group
+                                    text-navbar-text
+                                    hover:text-navbar-text-hover
+                                    hover:bg-navbar-hover-bg
+                                    hover:border-accepted
+                                    rounded-none
+                                    border-l-4
+                                    p-2.5
+                                    ${
+                                      isActive
+                                        ? "bg-navbar-active-bg text-navbar-text-active border-accepted"
+                                        : "border-transparent"
+                                    }
+                                  `}
                       >
                         <Icon />
-
-                        <span className="uppercase">{id}</span>
+                        <span className="uppercase">{name}</span>
                       </NavLink>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
@@ -63,12 +66,3 @@ export const AppSidebar = () => {
     </Sidebar>
   );
 };
-
-// TYPE ANNOTATION interface type
-//  Omit
-//  Pick
-// Some Types React.Node CSSPRoperties
-// children
-//  React.Element
-// <T>
-// Type Assertion ==> as
