@@ -20,7 +20,7 @@ export const AppSearchBar: React.FC<AppSearchBarProps> = ({
 
   return (
     <form onSubmit={handleFormSubmit}>
-      <div className="relative w-80 m-1 ">
+      <div className="relative w-92.5 mb-3">
         <Search
           size={18}
           className="absolute left-3 top-1/2 -translate-y-1/2 text-button-primary"

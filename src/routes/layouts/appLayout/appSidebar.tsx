@@ -16,7 +16,7 @@ export const AppSidebar = () => {
   const { pathname } = useLocation();
 
   return (
-    <Sidebar className="bg-primary w-54.5 ">
+    <Sidebar className="bg-primary  ">
       <SidebarHeader className="bg-primary">
         <img src={logoImg} alt="Logo" className="bg-transparent" />
       </SidebarHeader>

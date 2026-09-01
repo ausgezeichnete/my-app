@@ -21,10 +21,10 @@ export const ClientOrders = () => {
   const columns = useClientOrderColumns();
   return (
     <div>
-      <h1 className="text-2xl font-semibold mb-6">
+      <h2 className="page-header">
         {client?.name ?? "Unknown Client"}'s Orders (
         {client?.number_of_purchases ?? 0})
-      </h1>
+      </h2>
       {/* <SearchBox  /> */}
       <AppSearchBar query={searchQuery} onQueryChange={setSearchQuery} />
 

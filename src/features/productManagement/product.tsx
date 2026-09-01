@@ -12,7 +12,7 @@ export const Product = () => {
       <div className="mb-4">
         <Button
           onClick={() => console.log("Add Product Clicked")}
-          className="flex items-center gap bg-accepted hover:bg-accepted/90 text-white"
+          className="flex items-center gap bg-button-primary hover:bg-accepted/90 text-button-foreground"
         >
           <Plus className="w-4 h-4" />
           Add New Product

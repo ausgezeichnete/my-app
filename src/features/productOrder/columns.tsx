@@ -1,6 +1,5 @@
 import { createColumnHelper } from "@tanstack/react-table";
 import type { ProductOrderType } from "./productOrderTypes";
-import { Button } from "@/components/ui/button";
 import { AppButton } from "@/common/appButton/appButton";
 
 const columnHelper = createColumnHelper<ProductOrderType>();
@@ -8,28 +7,28 @@ const columnHelper = createColumnHelper<ProductOrderType>();
 export const useProductOrderColumns = () => {
   return [
     columnHelper.accessor("orderNumber", {
-      header: () => <span>Order Number</span>,
+      header: () => <span className="block text-center">Order Number</span>,
       cell: (info) => (
-        <div className="flex justify-start gap-4">{info.getValue()}</div>
+        <div className="block text-center">{info.getValue()}</div>
       ),
     }),
 
     columnHelper.accessor("clientName", {
-      header: () => <span>Client Name</span>,
+      header: () => <span className="block text-center">Client Name</span>,
       cell: (info) => (
-        <div className="flex justify-start gap-4">{info.getValue()}</div>
+        <div className="block text-center">{info.getValue()}</div>
       ),
     }),
 
     columnHelper.accessor("product", {
-      header: () => <span>Product</span>,
+      header: () => <span className="block text-center">Product</span>,
       cell: (info) => (
-        <div className="flex justify-start gap-4">{info.getValue()}</div>
+        <div className="block text-center">{info.getValue()}</div>
       ),
     }),
 
     columnHelper.accessor("paymentOption", {
-      header: () => <span>Payment</span>,
+      header: () => <span className="block text-center">Payment</span>,
       cell: (info) => (
         <span
           className={`flex justify-center gap-4 px-2 py-1 rounded-full text-xs w-30 font-medium ${
@@ -44,7 +43,7 @@ export const useProductOrderColumns = () => {
     }),
 
     columnHelper.accessor("orderStatus", {
-      header: () => <span>Status</span>,
+      header: () => <span className="block text-center">Status</span>,
       cell: (info) => {
         const status = info.getValue();
 
@@ -71,7 +70,7 @@ export const useProductOrderColumns = () => {
     }),
 
     columnHelper.accessor("receipt", {
-      header: () => <span>Receipt</span>,
+      header: () => <span className="block text-center">Receipt</span>,
       cell: (info) => {
         return (
           <AppButton buttonText="View" variant="contained" width="medium" />

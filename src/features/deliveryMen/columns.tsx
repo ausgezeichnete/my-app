@@ -8,34 +8,28 @@ const columnHelper = createColumnHelper<DeliveryMenType>();
 export const useDeliveryMenColumns = () => {
   return [
     columnHelper.accessor("name", {
-      header: () => <span>Name</span>,
+      header: () => <span className=" block text-center">Name</span>,
       cell: (info) => (
-        <div className="flex justify-start gap-4 whitespace-nowrap">
-          {info.getValue()}
-        </div>
+        <div className=" block text-center">{info.getValue()}</div>
       ),
     }),
 
     columnHelper.accessor("telephone", {
-      header: () => <span>Telephone</span>,
+      header: () => <span className=" block text-center">Telephone</span>,
       cell: (info) => (
-        <div className="flex justify-start gap-4 whitespace-nowrap">
-          {info.getValue()}
-        </div>
+        <div className=" block text-center">{info.getValue()}</div>
       ),
     }),
 
     columnHelper.accessor("email", {
-      header: () => <span>Email</span>,
+      header: () => <span className=" block text-center">Email</span>,
       cell: (info) => (
-        <div className="flex justify-start gap-4 whitespace-nowrap">
-          {info.getValue()}
-        </div>
+        <div className=" block text-center">{info.getValue()}</div>
       ),
     }),
 
     columnHelper.accessor("activityType", {
-      header: () => <span>Activity</span>,
+      header: () => <span className=" block text-center">Activity</span>,
       cell: (info) => {
         const activityType = info.getValue();
 
@@ -44,7 +38,7 @@ export const useDeliveryMenColumns = () => {
     }),
 
     columnHelper.accessor("profile", {
-      header: () => <span>Profile</span>,
+      header: () => <span className=" block text-center">Profile</span>,
       cell: () => (
         <AppButton buttonText="View" variant="contained" width="medium" />
       ),

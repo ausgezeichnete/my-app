@@ -6,39 +6,43 @@ const columnHelper = createColumnHelper<FixTransactionType>();
 export const useFixTransactionsColumns = () => {
   return [
     columnHelper.accessor("deliveryManName", {
-      header: () => <span>Delivery Man Name</span>,
+      header: () => (
+        <span className=" block text-center">Delivery Man Name</span>
+      ),
       cell: (info) => (
-        <div className="flex justify-start gap-4">{info.getValue()}</div>
+        <div className=" block text-center">{info.getValue()}</div>
       ),
     }),
 
     columnHelper.accessor("numberOfShipments", {
-      header: () => <span>Number of Shipments</span>,
+      header: () => (
+        <span className=" block text-center">Number of Shipments</span>
+      ),
       cell: (info) => (
-        <div className="flex justify-start gap-4">{info.getValue()}</div>
+        <div className=" block text-center">{info.getValue()}</div>
       ),
     }),
 
     columnHelper.accessor("numberOfSales", {
-      header: () => <span>Number of Sales</span>,
+      header: () => <span className=" block text-center">Number of Sales</span>,
       cell: (info) => (
-        <div className="flex justify-start gap-4">{info.getValue()}</div>
+        <div className=" block text-center">{info.getValue()}</div>
       ),
     }),
 
     columnHelper.accessor("commission", {
-      header: () => <span>Commission</span>,
+      header: () => <span className=" block text-center">Commission</span>,
       cell: (info) => (
-        <div className="flex justify-start gap-4">{info.getValue()} EGP</div>
+        <div className=" block text-center">{info.getValue()} Euro</div>
       ),
     }),
 
     columnHelper.accessor("collectedAmount", {
-      header: () => <span>Collected Amount</span>,
+      header: () => (
+        <span className=" block text-center">Collected Amount</span>
+      ),
       cell: (info) => (
-        <div className="flex justify-start gap-4 font-medium">
-          {info.getValue()} EGP
-        </div>
+        <div className=" block text-center">{info.getValue()} EGP</div>
       ),
     }),
   ];

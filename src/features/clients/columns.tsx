@@ -9,7 +9,7 @@ const columnHelper = createColumnHelper<ClientTypes>();
 export const useClientColumns = (onView: (clientId: number) => void) => {
   return [
     columnHelper.accessor("name", {
-      header: () => <span>name</span>,
+      header: () => <span className=" block text-center">name</span>,
       cell: (info) => {
         return (
           <div className="flex justify-start items-center gap-4">
@@ -24,18 +24,18 @@ export const useClientColumns = (onView: (clientId: number) => void) => {
     }),
 
     columnHelper.accessor("phone", {
-      header: () => <span>phone</span>,
+      header: () => <span className="tabl">phone</span>,
       cell: (info) => (
-        <div className="flex justify-start items-center gap-4">
+        <div className=" block text-center">
           <div>{info.row.original.phone}</div>
           {/* <div>{info.getValue()}</div> */}
         </div>
       ),
     }),
     columnHelper.accessor("email", {
-      header: () => <span>email</span>,
+      header: () => <span className=" block text-center">email</span>,
       cell: (info) => (
-        <div className="flex justify-start items-center gap-4">
+        <div className=" block text-center">
           <div>{info.row.original.email}</div>
           {/* <div>{info.getValue()}</div> */}
         </div>
@@ -43,7 +43,7 @@ export const useClientColumns = (onView: (clientId: number) => void) => {
     }),
 
     columnHelper.accessor("city", {
-      header: () => <span>city</span>,
+      header: () => <span className=" block text-center">city</span>,
       cell: (info) => (
         <div className="flex justify-start items-center gap-4">
           <div>{info.row.original.city}</div>
@@ -52,7 +52,7 @@ export const useClientColumns = (onView: (clientId: number) => void) => {
       ),
     }),
     columnHelper.accessor("status", {
-      header: () => <span>Status</span>,
+      header: () => <span className=" block text-center">Status</span>,
 
       cell: (info) => {
         const status = info.getValue();
@@ -60,16 +60,16 @@ export const useClientColumns = (onView: (clientId: number) => void) => {
       },
     }),
     columnHelper.accessor("number_of_purchases", {
-      header: () => <span>Purchase</span>,
+      header: () => <span className=" block text-center">Purchase</span>,
       cell: (info) => (
-        <div className="flex justify-start items-center gap-4">
+        <div className="block text-center ">
           <div>{info.getValue()}</div>
         </div>
       ),
     }),
     columnHelper.display({
       id: "profile",
-      header: () => <span>Profile</span>,
+      header: () => <span className=" block text-center">Profile</span>,
       cell: ({ row }) => {
         const clientId = row.original.id;
 

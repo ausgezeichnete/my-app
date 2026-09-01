@@ -10,22 +10,28 @@ const columnHelper = createColumnHelper<ClientOrderType>();
 export const useClientOrderColumns = () => {
   return [
     columnHelper.accessor("orderNumber", {
-      header: () => <span>Order Number</span>,
-      cell: (info) => <span className="font-medium">{info.getValue()}</span>,
+      header: () => <span className=" block text-center">Order Number</span>,
+      cell: (info) => (
+        <span className=" block text-center">{info.getValue()}</span>
+      ),
     }),
 
     columnHelper.accessor("product", {
-      header: () => <span>Product</span>,
-      cell: (info) => <span>{info.getValue()}</span>,
+      header: () => <span className=" block text-center">Product</span>,
+      cell: (info) => (
+        <span className=" block text-center">{info.getValue()}</span>
+      ),
     }),
 
     columnHelper.accessor("paymentMethod", {
-      header: () => <span>Payment Method</span>,
-      cell: (info) => <span>{info.getValue()}</span>,
+      header: () => <span className=" block text-center">Payment Method</span>,
+      cell: (info) => (
+        <span className=" block text-center">{info.getValue()}</span>
+      ),
     }),
 
     columnHelper.accessor("orderStatus", {
-      header: () => <span>Status</span>,
+      header: () => <span className=" block text-center">Status</span>,
       cell: (info) => {
         const status = info.getValue();
 
@@ -33,14 +39,14 @@ export const useClientOrderColumns = () => {
           <AppChip
             chipText={status}
             status={status}
-            className="px-2 py-1 rounded-full text-xs font-medium"
+            className="px-2 py-1 rounded-full text-xs font-medium block text-center"
           />
         );
       },
     }),
 
     columnHelper.accessor("receipt", {
-      header: () => <span>Receipt</span>,
+      header: () => <span className=" block text-center">Receipt</span>,
       cell: (info) => (
         <AppButton buttonText="View" variant="contained" width="medium" />
       ),

@@ -75,6 +75,7 @@
   --button-secondary: #3984e3;
   --button-primary-hover: #14b8a5b1;
   --button-secondary-hover: #3984e3;
+  --button-foreground: white;
 
   /* -------------------------------------------------------
      Semantic Status Colors
@@ -136,10 +137,10 @@
 
   --color-button-secondary: var(--button-secondary);
   --color-button-secondary-hover: var(--button-secondary-hover);
+  --color-button-foreground: var(--button-foreground);
   /* -------------------------------------------------------
      Sidebar
      ------------------------------------------------------- */
-
   --color-sidebar: var(--sidebar);
 
   --color-sidebar-foreground: var(--sidebar-foreground);
@@ -186,4 +187,8 @@
   --radius-sm: var(--radius-sm);
   --radius-md: var(--radius-md);
   --radius-lg: var(--radius-lg);
+}
+
+@utility page-header {
+  @apply block text-[25px] uppercase mb-4 mt-3;
 }
