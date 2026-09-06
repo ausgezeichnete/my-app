@@ -6,6 +6,8 @@ import { SellerCard } from "./SellerCard";
 import { AppButton } from "@/common/appButton/appButton";
 export const OrderDetails = () => {
   const order = ORDERS_MOCK_DATA[0];
+  console.log("ORDERS:", ORDERS_MOCK_DATA);
+  console.log("ORDER:", order);
   return (
     <main className="min-h-screen bg-background p-8">
       {" "}
