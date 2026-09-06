@@ -1,0 +1,100 @@
+[
+  {
+    "id": 5102,
+    "orderNumber": "5102",
+    "status": "accepted",
+
+    "product": {
+      "id": 1,
+      "name": "Green Hoodie",
+      "image": "https://img01.ztat.net/article/spp-media-p1/0879a00fcde3449c82dc58383d7a177c/5d4d24fa70404611bfd006e1519687ac.jpg?imwidth=762",
+      "price": 90,
+      "quantity": 1,
+      "size": "M",
+      "color": "Green",
+      "currency": "EUR"
+    },
+
+    "shipping": {
+      "city": "Berlin",
+      "address": "Kurfürstendamm 21, 10719 Berlin"
+    },
+
+    "timeline": [
+      {
+        "id": 1,
+        "title": "Order Accepted",
+        "description": "Your order has been accepted and is currently being prepared.",
+        "date": "February 15, 2026",
+        "time": "12:25",
+        "status": "current"
+      },
+      {
+        "id": 2,
+        "title": "Order Being Prepared",
+        "description": "Your order is being prepared for shipment.",
+        "status": "pending"
+      },
+      {
+        "id": 3,
+        "title": "Order Shipped",
+        "description": "Your order will be handed over to the shipping carrier.",
+        "date": "February 15, 2026",
+        "status": "pending"
+      },
+      {
+        "id": 4,
+        "title": "Delivered to Customer",
+        "description": "The order will be delivered to the customer.",
+        "date": "February 15, 2026",
+        "status": "pending"
+      }
+    ],
+
+    "seller": {
+      "id": 1,
+      "name": "Lukas Schneider",
+      "image": "https://images.unsplash.com/photo-1646408999669-ee7d002cd3fa?fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000",
+      "rating": 4.5
+    },
+
+    "receipt": {
+      "number": "#553265",
+      "date": "February 15, 2026",
+
+      "seller": {
+        "name": "Lukas Schneider",
+        "email": "info@beispiel-shop.de",
+        "phone": "+49 30 12345678"
+      },
+
+      "items": [
+        {
+          "id": 1,
+          "name": "Green Hoodie",
+          "quantity": 1,
+          "size": "M",
+          "color": "Green",
+          "unitPrice": 90,
+          "total": 90
+        },
+        {
+          "id": 2,
+          "name": "Shipping Cost",
+          "quantity": 1,
+          "size": null,
+          "color": null,
+          "unitPrice": 10,
+          "total": 10
+        }
+      ],
+
+      "subtotal": 90,
+      "shipping": 10,
+      "tax": 15,
+      "discount": 10,
+      "total": 105,
+      "currency": "EUR"
+    }
+  }
+]

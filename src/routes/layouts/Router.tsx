@@ -9,6 +9,7 @@ import { FixTransactions } from "@/features/fixTransactions/fixTransactions";
 import { LoginForm } from "@/components/login-form";
 import { Reports } from "@/features/reports/reports";
 import { Product } from "@/features/productManagement/product";
+import { OrderDetails } from "@/features/orderDetails/orderDetails";
 
 export const AppRouter = () => {
   return (
@@ -22,6 +23,7 @@ export const AppRouter = () => {
         <Route path="shipments" element={<Shipment />} />
         <Route path="fix-transactions" element={<FixTransactions />} />
         <Route path="reports" element={<Reports />} />
+        <Route path="order-details/:id" element={<OrderDetails />} />
         <Route path="product-management" element={<Product />} />
       </Route>
     </Routes>

@@ -13,7 +13,8 @@ type Status =
   | "cancelled"
   | "Full Time"
   | "Part Time"
-  | "Contract";
+  | "Contract"
+  | "completed";
 
 type AppChipPros = {
   status?: Status;
@@ -48,6 +49,7 @@ const colorStyles: Record<
   "Full Time": { background: "#4ade80", color: "#166534" },
   "Part Time": { background: "#3b82f6", color: "#1d4ed8" },
   Contract: { background: "#f59e0b", color: "#924005" },
+  completed: { background: "#3aa3a3", color: "#ffffff" },
 };
 
 export const AppChip = ({
