@@ -5,9 +5,9 @@ import { AppButton } from "@/common/appButton/appButton";
 
 import type { ClientOrderType } from "./clientOrders.types";
 
-const columnHelper = createColumnHelper<ClientOrderType>();
+const columnHelper = createColumnHelper<ClientOrderType, unknown>();
 
-export const useClientOrderColumns = () => {
+export const useClientColumns = (onView: (orderId: number) => void) => {
   return [
     columnHelper.accessor("orderNumber", {
       header: () => <span className=" block text-center">Order Number</span>,
@@ -47,9 +47,18 @@ export const useClientOrderColumns = () => {
 
     columnHelper.accessor("receipt", {
       header: () => <span className=" block text-center">Receipt</span>,
-      cell: (info) => (
-        <AppButton buttonText="View" variant="contained" width="medium" />
-      ),
+      cell: ({ row }) => {
+        const orderId = row.original.orderId;
+
+        return (
+          <AppButton
+            buttonText="View"
+            variant="contained"
+            width="medium"
+            onClick={() => onView(orderId)}
+          />
+        );
+      },
     }),
   ];
 };

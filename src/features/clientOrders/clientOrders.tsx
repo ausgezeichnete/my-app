@@ -4,9 +4,10 @@ import CLIENT_MOCK_DATA from "../clients/CLIENTS_MOCK_DATA.json";
 import { useClientOrderColumns } from "./columns";
 import { AppSearchBar } from "@/common/appSearchBar/appSearchBar";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export const ClientOrders = () => {
+  // Get the clientId from the URL parameters
   const { clientId } = useParams<{ clientId: string }>();
 
   const client = CLIENT_MOCK_DATA.find(
@@ -17,8 +18,16 @@ export const ClientOrders = () => {
     (order) => order.clientId === Number(clientId),
   );
 
+  // State for search query
   const [searchQuery, setSearchQuery] = useState("");
-  const columns = useClientOrderColumns();
+
+  //useNavigate hook to navigate to order details page
+  const navigate = useNavigate();
+  const handleViewOrder = (orderId: number) => {
+    navigate(`/order-details/${orderId}`);
+  };
+
+  const columns = useClientOrderColumns(handleViewOrder);
   return (
     <div>
       <h2 className="page-header">

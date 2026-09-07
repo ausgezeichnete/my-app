@@ -1,16 +1,16 @@
 import {
-  useReactTable,
-  getCoreRowModel,
+  useTable,
+  tableFeatures,
   flexRender,
-  type ColumnDef, //
+  type ColumnDef,
 } from "@tanstack/react-table";
 import type { CSSProperties } from "react";
 
-const columns = [{ accessorKey: "name", header: "Name" }];
+export const features = tableFeatures({});
 
 type AppTableProps<T> = {
   data: T[];
-  columns: ColumnDef<T>[];
+  columns: ColumnDef<typeof features, T>[];
 };
 
 const tableStyles: CSSProperties = {
@@ -57,10 +57,11 @@ export default function AppTable<T>({
   data,
   columns,
 }: Readonly<AppTableProps<T>>) {
-  const table = useReactTable({
+  const table = useTable({
+    features,
+    rowModels: {},
     data,
     columns,
-    getCoreRowModel: getCoreRowModel(),
   });
   return (
     <div className="rounded-tl-xl rounded-tr-xl overflow-x-auto w-full">
@@ -85,7 +86,7 @@ export default function AppTable<T>({
         <tbody style={tBodyStyles}>
           {table.getRowModel().rows.map((row) => (
             <tr key={row.id} style={trStyles}>
-              {row.getVisibleCells().map((cell) => (
+              {row.getAllCells().map((cell) => (
                 <td key={cell.id} style={tdStyles}>
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
                 </td>
