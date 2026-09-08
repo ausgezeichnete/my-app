@@ -10,12 +10,14 @@ import { LoginForm } from "@/components/login-form";
 import { Reports } from "@/features/reports/reports";
 import { Product } from "@/features/productManagement/product";
 import { OrderDetails } from "@/features/orderDetails/orderDetails";
+import { HomePage } from "@/features/home/homePage";
 
 export const AppRouter = () => {
   return (
     <Routes>
       <Route path="/" element={<AppLayout />}>
         <Route path="login" element={<LoginForm />} />
+        <Route index element={<HomePage />} />
         <Route path="clients" element={<Clients />} />
         <Route path="client-orders/:clientId" element={<ClientOrders />} />
         <Route path="product-orders" element={<ProductOrder />} />

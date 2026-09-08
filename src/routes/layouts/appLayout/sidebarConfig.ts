@@ -13,9 +13,9 @@ import {
 
 export const items = [
   {
-    id: "main",
-    title: "sidebar.main",
-    name: "main",
+    id: "home",
+    title: "sidebar.home",
+    name: "home",
     url: "/",
     icon: Home,
   },
