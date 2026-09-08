@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "orderNumber": "ORD-10001",
+    "orderNumber": "1",
     "clientId": 1,
     "clientName": "Lukas Müller",
     "product": "Wireless Headphones",
@@ -11,7 +11,7 @@
   },
   {
     "id": 2,
-    "orderNumber": "ORD-10002",
+    "orderNumber": "2",
     "clientId": 1,
     "clientName": "Lukas Müller",
     "product": "Smartphone",
@@ -21,7 +21,7 @@
   },
   {
     "id": 3,
-    "orderNumber": "ORD-10003",
+    "orderNumber": "3",
     "clientId": 1,
     "clientName": "Lukas Müller",
     "product": "Laptop Backpack",
@@ -31,7 +31,7 @@
   },
   {
     "id": 4,
-    "orderNumber": "ORD-10004",
+    "orderNumber": "4",
     "clientId": 2,
     "clientName": "Anna Schmidt",
     "product": "Running Shoes",
@@ -41,7 +41,7 @@
   },
   {
     "id": 5,
-    "orderNumber": "ORD-10005",
+    "orderNumber": "5",
     "clientId": 2,
     "clientName": "Anna Schmidt",
     "product": "Fitness Watch",
@@ -51,7 +51,7 @@
   },
   {
     "id": 6,
-    "orderNumber": "ORD-10006",
+    "orderNumber": "6",
     "clientId": 2,
     "clientName": "Anna Schmidt",
     "product": "Yoga Mat",
@@ -61,7 +61,7 @@
   },
   {
     "id": 7,
-    "orderNumber": "ORD-10007",
+    "orderNumber": "7",
     "clientId": 3,
     "clientName": "Jonas Weber",
     "product": "Gaming Keyboard",
@@ -71,7 +71,7 @@
   },
   {
     "id": 8,
-    "orderNumber": "ORD-10008",
+    "orderNumber": "8",
     "clientId": 3,
     "clientName": "Jonas Weber",
     "product": "Gaming Mouse",
@@ -81,7 +81,7 @@
   },
   {
     "id": 9,
-    "orderNumber": "ORD-10009",
+    "orderNumber": "9",
     "clientId": 3,
     "clientName": "Jonas Weber",
     "product": "27-inch Monitor",
@@ -91,7 +91,7 @@
   },
   {
     "id": 10,
-    "orderNumber": "ORD-10010",
+    "orderNumber": "10",
     "clientId": 4,
     "clientName": "Sophie Fischer",
     "product": "Leather Handbag",
@@ -101,7 +101,7 @@
   },
   {
     "id": 11,
-    "orderNumber": "ORD-10011",
+    "orderNumber": "11",
     "clientId": 4,
     "clientName": "Sophie Fischer",
     "product": "Sunglasses",
@@ -111,7 +111,7 @@
   },
   {
     "id": 12,
-    "orderNumber": "ORD-10012",
+    "orderNumber": "12",
     "clientId": 5,
     "clientName": "Felix Schneider",
     "product": "Bluetooth Speaker",
@@ -121,7 +121,7 @@
   },
   {
     "id": 13,
-    "orderNumber": "ORD-10013",
+    "orderNumber": "13",
     "clientId": 5,
     "clientName": "Felix Schneider",
     "product": "Smart TV",
@@ -131,7 +131,7 @@
   },
   {
     "id": 14,
-    "orderNumber": "ORD-10014",
+    "orderNumber": "14",
     "clientId": 5,
     "clientName": "Felix Schneider",
     "product": "HDMI Cable",
@@ -141,7 +141,7 @@
   },
   {
     "id": 15,
-    "orderNumber": "ORD-10015",
+    "orderNumber": "15",
     "clientId": 6,
     "clientName": "Laura Wagner",
     "product": "Coffee Machine",
@@ -151,7 +151,7 @@
   },
   {
     "id": 16,
-    "orderNumber": "ORD-10016",
+    "orderNumber": "16",
     "clientId": 6,
     "clientName": "Laura Wagner",
     "product": "Electric Kettle",
@@ -161,7 +161,7 @@
   },
   {
     "id": 17,
-    "orderNumber": "ORD-10017",
+    "orderNumber": "17",
     "clientId": 7,
     "clientName": "Maximilian Becker",
     "product": "Winter Jacket",
@@ -171,7 +171,7 @@
   },
   {
     "id": 18,
-    "orderNumber": "ORD-10018",
+    "orderNumber": "18",
     "clientId": 7,
     "clientName": "Maximilian Becker",
     "product": "Leather Boots",
@@ -181,7 +181,7 @@
   },
   {
     "id": 19,
-    "orderNumber": "ORD-10019",
+    "orderNumber": "19",
     "clientId": 8,
     "clientName": "Emma Hoffmann",
     "product": "Skincare Set",
@@ -191,7 +191,7 @@
   },
   {
     "id": 20,
-    "orderNumber": "ORD-10020",
+    "orderNumber": "20",
     "clientId": 8,
     "clientName": "Emma Hoffmann",
     "product": "Perfume",

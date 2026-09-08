@@ -38,7 +38,7 @@ export const AppSidebar = () => {
                         to={url}
                         className={`
                                     group
-                                    text-navbar-text
+                                    text-sidebar-foreground
                                     hover:text-sidebar-accent-foreground
                                     hover:bg-sidebar
                                     hover:border-sidebar-border

@@ -36,7 +36,9 @@ export const OrderProduct = ({ product }: OrderProductProps) => {
           <p className="shrink-0 font-semibold mb-1 mt-1 text-secondary">
             {product.price} {product.currency}
           </p>
-          <p className="font-bold text-border text-[8px]">+10 euro shipping</p>
+          <p className="font-bold text-[8px] text-dark-grey">
+            +10 euro shipping
+          </p>
         </div>
       </div>
     </div>

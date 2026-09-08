@@ -6,7 +6,6 @@ interface AppSearchBarProps {
 }
 
 export const AppSearchBar: React.FC<AppSearchBarProps> = ({
-  placeholder,
   query,
   onQueryChange,
 }) => {
@@ -24,12 +23,11 @@ export const AppSearchBar: React.FC<AppSearchBarProps> = ({
         <Search
           size={18}
           className="absolute left-3 top-1/2 -translate-y-1/2 text-button-primary"
-        />
-
+        />{" "}
         <input
           type="text"
           value={query}
-          placeholder={placeholder}
+          placeholder="Search..."
           onChange={handleInputChange}
           className="bg-white border-0 rounded-2xl py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full "
         />

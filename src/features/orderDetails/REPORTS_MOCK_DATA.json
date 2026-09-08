@@ -1,9 +1,8 @@
 [
   {
-    "id": 5102,
+    "id": 1,
     "orderNumber": "5102",
     "status": "accepted",
-
     "product": {
       "id": 1,
       "name": "Green Hoodie",
@@ -14,12 +13,10 @@
       "color": "Green",
       "currency": "EUR"
     },
-
     "shipping": {
       "city": "Berlin",
       "address": "Kurfürstendamm 21, 10719 Berlin"
     },
-
     "timeline": [
       {
         "id": 1,
@@ -50,24 +47,20 @@
         "status": "pending"
       }
     ],
-
     "seller": {
       "id": 1,
       "name": "Lukas Schneider",
       "image": "https://images.unsplash.com/photo-1646408999669-ee7d002cd3fa?fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000",
       "rating": 4.5
     },
-
     "receipt": {
       "number": "#553265",
       "date": "February 15, 2026",
-
       "seller": {
         "name": "Lukas Schneider",
         "email": "info@beispiel-shop.de",
         "phone": "+49 30 12345678"
       },
-
       "items": [
         {
           "id": 1,
@@ -88,12 +81,1755 @@
           "total": 10
         }
       ],
-
       "subtotal": 90,
       "shipping": 10,
       "tax": 15,
       "discount": 10,
       "total": 105,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": 2,
+    "orderNumber": "ORD-10002",
+    "status": "delivered",
+    "product": {
+      "id": 2,
+      "name": "Smartphone",
+      "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&q=80",
+      "price": 799,
+      "quantity": 1,
+      "size": null,
+      "color": "Black",
+      "currency": "EUR"
+    },
+    "shipping": {
+      "city": "Berlin",
+      "address": "Kurfürstendamm 21, 10719 Berlin"
+    },
+    "timeline": [
+      {
+        "id": 1,
+        "title": "Order Accepted",
+        "description": "Your order has been accepted and is currently being prepared.",
+        "date": "January 10, 2026",
+        "time": "09:00",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Order Being Prepared",
+        "description": "Your order was prepared for shipment.",
+        "date": "January 10, 2026",
+        "time": "15:20",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Order Shipped",
+        "description": "Your order was handed over to the shipping carrier.",
+        "date": "January 11, 2026",
+        "time": "08:30",
+        "status": "completed"
+      },
+      {
+        "id": 4,
+        "title": "Delivered to Customer",
+        "description": "The order was delivered to the customer.",
+        "date": "January 13, 2026",
+        "time": "11:15",
+        "status": "completed"
+      }
+    ],
+    "seller": {
+      "id": 2,
+      "name": "Anna Weber",
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80",
+      "rating": 4.8
+    },
+    "receipt": {
+      "number": "#553266",
+      "date": "January 10, 2026",
+      "seller": {
+        "name": "Anna Weber",
+        "email": "kontakt@techstore-berlin.de",
+        "phone": "+49 30 22334455"
+      },
+      "items": [
+        {
+          "id": 1,
+          "name": "Smartphone",
+          "quantity": 1,
+          "size": null,
+          "color": "Black",
+          "unitPrice": 799,
+          "total": 799
+        },
+        {
+          "id": 2,
+          "name": "Shipping Cost",
+          "quantity": 1,
+          "size": null,
+          "color": null,
+          "unitPrice": 0,
+          "total": 0
+        }
+      ],
+      "subtotal": 799,
+      "shipping": 0,
+      "tax": 151.81,
+      "discount": 50,
+      "total": 900.81,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": 3,
+    "orderNumber": "ORD-10003",
+    "status": "pending",
+    "product": {
+      "id": 3,
+      "name": "Laptop Backpack",
+      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80",
+      "price": 65,
+      "quantity": 1,
+      "size": "One Size",
+      "color": "Black",
+      "currency": "EUR"
+    },
+    "shipping": {
+      "city": "Berlin",
+      "address": "Kurfürstendamm 21, 10719 Berlin"
+    },
+    "timeline": [
+      {
+        "id": 1,
+        "title": "Order Accepted",
+        "description": "Your order has been accepted and is currently being prepared.",
+        "date": "March 4, 2026",
+        "time": "10:10",
+        "status": "current"
+      },
+      {
+        "id": 2,
+        "title": "Order Being Prepared",
+        "description": "Your order is being prepared for shipment.",
+        "status": "pending"
+      },
+      {
+        "id": 3,
+        "title": "Order Shipped",
+        "description": "Your order will be handed over to the shipping carrier.",
+        "status": "pending"
+      },
+      {
+        "id": 4,
+        "title": "Delivered to Customer",
+        "description": "The order will be delivered to the customer.",
+        "status": "pending"
+      }
+    ],
+    "seller": {
+      "id": 3,
+      "name": "Sofia Rossi",
+      "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
+      "rating": 4.6
+    },
+    "receipt": {
+      "number": "#553267",
+      "date": "March 4, 2026",
+      "seller": {
+        "name": "Sofia Rossi",
+        "email": "hello@bagshop-berlin.de",
+        "phone": "+49 30 33445566"
+      },
+      "items": [
+        {
+          "id": 1,
+          "name": "Laptop Backpack",
+          "quantity": 1,
+          "size": "One Size",
+          "color": "Black",
+          "unitPrice": 65,
+          "total": 65
+        },
+        {
+          "id": 2,
+          "name": "Shipping Cost",
+          "quantity": 1,
+          "size": null,
+          "color": null,
+          "unitPrice": 5,
+          "total": 5
+        }
+      ],
+      "subtotal": 65,
+      "shipping": 5,
+      "tax": 12.35,
+      "discount": 0,
+      "total": 82.35,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": 4,
+    "orderNumber": "ORD-10004",
+    "status": "delivered",
+    "product": {
+      "id": 4,
+      "name": "Running Shoes",
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80",
+      "price": 110,
+      "quantity": 1,
+      "size": "42",
+      "color": "Blue",
+      "currency": "EUR"
+    },
+    "shipping": {
+      "city": "Munich",
+      "address": "Maximilianstraße 14, 80539 München"
+    },
+    "timeline": [
+      {
+        "id": 1,
+        "title": "Order Accepted",
+        "description": "Your order has been accepted and is currently being prepared.",
+        "date": "February 1, 2026",
+        "time": "08:45",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Order Being Prepared",
+        "description": "Your order was prepared for shipment.",
+        "date": "February 1, 2026",
+        "time": "14:00",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Order Shipped",
+        "description": "Your order was handed over to the shipping carrier.",
+        "date": "February 2, 2026",
+        "time": "09:15",
+        "status": "completed"
+      },
+      {
+        "id": 4,
+        "title": "Delivered to Customer",
+        "description": "The order was delivered to the customer.",
+        "date": "February 4, 2026",
+        "time": "16:30",
+        "status": "completed"
+      }
+    ],
+    "seller": {
+      "id": 4,
+      "name": "Max Fischer",
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80",
+      "rating": 4.4
+    },
+    "receipt": {
+      "number": "#553268",
+      "date": "February 1, 2026",
+      "seller": {
+        "name": "Max Fischer",
+        "email": "support@sportshop-muenchen.de",
+        "phone": "+49 89 44556677"
+      },
+      "items": [
+        {
+          "id": 1,
+          "name": "Running Shoes",
+          "quantity": 1,
+          "size": "42",
+          "color": "Blue",
+          "unitPrice": 110,
+          "total": 110
+        },
+        {
+          "id": 2,
+          "name": "Shipping Cost",
+          "quantity": 1,
+          "size": null,
+          "color": null,
+          "unitPrice": 5,
+          "total": 5
+        }
+      ],
+      "subtotal": 110,
+      "shipping": 5,
+      "tax": 20.9,
+      "discount": 10,
+      "total": 125.9,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": 5,
+    "orderNumber": "ORD-10005",
+    "status": "inTransit",
+    "product": {
+      "id": 5,
+      "name": "Fitness Watch",
+      "image": "https://images.unsplash.com/photo-1544117519-31a4b719223d?w=800&q=80",
+      "price": 150,
+      "quantity": 1,
+      "size": null,
+      "color": "Black",
+      "currency": "EUR"
+    },
+    "shipping": {
+      "city": "Munich",
+      "address": "Maximilianstraße 14, 80539 München"
+    },
+    "timeline": [
+      {
+        "id": 1,
+        "title": "Order Accepted",
+        "description": "Your order has been accepted and is currently being prepared.",
+        "date": "March 1, 2026",
+        "time": "09:30",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Order Being Prepared",
+        "description": "Your order was prepared for shipment.",
+        "date": "March 1, 2026",
+        "time": "17:00",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Order Shipped",
+        "description": "Your order is on its way with the shipping carrier.",
+        "date": "March 2, 2026",
+        "time": "10:00",
+        "status": "current"
+      },
+      {
+        "id": 4,
+        "title": "Delivered to Customer",
+        "description": "The order will be delivered to the customer.",
+        "status": "pending"
+      }
+    ],
+    "seller": {
+      "id": 5,
+      "name": "Nina Keller",
+      "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&q=80",
+      "rating": 4.7
+    },
+    "receipt": {
+      "number": "#553269",
+      "date": "March 1, 2026",
+      "seller": {
+        "name": "Nina Keller",
+        "email": "info@fitgear-muenchen.de",
+        "phone": "+49 89 55667788"
+      },
+      "items": [
+        {
+          "id": 1,
+          "name": "Fitness Watch",
+          "quantity": 1,
+          "size": null,
+          "color": "Black",
+          "unitPrice": 150,
+          "total": 150
+        },
+        {
+          "id": 2,
+          "name": "Shipping Cost",
+          "quantity": 1,
+          "size": null,
+          "color": null,
+          "unitPrice": 0,
+          "total": 0
+        }
+      ],
+      "subtotal": 150,
+      "shipping": 0,
+      "tax": 28.5,
+      "discount": 0,
+      "total": 178.5,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": 6,
+    "orderNumber": "ORD-10006",
+    "status": "delivered",
+    "product": {
+      "id": 6,
+      "name": "Yoga Mat",
+      "image": "https://images.unsplash.com/photo-1592432678016-e910b452f9a2?w=800&q=80",
+      "price": 35,
+      "quantity": 1,
+      "size": null,
+      "color": "Purple",
+      "currency": "EUR"
+    },
+    "shipping": {
+      "city": "Munich",
+      "address": "Maximilianstraße 14, 80539 München"
+    },
+    "timeline": [
+      {
+        "id": 1,
+        "title": "Order Accepted",
+        "description": "Your order has been accepted and is currently being prepared.",
+        "date": "January 20, 2026",
+        "time": "11:00",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Order Being Prepared",
+        "description": "Your order was prepared for shipment.",
+        "date": "January 20, 2026",
+        "time": "15:40",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Order Shipped",
+        "description": "Your order was handed over to the shipping carrier.",
+        "date": "January 21, 2026",
+        "time": "08:00",
+        "status": "completed"
+      },
+      {
+        "id": 4,
+        "title": "Delivered to Customer",
+        "description": "The order was delivered to the customer.",
+        "date": "January 22, 2026",
+        "time": "13:00",
+        "status": "completed"
+      }
+    ],
+    "seller": {
+      "id": 6,
+      "name": "Paul Richter",
+      "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80",
+      "rating": 4.3
+    },
+    "receipt": {
+      "number": "#553270",
+      "date": "January 20, 2026",
+      "seller": {
+        "name": "Paul Richter",
+        "email": "kontakt@yogawelt-muenchen.de",
+        "phone": "+49 89 66778899"
+      },
+      "items": [
+        {
+          "id": 1,
+          "name": "Yoga Mat",
+          "quantity": 1,
+          "size": null,
+          "color": "Purple",
+          "unitPrice": 35,
+          "total": 35
+        },
+        {
+          "id": 2,
+          "name": "Shipping Cost",
+          "quantity": 1,
+          "size": null,
+          "color": null,
+          "unitPrice": 5,
+          "total": 5
+        }
+      ],
+      "subtotal": 35,
+      "shipping": 5,
+      "tax": 6.65,
+      "discount": 0,
+      "total": 46.65,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": 7,
+    "orderNumber": "ORD-10007",
+    "status": "delivered",
+    "product": {
+      "id": 7,
+      "name": "Gaming Keyboard",
+      "image": "https://images.unsplash.com/photo-1595225476474-70b5da96b1c9?w=800&q=80",
+      "price": 89,
+      "quantity": 1,
+      "size": null,
+      "color": "Black",
+      "currency": "EUR"
+    },
+    "shipping": {
+      "city": "Hamburg",
+      "address": "Mönckebergstraße 7, 20095 Hamburg"
+    },
+    "timeline": [
+      {
+        "id": 1,
+        "title": "Order Accepted",
+        "description": "Your order has been accepted and is currently being prepared.",
+        "date": "February 10, 2026",
+        "time": "10:00",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Order Being Prepared",
+        "description": "Your order was prepared for shipment.",
+        "date": "February 10, 2026",
+        "time": "16:20",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Order Shipped",
+        "description": "Your order was handed over to the shipping carrier.",
+        "date": "February 11, 2026",
+        "time": "09:00",
+        "status": "completed"
+      },
+      {
+        "id": 4,
+        "title": "Delivered to Customer",
+        "description": "The order was delivered to the customer.",
+        "date": "February 13, 2026",
+        "time": "12:45",
+        "status": "completed"
+      }
+    ],
+    "seller": {
+      "id": 7,
+      "name": "Laura Bauer",
+      "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80",
+      "rating": 4.5
+    },
+    "receipt": {
+      "number": "#553271",
+      "date": "February 10, 2026",
+      "seller": {
+        "name": "Laura Bauer",
+        "email": "info@gamershop-hh.de",
+        "phone": "+49 40 77889900"
+      },
+      "items": [
+        {
+          "id": 1,
+          "name": "Gaming Keyboard",
+          "quantity": 1,
+          "size": null,
+          "color": "Black",
+          "unitPrice": 89,
+          "total": 89
+        },
+        {
+          "id": 2,
+          "name": "Shipping Cost",
+          "quantity": 1,
+          "size": null,
+          "color": null,
+          "unitPrice": 5,
+          "total": 5
+        }
+      ],
+      "subtotal": 89,
+      "shipping": 5,
+      "tax": 16.91,
+      "discount": 0,
+      "total": 110.91,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": 8,
+    "orderNumber": "ORD-10008",
+    "status": "pending",
+    "product": {
+      "id": 8,
+      "name": "Gaming Mouse",
+      "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?w=800&q=80",
+      "price": 45,
+      "quantity": 1,
+      "size": null,
+      "color": "Black",
+      "currency": "EUR"
+    },
+    "shipping": {
+      "city": "Hamburg",
+      "address": "Mönckebergstraße 7, 20095 Hamburg"
+    },
+    "timeline": [
+      {
+        "id": 1,
+        "title": "Order Accepted",
+        "description": "Your order has been accepted and is currently being prepared.",
+        "date": "March 5, 2026",
+        "time": "13:00",
+        "status": "current"
+      },
+      {
+        "id": 2,
+        "title": "Order Being Prepared",
+        "description": "Your order is being prepared for shipment.",
+        "status": "pending"
+      },
+      {
+        "id": 3,
+        "title": "Order Shipped",
+        "description": "Your order will be handed over to the shipping carrier.",
+        "status": "pending"
+      },
+      {
+        "id": 4,
+        "title": "Delivered to Customer",
+        "description": "The order will be delivered to the customer.",
+        "status": "pending"
+      }
+    ],
+    "seller": {
+      "id": 8,
+      "name": "Jan Krüger",
+      "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80",
+      "rating": 4.2
+    },
+    "receipt": {
+      "number": "#553272",
+      "date": "March 5, 2026",
+      "seller": {
+        "name": "Jan Krüger",
+        "email": "kontakt@gamershop-hh.de",
+        "phone": "+49 40 88990011"
+      },
+      "items": [
+        {
+          "id": 1,
+          "name": "Gaming Mouse",
+          "quantity": 1,
+          "size": null,
+          "color": "Black",
+          "unitPrice": 45,
+          "total": 45
+        },
+        {
+          "id": 2,
+          "name": "Shipping Cost",
+          "quantity": 1,
+          "size": null,
+          "color": null,
+          "unitPrice": 5,
+          "total": 5
+        }
+      ],
+      "subtotal": 45,
+      "shipping": 5,
+      "tax": 8.55,
+      "discount": 0,
+      "total": 58.55,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": 9,
+    "orderNumber": "ORD-10009",
+    "status": "delivered",
+    "product": {
+      "id": 9,
+      "name": "27-inch Monitor",
+      "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&q=80",
+      "price": 249,
+      "quantity": 1,
+      "size": null,
+      "color": "Black",
+      "currency": "EUR"
+    },
+    "shipping": {
+      "city": "Hamburg",
+      "address": "Mönckebergstraße 7, 20095 Hamburg"
+    },
+    "timeline": [
+      {
+        "id": 1,
+        "title": "Order Accepted",
+        "description": "Your order has been accepted and is currently being prepared.",
+        "date": "January 28, 2026",
+        "time": "09:15",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Order Being Prepared",
+        "description": "Your order was prepared for shipment.",
+        "date": "January 28, 2026",
+        "time": "15:00",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Order Shipped",
+        "description": "Your order was handed over to the shipping carrier.",
+        "date": "January 29, 2026",
+        "time": "08:30",
+        "status": "completed"
+      },
+      {
+        "id": 4,
+        "title": "Delivered to Customer",
+        "description": "The order was delivered to the customer.",
+        "date": "January 31, 2026",
+        "time": "14:10",
+        "status": "completed"
+      }
+    ],
+    "seller": {
+      "id": 1,
+      "name": "Lukas Schneider",
+      "image": "https://images.unsplash.com/photo-1646408999669-ee7d002cd3fa?w=400&q=80",
+      "rating": 4.5
+    },
+    "receipt": {
+      "number": "#553273",
+      "date": "January 28, 2026",
+      "seller": {
+        "name": "Lukas Schneider",
+        "email": "info@technikwelt-hh.de",
+        "phone": "+49 40 99001122"
+      },
+      "items": [
+        {
+          "id": 1,
+          "name": "27-inch Monitor",
+          "quantity": 1,
+          "size": null,
+          "color": "Black",
+          "unitPrice": 249,
+          "total": 249
+        },
+        {
+          "id": 2,
+          "name": "Shipping Cost",
+          "quantity": 1,
+          "size": null,
+          "color": null,
+          "unitPrice": 0,
+          "total": 0
+        }
+      ],
+      "subtotal": 249,
+      "shipping": 0,
+      "tax": 47.31,
+      "discount": 20,
+      "total": 276.31,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": 10,
+    "orderNumber": "ORD-10010",
+    "status": "delivered",
+    "product": {
+      "id": 10,
+      "name": "Leather Handbag",
+      "image": "https://images.unsplash.com/photo-1591561954557-26941169b49e?w=800&q=80",
+      "price": 180,
+      "quantity": 1,
+      "size": "One Size",
+      "color": "Tan",
+      "currency": "EUR"
+    },
+    "shipping": {
+      "city": "Cologne",
+      "address": "Hohe Straße 5, 50667 Köln"
+    },
+    "timeline": [
+      {
+        "id": 1,
+        "title": "Order Accepted",
+        "description": "Your order has been accepted and is currently being prepared.",
+        "date": "February 5, 2026",
+        "time": "10:30",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Order Being Prepared",
+        "description": "Your order was prepared for shipment.",
+        "date": "February 5, 2026",
+        "time": "16:00",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Order Shipped",
+        "description": "Your order was handed over to the shipping carrier.",
+        "date": "February 6, 2026",
+        "time": "09:00",
+        "status": "completed"
+      },
+      {
+        "id": 4,
+        "title": "Delivered to Customer",
+        "description": "The order was delivered to the customer.",
+        "date": "February 8, 2026",
+        "time": "12:00",
+        "status": "completed"
+      }
+    ],
+    "seller": {
+      "id": 2,
+      "name": "Anna Weber",
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80",
+      "rating": 4.8
+    },
+    "receipt": {
+      "number": "#553274",
+      "date": "February 5, 2026",
+      "seller": {
+        "name": "Anna Weber",
+        "email": "hello@ledertaschen-koeln.de",
+        "phone": "+49 221 1122334"
+      },
+      "items": [
+        {
+          "id": 1,
+          "name": "Leather Handbag",
+          "quantity": 1,
+          "size": "One Size",
+          "color": "Tan",
+          "unitPrice": 180,
+          "total": 180
+        },
+        {
+          "id": 2,
+          "name": "Shipping Cost",
+          "quantity": 1,
+          "size": null,
+          "color": null,
+          "unitPrice": 5,
+          "total": 5
+        }
+      ],
+      "subtotal": 180,
+      "shipping": 5,
+      "tax": 34.2,
+      "discount": 0,
+      "total": 219.2,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": 11,
+    "orderNumber": "ORD-10011",
+    "status": "cancelled",
+    "product": {
+      "id": 11,
+      "name": "Sunglasses",
+      "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=800&q=80",
+      "price": 60,
+      "quantity": 1,
+      "size": "One Size",
+      "color": "Black",
+      "currency": "EUR"
+    },
+    "shipping": {
+      "city": "Cologne",
+      "address": "Hohe Straße 5, 50667 Köln"
+    },
+    "timeline": [
+      {
+        "id": 1,
+        "title": "Order Accepted",
+        "description": "Your order has been accepted and is currently being prepared.",
+        "date": "February 20, 2026",
+        "time": "11:00",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Order Cancelled",
+        "description": "The order was cancelled at the customer's request.",
+        "date": "February 21, 2026",
+        "time": "09:00",
+        "status": "cancelled"
+      }
+    ],
+    "seller": {
+      "id": 3,
+      "name": "Sofia Rossi",
+      "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
+      "rating": 4.6
+    },
+    "receipt": {
+      "number": "#553275",
+      "date": "February 20, 2026",
+      "seller": {
+        "name": "Sofia Rossi",
+        "email": "info@brillenshop-koeln.de",
+        "phone": "+49 221 2233445"
+      },
+      "items": [
+        {
+          "id": 1,
+          "name": "Sunglasses",
+          "quantity": 1,
+          "size": "One Size",
+          "color": "Black",
+          "unitPrice": 60,
+          "total": 60
+        },
+        {
+          "id": 2,
+          "name": "Shipping Cost",
+          "quantity": 1,
+          "size": null,
+          "color": null,
+          "unitPrice": 5,
+          "total": 5
+        }
+      ],
+      "subtotal": 60,
+      "shipping": 5,
+      "tax": 11.4,
+      "discount": 0,
+      "total": 76.4,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": 12,
+    "orderNumber": "ORD-10012",
+    "status": "delivered",
+    "product": {
+      "id": 12,
+      "name": "Bluetooth Speaker",
+      "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=800&q=80",
+      "price": 79,
+      "quantity": 1,
+      "size": null,
+      "color": "Red",
+      "currency": "EUR"
+    },
+    "shipping": {
+      "city": "Frankfurt",
+      "address": "Zeil 100, 60313 Frankfurt am Main"
+    },
+    "timeline": [
+      {
+        "id": 1,
+        "title": "Order Accepted",
+        "description": "Your order has been accepted and is currently being prepared.",
+        "date": "January 15, 2026",
+        "time": "09:45",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Order Being Prepared",
+        "description": "Your order was prepared for shipment.",
+        "date": "January 15, 2026",
+        "time": "14:30",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Order Shipped",
+        "description": "Your order was handed over to the shipping carrier.",
+        "date": "January 16, 2026",
+        "time": "08:00",
+        "status": "completed"
+      },
+      {
+        "id": 4,
+        "title": "Delivered to Customer",
+        "description": "The order was delivered to the customer.",
+        "date": "January 18, 2026",
+        "time": "11:30",
+        "status": "completed"
+      }
+    ],
+    "seller": {
+      "id": 4,
+      "name": "Max Fischer",
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80",
+      "rating": 4.4
+    },
+    "receipt": {
+      "number": "#553276",
+      "date": "January 15, 2026",
+      "seller": {
+        "name": "Max Fischer",
+        "email": "kontakt@audiotech-ffm.de",
+        "phone": "+49 69 3344556"
+      },
+      "items": [
+        {
+          "id": 1,
+          "name": "Bluetooth Speaker",
+          "quantity": 1,
+          "size": null,
+          "color": "Red",
+          "unitPrice": 79,
+          "total": 79
+        },
+        {
+          "id": 2,
+          "name": "Shipping Cost",
+          "quantity": 1,
+          "size": null,
+          "color": null,
+          "unitPrice": 5,
+          "total": 5
+        }
+      ],
+      "subtotal": 79,
+      "shipping": 5,
+      "tax": 15.01,
+      "discount": 0,
+      "total": 99.01,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": 13,
+    "orderNumber": "ORD-10013",
+    "status": "inTransit",
+    "product": {
+      "id": 13,
+      "name": "Smart TV",
+      "image": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=800&q=80",
+      "price": 599,
+      "quantity": 1,
+      "size": null,
+      "color": "Black",
+      "currency": "EUR"
+    },
+    "shipping": {
+      "city": "Frankfurt",
+      "address": "Zeil 100, 60313 Frankfurt am Main"
+    },
+    "timeline": [
+      {
+        "id": 1,
+        "title": "Order Accepted",
+        "description": "Your order has been accepted and is currently being prepared.",
+        "date": "March 3, 2026",
+        "time": "10:00",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Order Being Prepared",
+        "description": "Your order was prepared for shipment.",
+        "date": "March 3, 2026",
+        "time": "17:30",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Order Shipped",
+        "description": "Your order is on its way with the shipping carrier.",
+        "date": "March 4, 2026",
+        "time": "09:00",
+        "status": "current"
+      },
+      {
+        "id": 4,
+        "title": "Delivered to Customer",
+        "description": "The order will be delivered to the customer.",
+        "status": "pending"
+      }
+    ],
+    "seller": {
+      "id": 5,
+      "name": "Nina Keller",
+      "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&q=80",
+      "rating": 4.7
+    },
+    "receipt": {
+      "number": "#553277",
+      "date": "March 3, 2026",
+      "seller": {
+        "name": "Nina Keller",
+        "email": "info@elektromarkt-ffm.de",
+        "phone": "+49 69 4455667"
+      },
+      "items": [
+        {
+          "id": 1,
+          "name": "Smart TV",
+          "quantity": 1,
+          "size": null,
+          "color": "Black",
+          "unitPrice": 599,
+          "total": 599
+        },
+        {
+          "id": 2,
+          "name": "Shipping Cost",
+          "quantity": 1,
+          "size": null,
+          "color": null,
+          "unitPrice": 0,
+          "total": 0
+        }
+      ],
+      "subtotal": 599,
+      "shipping": 0,
+      "tax": 113.81,
+      "discount": 30,
+      "total": 682.81,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": 14,
+    "orderNumber": "ORD-10014",
+    "status": "delivered",
+    "product": {
+      "id": 14,
+      "name": "HDMI Cable",
+      "image": "https://images.unsplash.com/photo-1585155770447-2f66e2a397b5?w=800&q=80",
+      "price": 12,
+      "quantity": 1,
+      "size": null,
+      "color": "Black",
+      "currency": "EUR"
+    },
+    "shipping": {
+      "city": "Frankfurt",
+      "address": "Zeil 100, 60313 Frankfurt am Main"
+    },
+    "timeline": [
+      {
+        "id": 1,
+        "title": "Order Accepted",
+        "description": "Your order has been accepted and is currently being prepared.",
+        "date": "February 12, 2026",
+        "time": "13:00",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Order Being Prepared",
+        "description": "Your order was prepared for shipment.",
+        "date": "February 12, 2026",
+        "time": "16:00",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Order Shipped",
+        "description": "Your order was handed over to the shipping carrier.",
+        "date": "February 13, 2026",
+        "time": "08:15",
+        "status": "completed"
+      },
+      {
+        "id": 4,
+        "title": "Delivered to Customer",
+        "description": "The order was delivered to the customer.",
+        "date": "February 14, 2026",
+        "time": "10:00",
+        "status": "completed"
+      }
+    ],
+    "seller": {
+      "id": 6,
+      "name": "Paul Richter",
+      "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80",
+      "rating": 4.3
+    },
+    "receipt": {
+      "number": "#553278",
+      "date": "February 12, 2026",
+      "seller": {
+        "name": "Paul Richter",
+        "email": "kontakt@kabelshop-ffm.de",
+        "phone": "+49 69 5566778"
+      },
+      "items": [
+        {
+          "id": 1,
+          "name": "HDMI Cable",
+          "quantity": 1,
+          "size": null,
+          "color": "Black",
+          "unitPrice": 12,
+          "total": 12
+        },
+        {
+          "id": 2,
+          "name": "Shipping Cost",
+          "quantity": 1,
+          "size": null,
+          "color": null,
+          "unitPrice": 5,
+          "total": 5
+        }
+      ],
+      "subtotal": 12,
+      "shipping": 5,
+      "tax": 2.28,
+      "discount": 0,
+      "total": 19.28,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": 15,
+    "orderNumber": "ORD-10015",
+    "status": "delayed",
+    "product": {
+      "id": 15,
+      "name": "Coffee Machine",
+      "image": "https://images.unsplash.com/photo-1520970014086-2208d157c9e2?w=800&q=80",
+      "price": 129,
+      "quantity": 1,
+      "size": null,
+      "color": "Silver",
+      "currency": "EUR"
+    },
+    "shipping": {
+      "city": "Stuttgart",
+      "address": "Königstraße 30, 70173 Stuttgart"
+    },
+    "timeline": [
+      {
+        "id": 1,
+        "title": "Order Accepted",
+        "description": "Your order has been accepted and is currently being prepared.",
+        "date": "February 25, 2026",
+        "time": "09:00",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Order Being Prepared",
+        "description": "Your order was prepared for shipment.",
+        "date": "February 25, 2026",
+        "time": "15:00",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Order Delayed",
+        "description": "Your order has been delayed and will ship later than expected.",
+        "date": "February 27, 2026",
+        "time": "10:00",
+        "status": "current"
+      },
+      {
+        "id": 4,
+        "title": "Delivered to Customer",
+        "description": "The order will be delivered to the customer.",
+        "status": "pending"
+      }
+    ],
+    "seller": {
+      "id": 7,
+      "name": "Laura Bauer",
+      "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80",
+      "rating": 4.5
+    },
+    "receipt": {
+      "number": "#553279",
+      "date": "February 25, 2026",
+      "seller": {
+        "name": "Laura Bauer",
+        "email": "info@haushaltswelt-stuttgart.de",
+        "phone": "+49 711 6677889"
+      },
+      "items": [
+        {
+          "id": 1,
+          "name": "Coffee Machine",
+          "quantity": 1,
+          "size": null,
+          "color": "Silver",
+          "unitPrice": 129,
+          "total": 129
+        },
+        {
+          "id": 2,
+          "name": "Shipping Cost",
+          "quantity": 1,
+          "size": null,
+          "color": null,
+          "unitPrice": 5,
+          "total": 5
+        }
+      ],
+      "subtotal": 129,
+      "shipping": 5,
+      "tax": 24.51,
+      "discount": 0,
+      "total": 158.51,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": 16,
+    "orderNumber": "ORD-10016",
+    "status": "delivered",
+    "product": {
+      "id": 16,
+      "name": "Electric Kettle",
+      "image": "https://images.unsplash.com/photo-1585237017125-24baf8d7406f?w=800&q=80",
+      "price": 39,
+      "quantity": 1,
+      "size": null,
+      "color": "White",
+      "currency": "EUR"
+    },
+    "shipping": {
+      "city": "Stuttgart",
+      "address": "Königstraße 30, 70173 Stuttgart"
+    },
+    "timeline": [
+      {
+        "id": 1,
+        "title": "Order Accepted",
+        "description": "Your order has been accepted and is currently being prepared.",
+        "date": "January 22, 2026",
+        "time": "10:15",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Order Being Prepared",
+        "description": "Your order was prepared for shipment.",
+        "date": "January 22, 2026",
+        "time": "16:00",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Order Shipped",
+        "description": "Your order was handed over to the shipping carrier.",
+        "date": "January 23, 2026",
+        "time": "08:45",
+        "status": "completed"
+      },
+      {
+        "id": 4,
+        "title": "Delivered to Customer",
+        "description": "The order was delivered to the customer.",
+        "date": "January 24, 2026",
+        "time": "13:20",
+        "status": "completed"
+      }
+    ],
+    "seller": {
+      "id": 8,
+      "name": "Jan Krüger",
+      "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80",
+      "rating": 4.2
+    },
+    "receipt": {
+      "number": "#553280",
+      "date": "January 22, 2026",
+      "seller": {
+        "name": "Jan Krüger",
+        "email": "kontakt@haushaltswelt-stuttgart.de",
+        "phone": "+49 711 7788990"
+      },
+      "items": [
+        {
+          "id": 1,
+          "name": "Electric Kettle",
+          "quantity": 1,
+          "size": null,
+          "color": "White",
+          "unitPrice": 39,
+          "total": 39
+        },
+        {
+          "id": 2,
+          "name": "Shipping Cost",
+          "quantity": 1,
+          "size": null,
+          "color": null,
+          "unitPrice": 5,
+          "total": 5
+        }
+      ],
+      "subtotal": 39,
+      "shipping": 5,
+      "tax": 7.41,
+      "discount": 0,
+      "total": 51.41,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": 17,
+    "orderNumber": "ORD-10017",
+    "status": "delivered",
+    "product": {
+      "id": 17,
+      "name": "Winter Jacket",
+      "image": "https://images.unsplash.com/photo-1547949003-9792a18a2645?w=800&q=80",
+      "price": 150,
+      "quantity": 1,
+      "size": "L",
+      "color": "Navy",
+      "currency": "EUR"
+    },
+    "shipping": {
+      "city": "Düsseldorf",
+      "address": "Königsallee 12, 40212 Düsseldorf"
+    },
+    "timeline": [
+      {
+        "id": 1,
+        "title": "Order Accepted",
+        "description": "Your order has been accepted and is currently being prepared.",
+        "date": "January 5, 2026",
+        "time": "11:30",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Order Being Prepared",
+        "description": "Your order was prepared for shipment.",
+        "date": "January 5, 2026",
+        "time": "16:45",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Order Shipped",
+        "description": "Your order was handed over to the shipping carrier.",
+        "date": "January 6, 2026",
+        "time": "09:00",
+        "status": "completed"
+      },
+      {
+        "id": 4,
+        "title": "Delivered to Customer",
+        "description": "The order was delivered to the customer.",
+        "date": "January 8, 2026",
+        "time": "14:00",
+        "status": "completed"
+      }
+    ],
+    "seller": {
+      "id": 1,
+      "name": "Lukas Schneider",
+      "image": "https://images.unsplash.com/photo-1646408999669-ee7d002cd3fa?w=400&q=80",
+      "rating": 4.5
+    },
+    "receipt": {
+      "number": "#553281",
+      "date": "January 5, 2026",
+      "seller": {
+        "name": "Lukas Schneider",
+        "email": "info@modehaus-duesseldorf.de",
+        "phone": "+49 211 8899001"
+      },
+      "items": [
+        {
+          "id": 1,
+          "name": "Winter Jacket",
+          "quantity": 1,
+          "size": "L",
+          "color": "Navy",
+          "unitPrice": 150,
+          "total": 150
+        },
+        {
+          "id": 2,
+          "name": "Shipping Cost",
+          "quantity": 1,
+          "size": null,
+          "color": null,
+          "unitPrice": 5,
+          "total": 5
+        }
+      ],
+      "subtotal": 150,
+      "shipping": 5,
+      "tax": 28.5,
+      "discount": 15,
+      "total": 168.5,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": 18,
+    "orderNumber": "ORD-10018",
+    "status": "pending",
+    "product": {
+      "id": 18,
+      "name": "Leather Boots",
+      "image": "https://images.unsplash.com/photo-1520639888713-7851133b1ed0?w=800&q=80",
+      "price": 140,
+      "quantity": 1,
+      "size": "43",
+      "color": "Brown",
+      "currency": "EUR"
+    },
+    "shipping": {
+      "city": "Düsseldorf",
+      "address": "Königsallee 12, 40212 Düsseldorf"
+    },
+    "timeline": [
+      {
+        "id": 1,
+        "title": "Order Accepted",
+        "description": "Your order has been accepted and is currently being prepared.",
+        "date": "March 6, 2026",
+        "time": "12:00",
+        "status": "current"
+      },
+      {
+        "id": 2,
+        "title": "Order Being Prepared",
+        "description": "Your order is being prepared for shipment.",
+        "status": "pending"
+      },
+      {
+        "id": 3,
+        "title": "Order Shipped",
+        "description": "Your order will be handed over to the shipping carrier.",
+        "status": "pending"
+      },
+      {
+        "id": 4,
+        "title": "Delivered to Customer",
+        "description": "The order will be delivered to the customer.",
+        "status": "pending"
+      }
+    ],
+    "seller": {
+      "id": 2,
+      "name": "Anna Weber",
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80",
+      "rating": 4.8
+    },
+    "receipt": {
+      "number": "#553282",
+      "date": "March 6, 2026",
+      "seller": {
+        "name": "Anna Weber",
+        "email": "hello@schuhwelt-duesseldorf.de",
+        "phone": "+49 211 9900112"
+      },
+      "items": [
+        {
+          "id": 1,
+          "name": "Leather Boots",
+          "quantity": 1,
+          "size": "43",
+          "color": "Brown",
+          "unitPrice": 140,
+          "total": 140
+        },
+        {
+          "id": 2,
+          "name": "Shipping Cost",
+          "quantity": 1,
+          "size": null,
+          "color": null,
+          "unitPrice": 5,
+          "total": 5
+        }
+      ],
+      "subtotal": 140,
+      "shipping": 5,
+      "tax": 26.6,
+      "discount": 0,
+      "total": 171.6,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": 19,
+    "orderNumber": "ORD-10019",
+    "status": "delivered",
+    "product": {
+      "id": 19,
+      "name": "Skincare Set",
+      "image": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&q=80",
+      "price": 55,
+      "quantity": 1,
+      "size": null,
+      "color": null,
+      "currency": "EUR"
+    },
+    "shipping": {
+      "city": "Leipzig",
+      "address": "Grimmaische Straße 10, 04109 Leipzig"
+    },
+    "timeline": [
+      {
+        "id": 1,
+        "title": "Order Accepted",
+        "description": "Your order has been accepted and is currently being prepared.",
+        "date": "February 8, 2026",
+        "time": "09:30",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Order Being Prepared",
+        "description": "Your order was prepared for shipment.",
+        "date": "February 8, 2026",
+        "time": "14:15",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Order Shipped",
+        "description": "Your order was handed over to the shipping carrier.",
+        "date": "February 9, 2026",
+        "time": "08:00",
+        "status": "completed"
+      },
+      {
+        "id": 4,
+        "title": "Delivered to Customer",
+        "description": "The order was delivered to the customer.",
+        "date": "February 11, 2026",
+        "time": "12:30",
+        "status": "completed"
+      }
+    ],
+    "seller": {
+      "id": 3,
+      "name": "Sofia Rossi",
+      "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
+      "rating": 4.6
+    },
+    "receipt": {
+      "number": "#553283",
+      "date": "February 8, 2026",
+      "seller": {
+        "name": "Sofia Rossi",
+        "email": "info@beautyshop-leipzig.de",
+        "phone": "+49 341 1122334"
+      },
+      "items": [
+        {
+          "id": 1,
+          "name": "Skincare Set",
+          "quantity": 1,
+          "size": null,
+          "color": null,
+          "unitPrice": 55,
+          "total": 55
+        },
+        {
+          "id": 2,
+          "name": "Shipping Cost",
+          "quantity": 1,
+          "size": null,
+          "color": null,
+          "unitPrice": 5,
+          "total": 5
+        }
+      ],
+      "subtotal": 55,
+      "shipping": 5,
+      "tax": 10.45,
+      "discount": 0,
+      "total": 70.45,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": 20,
+    "orderNumber": "ORD-10020",
+    "status": "inTransit",
+    "product": {
+      "id": 20,
+      "name": "Perfume",
+      "image": "https://images.unsplash.com/photo-1541643600914-78b084683601?w=800&q=80",
+      "price": 75,
+      "quantity": 1,
+      "size": null,
+      "color": null,
+      "currency": "EUR"
+    },
+    "shipping": {
+      "city": "Leipzig",
+      "address": "Grimmaische Straße 10, 04109 Leipzig"
+    },
+    "timeline": [
+      {
+        "id": 1,
+        "title": "Order Accepted",
+        "description": "Your order has been accepted and is currently being prepared.",
+        "date": "March 4, 2026",
+        "time": "10:00",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Order Being Prepared",
+        "description": "Your order was prepared for shipment.",
+        "date": "March 4, 2026",
+        "time": "15:30",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Order Shipped",
+        "description": "Your order is on its way with the shipping carrier.",
+        "date": "March 5, 2026",
+        "time": "09:00",
+        "status": "current"
+      },
+      {
+        "id": 4,
+        "title": "Delivered to Customer",
+        "description": "The order will be delivered to the customer.",
+        "status": "pending"
+      }
+    ],
+    "seller": {
+      "id": 4,
+      "name": "Max Fischer",
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80",
+      "rating": 4.4
+    },
+    "receipt": {
+      "number": "#553284",
+      "date": "March 4, 2026",
+      "seller": {
+        "name": "Max Fischer",
+        "email": "kontakt@parfuemerie-leipzig.de",
+        "phone": "+49 341 2233445"
+      },
+      "items": [
+        {
+          "id": 1,
+          "name": "Perfume",
+          "quantity": 1,
+          "size": null,
+          "color": null,
+          "unitPrice": 75,
+          "total": 75
+        },
+        {
+          "id": 2,
+          "name": "Shipping Cost",
+          "quantity": 1,
+          "size": null,
+          "color": null,
+          "unitPrice": 5,
+          "total": 5
+        }
+      ],
+      "subtotal": 75,
+      "shipping": 5,
+      "tax": 14.25,
+      "discount": 5,
+      "total": 89.25,
       "currency": "EUR"
     }
   }

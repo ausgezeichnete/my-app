@@ -1,3 +1,5 @@
+import { Star } from "lucide-react";
+
 type Seller = {
   id: number;
   name: string;
@@ -14,10 +16,19 @@ export const SellerCard = ({ seller }: SellerCardProps) => {
     <div className="flex items-center justify-end rounded-xl bg-white p-5 shadow-sm">
       <div className="text-right">
         <p className="text-xs text-muted-foreground">Seller</p>
-
         <h3 className="font-semibold">{seller.name}</h3>
-
-        <div className="mt-1 text-warning">★★★★★</div>
+        <div className="flex gap-1">
+          {[1, 2, 3, 4, 5].map((star) => (
+            <Star
+              key={star}
+              className={`h-4 w-4 ${
+                star <= seller.rating
+                  ? "fill-highlight stroke-highlight"
+                  : "fill-transparent stroke-dark-grey"
+              }`}
+            />
+          ))}
+        </div>
       </div>
 
       <img

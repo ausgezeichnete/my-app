@@ -9,8 +9,8 @@ export function AppLayout() {
     <SidebarProvider className=" font-open-sans text-base font-normal">
       <AppSidebar />
 
-      <section className="bg-[#F3F6FE] w-full">
-        <div className="">
+      <section className="bg-background w-full">
+        <div>
           <Navbar />
         </div>
 

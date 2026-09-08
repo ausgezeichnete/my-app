@@ -21,8 +21,8 @@ const tableStyles: CSSProperties = {
 
 const theadStyles: CSSProperties = {
   height: 70,
-  // backgroundColor: "#01C0AA26",
-  textAlign: "left",
+  backgroundColor: "var(--color-secondary-accent)",
+  textAlign: "center",
 };
 const thStyles: CSSProperties = {
   padding: 24,
@@ -38,10 +38,9 @@ const thDivStyles: CSSProperties = {
 
 const tBodyStyles: CSSProperties = {
   backgroundColor: "#FFFFFF",
-  textAlign: "left",
 };
 const trStyles: CSSProperties = {
-  borderBottom: "1px solid #E5E7EB",
+  borderBottom: "1px solid var(--table-border)",
 };
 
 const tdStyles: CSSProperties = {
@@ -49,7 +48,7 @@ const tdStyles: CSSProperties = {
   paddingBlock: 16,
   fontSize: 16,
   height: 80,
-  //minWidth: 150,
+  textAlign: "center",
 };
 
 // TODO::

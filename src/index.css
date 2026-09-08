@@ -45,70 +45,45 @@
    ========================================================= */
 
 :root {
-  /* -------------------------------------------------------
-     Brand
-     ------------------------------------------------------- */
-
+  /* ---- Brand ---------------------------------------------------- */
   --primary: #1f263e;
   --secondary: #3aa3a3;
   --accent: #3984e3;
+  --secondary-accent: #01c0aa26;
+  --hightlight: #fcd13d;
 
-  /* -------------------------------------------------------
-     Sidebar
-     ------------------------------------------------------- */
-
+  /* ---- Sidebar ---------------------------------------------------- */
   --sidebar: #1f263e;
-
   --sidebar-foreground: #b1b3bc;
   --sidebar-foreground-hover: #ffffff;
   --sidebar-foreground-active: #ffffff;
-
   --sidebar-accent: #4a598b;
   --sidebar-accent-foreground: #ffffff;
-
   --sidebar-border: #3aa3a3;
 
-  /* -------------------------------------------------------
-     Button
-     ------------------------------------------------------- */
+  /* ---- Button ---------------------------------------------------- */
   --button-primary: #14b8a6;
   --button-secondary: #3984e3;
   --button-primary-hover: #14b8a5b1;
   --button-secondary-hover: #3984e3;
   --button-foreground: white;
 
-  /* -------------------------------------------------------
-     Semantic Status Colors
-     ------------------------------------------------------- */
-
+  /* ---- Semantic Status Colors -------------------------------------- */
   --success: #3aa3a3;
   --success-muted: rgb(58 163 163 / 15%);
-
   --warning: #ffc246;
   --warning-muted: rgb(255 194 70 / 15%);
-
   --error: #ef4444;
   --error-muted: rgb(239 68 68 / 15%);
 
-  /* -------------------------------------------------------
-     UI
-     ------------------------------------------------------- */
-
-  --background: #ffffff;
+  /* ---- UI ---------------------------------------------------- */
+  --background: #f3f6fe;
   --foreground: #1f263e;
+  --table-border: #e5e7eb;
+  --light-grey: #bababa;
+  --dark-grey: #737373;
 
-  --muted: #f5f6f8;
-  --muted-foreground: #6b7280;
-
-  --border: #a7a7a7;
-  --input: #e5e7eb;
-
-  --ring: #3984e3;
-
-  /* -------------------------------------------------------
-     Border Radius
-     ------------------------------------------------------- */
-
+  /* ---- Border Radius ---------------------------------------------------- */
   --radius-sm: 0.25rem;
   --radius-md: 0.375rem;
   --radius-lg: 0.5rem;
@@ -119,76 +94,116 @@
    ========================================================= */
 
 @theme inline {
-  /* -------------------------------------------------------
-     Typography
-     ------------------------------------------------------- */
-
+  /* ---- Typography ---------------------------------------------------- */
   --font-sans: "Open Sans", sans-serif;
 
-  /* -------------------------------------------------------
-     Brand
-     ------------------------------------------------------- */
-
+  /* ---- Brand ---------------------------------------------------- */
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
+  --color-secondary-accent: var(--secondary-accent);
+  --color-highlight: var(--hightlight);
+
   --color-button-primary: var(--button-primary);
   --color-button-primary-hover: var(--button-primary-hover);
-
   --color-button-secondary: var(--button-secondary);
   --color-button-secondary-hover: var(--button-secondary-hover);
   --color-button-foreground: var(--button-foreground);
-  /* -------------------------------------------------------
-     Sidebar
-     ------------------------------------------------------- */
-  --color-sidebar: var(--sidebar);
 
+  /* ---- Sidebar ---------------------------------------------------- */
+  --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-foreground-hover: var(--sidebar-foreground-hover);
   --color-sidebar-foreground-active: var(--sidebar-foreground-active);
-
   --color-sidebar-accent: var(--sidebar-accent);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-
   --color-sidebar-border: var(--sidebar-border);
 
-  /* -------------------------------------------------------
-     Semantic Status Colors
-     ------------------------------------------------------- */
-
-  --color-success: var(--success);
-  --color-success-muted: var(--success-muted);
-
-  --color-warning: var(--warning);
-  --color-warning-muted: var(--warning-muted);
-
-  --color-error: var(--error);
-  --color-error-muted: var(--error-muted);
-
-  /* -------------------------------------------------------
-     UI
-     ------------------------------------------------------- */
-
+  /* ---- UI ---------------------------------------------------- */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-
-  --color-border: var(--border);
+  --color-border: var(--table-border);
   --color-input: var(--input);
-
+  --color-light-grey: var(--light-grey);
+  --color-dark-grey: var(--dark-grey);
   --color-ring: var(--ring);
+  --color-error: var(--error);
 
-  /* -------------------------------------------------------
-     Border Radius
-     ------------------------------------------------------- */
-
+  /* ---- Border Radius ---------------------------------------------------- */
   --radius-sm: var(--radius-sm);
   --radius-md: var(--radius-md);
   --radius-lg: var(--radius-lg);
 }
 
-@utility page-header {
-  @apply block text-[25px] uppercase mb-4 mt-3;
+/* =========================================================
+   Base Element Overrides
+   ========================================================= */
+
+h2 {
+  font-size: 25px;
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* =========================================================
+   Receipt — Export / Print Styling
+   ========================================================= */
+
+/* ---- PDF export mode (applied temporarily by html2canvas capture) ---- */
+.receipt-print-mode {
+  background: #ffffff !important;
+  color: #111827 !important;
+  font-family: "Helvetica Neue", Arial, sans-serif !important;
+  padding: 24px !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.receipt-print-mode button,
+.receipt-print-mode .no-print {
+  display: none !important;
+}
+
+/* ---- Native browser print (window.print) ---- */
+@media print {
+  /* Hide the entire page by default */
+  body * {
+    visibility: hidden;
+  }
+
+  /* Reveal only the receipt */
+  #order-receipt,
+  #order-receipt * {
+    visibility: visible;
+  }
+
+  #order-receipt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px !important;
+    background: #ffffff !important;
+    color: #111827 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* Hide the Download/Print action buttons in the printed output */
+  #order-receipt .receipt-actions {
+    display: none !important;
+  }
+
+  /* Clean, consistent table borders on paper */
+  #order-receipt table,
+  #order-receipt th,
+  #order-receipt td {
+    border-color: #d1d5db !important;
+  }
+
+  /* Avoid splitting a table row across two pages */
+  #order-receipt tr {
+    break-inside: avoid;
+  }
 }

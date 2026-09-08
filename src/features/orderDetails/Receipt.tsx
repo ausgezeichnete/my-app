@@ -1,3 +1,6 @@
+import { AppButton } from "@/common/appButton/appButton";
+import { useDownloadReceipt } from "@/hooks/useDownloadReceipt";
+
 type ReceiptItem = {
   id: number;
   name: string;
@@ -31,10 +34,11 @@ type ReceiptProps = {
 };
 
 export const Receipt = ({ receipt }: ReceiptProps) => {
+  const { downloadReceipt, isDownloading, error } = useDownloadReceipt();
   return (
     <div
       id="order-receipt"
-      className="w-[385px] rounded-xl bg-white p-6 shadow-sm"
+      className="w-96.25 rounded-xl bg-white p-6 shadow-sm"
     >
       {/* Header */}
       <div className="mb-8 flex items-start justify-between">
@@ -123,6 +127,30 @@ export const Receipt = ({ receipt }: ReceiptProps) => {
             <span>
               {receipt.total} {receipt.currency}
             </span>
+          </div>
+          <div className="mt-4 flex gap-3 justify-center receipt-actions">
+            <AppButton
+              buttonText={isDownloading ? "Preparing…" : "Download"}
+              variant="contained"
+              width="medium"
+              disabled={isDownloading}
+              onClick={() =>
+                downloadReceipt("order-receipt", {
+                  fileName: `receipt-${receipt.number}.pdf`, // also fixed below
+                  printClassName: "receipt-print-mode",
+                  margin: 12,
+                  scale: 3,
+                })
+              }
+            />
+            {error && <p className="text-sm text-error mt-2">{error}</p>}
+            <AppButton
+              buttonText="Print"
+              variant="contained"
+              width="medium"
+              color="secondary"
+              onClick={() => window.print()}
+            />
           </div>
         </div>
       </div>

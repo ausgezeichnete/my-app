@@ -15,7 +15,7 @@ type OrderTimelineProps = {
 
 export const OrderTimeline = ({ items }: OrderTimelineProps) => {
   return (
-    <div className="rounded-xl  p-6 shadow-sm">
+    <div className="rounded-xl p-6 shadow-sm bg-white text-[14px]">
       {/* Header */}
       <div className="mb-6 flex items-center justify-between">
         <h2 className="text-lg font-semibold">Current Order Status</h2>
@@ -36,14 +36,13 @@ export const OrderTimeline = ({ items }: OrderTimelineProps) => {
                     h-4 w-4 shrink-0 rounded-full border-4
                     ${
                       item.status === "current"
-                        ? "border-warning bg-white"
+                        ? "border-highlight"
                         : item.status === "completed"
-                          ? "border-success bg-success"
+                          ? "border-amber-50 bg-success"
                           : "border-muted-foreground/30 bg-white"
                     }
                   `}
                 />
-
                 {!isLast && <div className="mt-1 h-full w-px bg-border" />}
               </div>
 
@@ -64,22 +63,20 @@ export const OrderTimeline = ({ items }: OrderTimelineProps) => {
                   </h3>
 
                   {item.time && (
-                    <span className="shrink-0 text-sm text-muted-foreground">
+                    <span className="shrink-0 text-sm text-light-grey">
                       {item.time}
                     </span>
                   )}
                 </div>
 
                 {item.description && (
-                  <p className="mt-1 text-sm text-muted-foreground">
+                  <p className="mt-1 text-sm  text-light-grey">
                     {item.description}
                   </p>
                 )}
 
                 {item.date && (
-                  <p className="mt-1 text-xs text-muted-foreground">
-                    {item.date}
-                  </p>
+                  <p className="mt-1 text-xs  text-light-grey">{item.date}</p>
                 )}
               </div>
             </div>

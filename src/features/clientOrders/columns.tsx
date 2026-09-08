@@ -7,31 +7,25 @@ import type { ClientOrderType } from "./clientOrders.types";
 
 const columnHelper = createColumnHelper<ClientOrderType, unknown>();
 
-export const useClientColumns = (onView: (orderId: number) => void) => {
+export const useClientOrderColumns = (onView: (orderId: number) => void) => {
   return [
     columnHelper.accessor("orderNumber", {
-      header: () => <span className=" block text-center">Order Number</span>,
-      cell: (info) => (
-        <span className=" block text-center">{info.getValue()}</span>
-      ),
+      header: () => <span>Order Number</span>,
+      cell: (info) => <span>{info.getValue()}</span>,
     }),
 
     columnHelper.accessor("product", {
-      header: () => <span className=" block text-center">Product</span>,
-      cell: (info) => (
-        <span className=" block text-center">{info.getValue()}</span>
-      ),
+      header: () => <span>Product</span>,
+      cell: (info) => <span>{info.getValue()}</span>,
     }),
 
     columnHelper.accessor("paymentMethod", {
-      header: () => <span className=" block text-center">Payment Method</span>,
-      cell: (info) => (
-        <span className=" block text-center">{info.getValue()}</span>
-      ),
+      header: () => <span>Payment Method</span>,
+      cell: (info) => <span>{info.getValue()}</span>,
     }),
 
     columnHelper.accessor("orderStatus", {
-      header: () => <span className=" block text-center">Status</span>,
+      header: () => <span>Status</span>,
       cell: (info) => {
         const status = info.getValue();
 
@@ -46,9 +40,9 @@ export const useClientColumns = (onView: (orderId: number) => void) => {
     }),
 
     columnHelper.accessor("receipt", {
-      header: () => <span className=" block text-center">Receipt</span>,
+      header: () => <span>Receipt</span>,
       cell: ({ row }) => {
-        const orderId = row.original.orderId;
+        const orderId = row.original.orderNumber;
 
         return (
           <AppButton
