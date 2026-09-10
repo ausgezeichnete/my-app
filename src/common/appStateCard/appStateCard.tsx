@@ -1,5 +1,7 @@
 import type { HTMLAttributes } from "react";
 type Status =
+  | "active"
+  | "inActive"
   | "accepted"
   | "rejected"
   | "pending"
@@ -27,6 +29,8 @@ type Status =
   | "PartTime"
   | "Contract";
 const statusLabels: Record<Status, string> = {
+  active: "active",
+  inActive: "In active",
   accepted: "Accepted",
   rejected: "Rejected",
   pending: "Pending",
@@ -74,6 +78,15 @@ const colorStyles: Record<
   Status,
   { background: string; color: string; cursor?: string }
 > = {
+  active: {
+    background: "#3aa3a31a",
+    color: "#166534",
+  },
+  inActive: {
+    background: "#ffc2461a",
+    color: "#92400e",
+  },
+
   accepted: {
     background: "#3aa3a31a",
     color: "#166534",

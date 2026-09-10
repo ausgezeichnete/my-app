@@ -2,8 +2,8 @@ import { createColumnHelper } from "@tanstack/react-table";
 import { features } from "@/common/table/table.content";
 import type { ClientTypes } from "./clients.types";
 import { AvatarImage, Avatar } from "@/components/ui/avatar";
-import { AppChip } from "@/common/appChip/appChip";
 import { AppButton } from "@/common/appButton/appButton";
+import { AppStateCard } from "@/common/appStateCard/appStateCard";
 
 const columnHelper = createColumnHelper<typeof features, ClientTypes>();
 
@@ -52,7 +52,14 @@ export const useClientColumns = (onView: (clientId: number) => void) => {
       header: () => <span>Status</span>,
       cell: (info) => {
         const status = info.getValue();
-        return <AppChip chipText={status} status={status} />;
+
+        return (
+          <AppStateCard
+            cardText={status}
+            status={status}
+            className="px-2 py-1 rounded-full text-xs font-medium block text-center"
+          />
+        );
       },
     }),
     columnHelper.accessor("number_of_purchases", {

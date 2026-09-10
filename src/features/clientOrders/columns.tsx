@@ -1,11 +1,11 @@
 import { createColumnHelper } from "@tanstack/react-table";
 
-import { AppChip } from "@/common/appChip/appChip";
 import { AppButton } from "@/common/appButton/appButton";
 
 import type { ClientOrderType } from "./clientOrders.types";
+import { AppStateCard } from "@/common/appStateCard/appStateCard";
 
-const columnHelper = createColumnHelper<ClientOrderType, unknown>();
+export const columnHelper = createColumnHelper<ClientOrderType, unknown>();
 
 export const useClientOrderColumns = (onView: (orderId: number) => void) => {
   return [
@@ -30,8 +30,8 @@ export const useClientOrderColumns = (onView: (orderId: number) => void) => {
         const status = info.getValue();
 
         return (
-          <AppChip
-            chipText={status}
+          <AppStateCard
+            cardText={status}
             status={status}
             className="px-2 py-1 rounded-full text-xs font-medium block text-center"
           />
