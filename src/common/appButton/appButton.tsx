@@ -1,11 +1,7 @@
-import type {
-  PropsWithChildren,
-  ButtonHTMLAttributes,
-  CSSProperties,
-} from "react";
+import type { PropsWithChildren, ButtonHTMLAttributes, ReactNode } from "react";
 
 type Variant = "contained" | "outlined";
-type Color = "primary";
+type Color = "primary" | "secondary";
 type Width = "short" | "medium" | "long";
 
 type AppButtonProps = PropsWithChildren<{
@@ -13,39 +9,29 @@ type AppButtonProps = PropsWithChildren<{
   variant?: Variant;
   color?: Color;
   width?: Width;
+  endIcon?: ReactNode;
 }> &
-  Omit<ButtonHTMLAttributes<HTMLButtonElement>, "">;
+  ButtonHTMLAttributes<HTMLButtonElement>;
 
-const baseStyle = {
-  borderRadius: 12,
-  fontWeight: 300,
-  cursor: "pointer",
-  border: "3px solid transparent",
-  height: "30px",
+const widthStyles: Record<Width, string> = {
+  short: "w-[50px]",
+  medium: "w-[101px]",
+  long: "w-[598px]",
 };
 
-// color:   red
-const widthStyle: Record<Width, CSSProperties> = {
-  short: { width: "50px" },
-  medium: { width: "100px" },
-  long: { width: "150px" },
-};
+const buttonStyles: Record<Color, Record<Variant, string>> = {
+  primary: {
+    contained: "bg-button-primary text-white hover:bg-button-primary-hover",
 
-const colorStyles: Record<Color, { color: string; background: string }> = {
-  primary: { color: "#FFF", background: "#01C0AA" },
-};
+    outlined: "border border-button-primary bg-transparent text-button-primary",
+  },
 
-const variantStyles: Record<Variant, (c: Color) => CSSProperties> = {
-  contained: (c) => ({
-    backgroundColor: colorStyles[c].background,
-    color: colorStyles[c].color,
-  }),
+  secondary: {
+    contained: "bg-button-secondary text-white",
 
-  outlined: (c) => ({
-    backgroundColor: "transparent",
-    color: colorStyles[c].color,
-    border: `1px solid ${colorStyles[c].background}`,
-  }),
+    outlined:
+      "border border-button-secondary bg-transparent text-button-secondary ",
+  },
 };
 
 export const AppButton = ({
@@ -53,17 +39,34 @@ export const AppButton = ({
   variant = "contained",
   color = "primary",
   width,
+  endIcon,
+  className = "",
+  ...props
 }: AppButtonProps) => {
   return (
-    <button
-      style={{
-        ...baseStyle,
-        ...variantStyles[variant](color),
-        ...(width && widthStyle[width]),
-        // ...widthStyle[width]
-      }}
-    >
-      {buttonText}
-    </button>
+    <div className="flex justify-center">
+      <button
+        {...props}
+        className={`
+        h-9.5
+        rounded-xl
+        text-[16px]
+        font-light
+        cursor-pointer
+        flex
+        items-center
+        ${endIcon ? "justify-between" : "justify-center"}        
+        pr-3
+        pl-3
+        ${width ? widthStyles[width] : ""}
+        ${buttonStyles[color][variant]}
+        ${className}
+      `}
+      >
+        <span>{buttonText}</span>
+
+        {endIcon && <span>{endIcon}</span>}
+      </button>
+    </div>
   );
 };

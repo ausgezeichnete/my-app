@@ -1,7 +1,7 @@
 import { createColumnHelper } from "@tanstack/react-table";
-import { Button } from "@/components/ui/button";
 import type { ProductType } from "./productTypes";
 import { AppButton } from "@/common/appButton/appButton";
+import { ChevronDown } from "lucide-react";
 
 const columnHelper = createColumnHelper<ProductType>();
 
@@ -10,13 +10,13 @@ export const useProductColumns = () => {
     columnHelper.accessor("name", {
       header: () => <span>Product Name</span>,
       cell: (info) => (
-        <div className="flex items-center gap-3">
+        <div className="flex gap-2 justify-start">
           <img
             src={info.row.original.image}
             alt={info.getValue()}
-            className="w-10 h-10 rounded-md object-cover bg-accepted"
+            className="w-10 h-10 rounded-md object-cover"
           />
-          <span className="">{info.getValue()}</span>
+          <span>{info.getValue()}</span>
         </div>
       ),
     }),
@@ -52,8 +52,13 @@ export const useProductColumns = () => {
     columnHelper.display({
       id: "actions",
       header: () => <span>Action</span>,
-      cell: ({ row }) => (
-        <AppButton buttonText="Edit" variant="contained" width="medium" />
+      cell: () => (
+        <AppButton
+          buttonText="Edit"
+          variant="contained"
+          width="medium"
+          endIcon={<ChevronDown size={18} />}
+        />
       ),
     }),
   ];

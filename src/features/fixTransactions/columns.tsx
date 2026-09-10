@@ -1,45 +1,51 @@
 import { createColumnHelper } from "@tanstack/react-table";
 import type { FixTransactionType } from "./fixTransactionsTypes";
+import { AppButton } from "@/common/appButton/appButton";
 
 const columnHelper = createColumnHelper<FixTransactionType>();
 
-export const useFixTransactionsColumns = () => {
+export const useFixTransactionsColumns = (
+  onView: (transactionId: number) => void,
+) => {
   return [
     columnHelper.accessor("deliveryManName", {
       header: () => <span>Delivery Man Name</span>,
-      cell: (info) => (
-        <div className="flex justify-start gap-4">{info.getValue()}</div>
-      ),
+      cell: (info) => <div>{info.getValue()}</div>,
     }),
 
     columnHelper.accessor("numberOfShipments", {
       header: () => <span>Number of Shipments</span>,
-      cell: (info) => (
-        <div className="flex justify-start gap-4">{info.getValue()}</div>
-      ),
+      cell: (info) => <div>{info.getValue()}</div>,
     }),
 
     columnHelper.accessor("numberOfSales", {
       header: () => <span>Number of Sales</span>,
-      cell: (info) => (
-        <div className="flex justify-start gap-4">{info.getValue()}</div>
-      ),
+      cell: (info) => <div>{info.getValue()}</div>,
     }),
 
-    columnHelper.accessor("commission", {
-      header: () => <span>Commission</span>,
-      cell: (info) => (
-        <div className="flex justify-start gap-4">{info.getValue()} EGP</div>
-      ),
+    columnHelper.accessor("percentage", {
+      header: () => <span>percentage</span>,
+      cell: (info) => <div>{info.getValue()}</div>,
     }),
 
-    columnHelper.accessor("collectedAmount", {
-      header: () => <span>Collected Amount</span>,
-      cell: (info) => (
-        <div className="flex justify-start gap-4 font-medium">
-          {info.getValue()} EGP
-        </div>
-      ),
+    columnHelper.accessor("totalDue", {
+      header: () => <span>total due</span>,
+      cell: (info) => <div>{info.getValue()} Euro</div>,
+    }),
+
+    columnHelper.accessor("Action", {
+      header: () => <span> Action</span>,
+      cell: (info) => {
+        const transactionId = info.row.original.id;
+        return (
+          <AppButton
+            buttonText="Transafer"
+            variant="contained"
+            width="medium"
+            onClick={() => onView(transactionId)}
+          />
+        );
+      },
     }),
   ];
 };

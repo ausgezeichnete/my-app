@@ -3,6 +3,6 @@ export type FixTransactionType = {
   deliveryManName: string;
   numberOfShipments: number;
   numberOfSales: number;
-  commission: number;
-  collectedAmount: number;
+  percentage: number;
+  totalDue: number;
 };

@@ -4,7 +4,7 @@
     "name": "Mohamed Ali",
     "telephone": "+20 100 123 4567",
     "email": "mohamed.ali@example.com",
-    "activityType": "Full Time",
+    "activityType": "FullTime",
     "profile": "Active delivery man with 3 years of experience"
   },
   {
@@ -12,7 +12,7 @@
     "name": "Omar Khaled",
     "telephone": "+20 101 234 5678",
     "email": "omar.khaled@example.com",
-    "activityType": "Part Time",
+    "activityType": "PartTime",
     "profile": "Part-time delivery man"
   },
   {
@@ -20,7 +20,7 @@
     "name": "Ahmed Samir",
     "telephone": "+20 102 345 6789",
     "email": "ahmed.samir@example.com",
-    "activityType": "Full Time",
+    "activityType": "FullTime",
     "profile": "Experienced delivery man specializing in local deliveries"
   },
   {
@@ -28,7 +28,7 @@
     "name": "Mahmoud Hassan",
     "telephone": "+20 103 456 7890",
     "email": "mahmoud.hassan@example.com",
-    "activityType": "Full Time",
+    "activityType": "FullTime",
     "profile": "Senior delivery man"
   },
   {
@@ -36,7 +36,7 @@
     "name": "Karim Mostafa",
     "telephone": "+20 104 567 8901",
     "email": "karim.mostafa@example.com",
-    "activityType": "Part Time",
+    "activityType": "PartTime",
     "profile": "Part-time delivery man for evening shifts"
   },
   {
@@ -44,7 +44,7 @@
     "name": "Ibrahim Fathy",
     "telephone": "+20 105 678 9012",
     "email": "ibrahim.fathy@example.com",
-    "activityType": "Full Time",
+    "activityType": "FullTime",
     "profile": "Full-time delivery man"
   },
   {
@@ -60,7 +60,7 @@
     "name": "Hassan Mahmoud",
     "telephone": "+20 107 890 1234",
     "email": "hassan.mahmoud@example.com",
-    "activityType": "Full Time",
+    "activityType": "FullTime",
     "profile": "Experienced delivery man"
   },
   {
@@ -68,7 +68,7 @@
     "name": "Yasser Mohamed",
     "telephone": "+20 108 901 2345",
     "email": "yasser.mohamed@example.com",
-    "activityType": "Part Time",
+    "activityType": "PartTime",
     "profile": "Part-time delivery man"
   },
   {
@@ -76,7 +76,7 @@
     "name": "Ali Hassan",
     "telephone": "+20 109 012 3456",
     "email": "ali.hassan@example.com",
-    "activityType": "Full Time",
+    "activityType": "FullTime",
     "profile": "Full-time delivery man with 2 years of experience"
   }
 ]
