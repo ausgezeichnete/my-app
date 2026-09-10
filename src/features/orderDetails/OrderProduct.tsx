@@ -20,13 +20,13 @@ export const OrderProduct = ({ product }: OrderProductProps) => {
         <img
           src={product.image}
           alt={product.name}
-          className="h-20 w-20 shrink-0 rounded-lg object-cover"
+          className="h-23.25 w-19.75 shrink-0 rounded-lg object-cover"
         />
 
         <div className="min-w-0">
-          <h3 className=" font-bold text-primary text-[10px] ">
+          <p className=" font-bold text-primary text-[10px]  ">
             {product.name}-{product.color}
-          </h3>
+          </p>
 
           <p className=" text-[12px]  border text-center border-border px-1.25 py-0.75 gap-2.5 rounded-[8px]  mt-2">
             <span className="mr-2"> Quantity: {product.quantity}</span>

@@ -1,4 +1,4 @@
-import { AppChip } from "@/common/appChip/appChip";
+import { AppStateCard } from "@/common/appStateCard/appStateCard";
 
 type TimelineItem = {
   id: number;
@@ -18,8 +18,10 @@ export const OrderTimeline = ({ items }: OrderTimelineProps) => {
     <div className="rounded-xl p-6 shadow-sm bg-white text-[14px]">
       {/* Header */}
       <div className="mb-6 flex items-center justify-between">
-        <h2 className="text-lg font-semibold">Current Order Status</h2>
-        <AppChip status="completed" chipText="completed" />
+        <div className="text-[12px] font-semibold  border-muted-foreground/30">
+          Current Order Status:
+        </div>
+        <AppStateCard status="accepted" cardText="accepted" />
       </div>
 
       {/* Timeline */}
@@ -28,12 +30,12 @@ export const OrderTimeline = ({ items }: OrderTimelineProps) => {
           const isLast = index === items.length - 1;
 
           return (
-            <div key={item.id} className="flex gap-4">
+            <div key={item.id} className="flex ">
               {/* Indicator */}
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center mr-3 mt-3">
                 <div
                   className={`
-                    h-4 w-4 shrink-0 rounded-full border-4
+                    h-4 w-4 shrink-0 rounded-full border-4 
                     ${
                       item.status === "current"
                         ? "border-highlight"
@@ -48,8 +50,8 @@ export const OrderTimeline = ({ items }: OrderTimelineProps) => {
 
               {/* Content */}
               <div className="min-w-0 flex-1">
-                <div className="flex items-start justify-between gap-4">
-                  <h3
+                <div className="flex items-start justify-between gap-4 text-[16px]">
+                  <div
                     className={`
                       font-bold
                       ${
@@ -60,7 +62,7 @@ export const OrderTimeline = ({ items }: OrderTimelineProps) => {
                     `}
                   >
                     {item.title}
-                  </h3>
+                  </div>
 
                   {item.time && (
                     <span className="shrink-0 text-sm text-light-grey">

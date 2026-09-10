@@ -24,7 +24,7 @@ export const useClientColumns = (onView: (clientId: number) => void) => {
     }),
 
     columnHelper.accessor("phone", {
-      header: () => <span className="tabl">phone</span>,
+      header: () => <span>phone</span>,
       cell: (info) => (
         <div>
           <div>{info.row.original.phone}</div>
@@ -43,7 +43,7 @@ export const useClientColumns = (onView: (clientId: number) => void) => {
     columnHelper.accessor("city", {
       header: () => <span>city</span>,
       cell: (info) => (
-        <div className="flex justify-start items-center gap-4">
+        <div>
           <div>{info.row.original.city}</div>
         </div>
       ),

@@ -1,4 +1,4 @@
-import type { PropsWithChildren, ButtonHTMLAttributes } from "react";
+import type { PropsWithChildren, ButtonHTMLAttributes, ReactNode } from "react";
 
 type Variant = "contained" | "outlined";
 type Color = "primary" | "secondary";
@@ -9,6 +9,7 @@ type AppButtonProps = PropsWithChildren<{
   variant?: Variant;
   color?: Color;
   width?: Width;
+  endIcon?: ReactNode;
 }> &
   ButtonHTMLAttributes<HTMLButtonElement>;
 
@@ -38,24 +39,34 @@ export const AppButton = ({
   variant = "contained",
   color = "primary",
   width,
+  endIcon,
   className = "",
   ...props
 }: AppButtonProps) => {
   return (
-    <button
-      {...props}
-      className={`
+    <div className="flex justify-center">
+      <button
+        {...props}
+        className={`
         h-9.5
         rounded-xl
         text-[16px]
         font-light
         cursor-pointer
+        flex
+        items-center
+        ${endIcon ? "justify-between" : "justify-center"}        
+        pr-3
+        pl-3
         ${width ? widthStyles[width] : ""}
         ${buttonStyles[color][variant]}
         ${className}
       `}
-    >
-      {buttonText}
-    </button>
+      >
+        <span>{buttonText}</span>
+
+        {endIcon && <span>{endIcon}</span>}
+      </button>
+    </div>
   );
 };

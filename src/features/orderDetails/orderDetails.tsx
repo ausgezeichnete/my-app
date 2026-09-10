@@ -24,7 +24,7 @@ export const OrderDetails = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background p-8 space-y-6">
+    <div className="min-h-screen bg-background p-8 space-y-6 ">
       <div className="flex justify-between">
         <h2>Order #{order.orderNumber}</h2>
         <button
@@ -35,12 +35,12 @@ export const OrderDetails = () => {
           Back
         </button>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-[385px_minmax(0,1fr)] gap-6">
-        <aside className="lg:order-1 order-2">
+      <div className="grid grid-cols-1 lg:grid-cols-[433px_minmax(0,1fr)] gap-6">
+        <aside className="lg:order-1 order-2 ">
           <Receipt receipt={order.receipt} />
         </aside>
 
-        <section className="min-w-0 space-y-6 lg:order-2 order-1">
+        <section className="min-w-0 space-y-6 lg:order-2 order-1 ">
           <OrderProduct product={order.product} />
           <OrderTimeline items={order.timeline} />
           <SellerCard seller={order.seller} />

@@ -16,7 +16,7 @@ export const SellerCard = ({ seller }: SellerCardProps) => {
     <div className="flex items-center justify-end rounded-xl bg-white p-5 shadow-sm">
       <div className="text-right">
         <p className="text-xs text-muted-foreground">Seller</p>
-        <h3 className="font-semibold">{seller.name}</h3>
+        <p className="font-semibold">{seller.name}</p>
         <div className="flex gap-1">
           {[1, 2, 3, 4, 5].map((star) => (
             <Star

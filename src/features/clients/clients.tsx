@@ -21,7 +21,7 @@ export const Clients = () => {
 
   return (
     <div>
-      <h2 className="page-header">Clients</h2>
+      <h2>Clients</h2>
       <AppSearchBar query={searchQuery} onQueryChange={setSearchQuery} />
 
       <AppTable data={filteredData} columns={columns} />

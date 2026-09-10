@@ -1,47 +1,50 @@
 import { createColumnHelper } from "@tanstack/react-table";
 import type { DeliveryMenType } from "./deliveryMenTypes";
 import { AppButton } from "@/common/appButton/appButton";
-import { AppChip } from "@/common/appChip/appChip";
+import { AppStateCard } from "@/common/appStateCard/appStateCard";
 
 const columnHelper = createColumnHelper<DeliveryMenType>();
 
-export const useDeliveryMenColumns = () => {
+export const useDeliveryMenColumns = (
+  OnView: (deliverymenId: DeliveryMenType) => void,
+) => {
   return [
     columnHelper.accessor("name", {
-      header: () => <span className=" block text-center">Name</span>,
-      cell: (info) => (
-        <div className=" block text-center">{info.getValue()}</div>
-      ),
+      header: () => <span>Name</span>,
+      cell: (info) => <div>{info.getValue()}</div>,
     }),
 
     columnHelper.accessor("telephone", {
-      header: () => <span className=" block text-center">Telephone</span>,
-      cell: (info) => (
-        <div className=" block text-center">{info.getValue()}</div>
-      ),
+      header: () => <span>Telephone</span>,
+      cell: (info) => <div>{info.getValue()}</div>,
     }),
 
     columnHelper.accessor("email", {
-      header: () => <span className=" block text-center">Email</span>,
-      cell: (info) => (
-        <div className=" block text-center">{info.getValue()}</div>
-      ),
+      header: () => <span>Email</span>,
+      cell: (info) => <div>{info.getValue()}</div>,
     }),
 
     columnHelper.accessor("activityType", {
-      header: () => <span className=" block text-center">Activity</span>,
+      header: () => <span>Activity</span>,
       cell: (info) => {
         const activityType = info.getValue();
-
-        return <AppChip chipText={activityType} status={activityType} />;
+        return <AppStateCard status={activityType} cardText={activityType} />;
       },
     }),
 
-    columnHelper.accessor("profile", {
-      header: () => <span className=" block text-center">Profile</span>,
-      cell: () => (
-        <AppButton buttonText="View" variant="contained" width="medium" />
-      ),
+    columnHelper.accessor("Profile", {
+      header: () => <span> Profile</span>,
+      cell: (info) => {
+        const deliverymenId = info.row.original.id;
+        return (
+          <AppButton
+            buttonText="View"
+            variant="contained"
+            width="medium"
+            onClick={() => onView(deliverymenId)}
+          />
+        );
+      },
     }),
   ];
 };

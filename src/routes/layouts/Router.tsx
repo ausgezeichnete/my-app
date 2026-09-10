@@ -10,7 +10,8 @@ import { LoginForm } from "@/components/login-form";
 import { Reports } from "@/features/reports/reports";
 import { Product } from "@/features/productManagement/product";
 import { OrderDetails } from "@/features/orderDetails/orderDetails";
-import { HomePage } from "@/features/home/homePage";
+import { HomePage } from "@/features/home/HomePage";
+import { ShipmentOrder } from "@/features/ShipmentOrder/ShipmentOrder";
 
 export const AppRouter = () => {
   return (
@@ -23,6 +24,7 @@ export const AppRouter = () => {
         <Route path="product-orders" element={<ProductOrder />} />
         <Route path="delivery-men" element={<DeliveryMen />} />
         <Route path="shipments" element={<Shipment />} />
+        <Route path="shipment-order/:shipmentId" element={<ShipmentOrder />} />
         <Route path="fix-transactions" element={<FixTransactions />} />
         <Route path="reports" element={<Reports />} />
         <Route path="order-details/:id" element={<OrderDetails />} />

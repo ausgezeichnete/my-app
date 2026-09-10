@@ -50,7 +50,6 @@
   --secondary: #3aa3a3;
   --accent: #3984e3;
   --secondary-accent: #01c0aa26;
-  --hightlight: #fcd13d;
 
   /* ---- Sidebar ---------------------------------------------------- */
   --sidebar: #1f263e;
@@ -82,7 +81,9 @@
   --table-border: #e5e7eb;
   --light-grey: #bababa;
   --dark-grey: #737373;
-
+  --hightlight: #fcd13d;
+  --highlight-green: #01c0aa;
+  --muted-foreground: #121212;
   /* ---- Border Radius ---------------------------------------------------- */
   --radius-sm: 0.25rem;
   --radius-md: 0.375rem;
@@ -103,6 +104,8 @@
   --color-accent: var(--accent);
   --color-secondary-accent: var(--secondary-accent);
   --color-highlight: var(--hightlight);
+  --color-highlight-green: var(--highlight-green);
+  --color-muted-foreground: var(--muted-foreground);
 
   --color-button-primary: var(--button-primary);
   --color-button-primary-hover: var(--button-primary-hover);
@@ -143,6 +146,12 @@ h2 {
   font-size: 25px;
   margin-top: 0.75rem;
   margin-bottom: 1rem;
+}
+h3 {
+  font-family: 20px;
+  padding: 10px;
+  width: 142px;
+  height: 48px;
 }
 
 /* =========================================================

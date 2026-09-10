@@ -54,39 +54,42 @@
       "rating": 4.5
     },
     "receipt": {
-      "number": "#553265",
-      "date": "February 15, 2026",
-      "seller": {
-        "name": "Lukas Schneider",
-        "email": "info@beispiel-shop.de",
-        "phone": "+49 30 12345678"
+      "invoiceNumber": "553265",
+      "issueDate": "February 15, 2026",
+      "status": "Paid",
+      "orderLocation": "Online app",
+      "customer": {
+        "name": "Finn Wagner",
+        "phone": "+49 176 5551234",
+        "email": "finn.wagner@example.com",
+        "address": "Kurfürstendamm 21, 10719 Berlin",
+        "notes": "No notes"
       },
       "items": [
         {
           "id": 1,
-          "name": "Green Hoodie",
+          "name": "Green Hoodie (Size: M, Color: Green)",
           "quantity": 1,
-          "size": "M",
-          "color": "Green",
           "unitPrice": 90,
           "total": 90
         },
         {
           "id": 2,
-          "name": "Shipping Cost",
+          "name": "Red Bag",
           "quantity": 1,
-          "size": null,
-          "color": null,
           "unitPrice": 10,
           "total": 10
         }
       ],
-      "subtotal": 90,
-      "shipping": 10,
-      "tax": 15,
       "discount": 10,
-      "total": 105,
-      "currency": "EUR"
+      "shipping": 10,
+      "subtotal": 90,
+      "taxTotal": 15,
+      "invoiceTotal": 105,
+      "amountPaid": 105,
+      "currency": "EUR",
+      "companyName": "Lukas Schneider",
+      "companyLogoUrl": "https://images.unsplash.com/photo-1646408999669-ee7d002cd3fa?fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000"
     }
   },
   {
@@ -148,20 +151,22 @@
       "rating": 4.8
     },
     "receipt": {
-      "number": "#553266",
-      "date": "January 10, 2026",
-      "seller": {
-        "name": "Anna Weber",
-        "email": "kontakt@techstore-berlin.de",
-        "phone": "+49 30 22334455"
+      "invoiceNumber": "553266",
+      "issueDate": "January 10, 2026",
+      "status": "Paid",
+      "orderLocation": "Online app",
+      "customer": {
+        "name": "Finn Wagner",
+        "phone": "+49 176 5551234",
+        "email": "finn.wagner@example.com",
+        "address": "Kurfürstendamm 21, 10719 Berlin",
+        "notes": "No notes"
       },
       "items": [
         {
           "id": 1,
-          "name": "Smartphone",
+          "name": "Smartphone (Color: Black)",
           "quantity": 1,
-          "size": null,
-          "color": "Black",
           "unitPrice": 799,
           "total": 799
         },
@@ -169,18 +174,19 @@
           "id": 2,
           "name": "Shipping Cost",
           "quantity": 1,
-          "size": null,
-          "color": null,
           "unitPrice": 0,
           "total": 0
         }
       ],
-      "subtotal": 799,
-      "shipping": 0,
-      "tax": 151.81,
       "discount": 50,
-      "total": 900.81,
-      "currency": "EUR"
+      "shipping": 0,
+      "subtotal": 799,
+      "taxTotal": 151.81,
+      "invoiceTotal": 900.81,
+      "amountPaid": 900.81,
+      "currency": "EUR",
+      "companyName": "Anna Weber",
+      "companyLogoUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80"
     }
   },
   {
@@ -236,20 +242,22 @@
       "rating": 4.6
     },
     "receipt": {
-      "number": "#553267",
-      "date": "March 4, 2026",
-      "seller": {
-        "name": "Sofia Rossi",
-        "email": "hello@bagshop-berlin.de",
-        "phone": "+49 30 33445566"
+      "invoiceNumber": "553267",
+      "issueDate": "March 4, 2026",
+      "status": "Pending",
+      "orderLocation": "Online app",
+      "customer": {
+        "name": "Finn Wagner",
+        "phone": "+49 176 5551234",
+        "email": "finn.wagner@example.com",
+        "address": "Kurfürstendamm 21, 10719 Berlin",
+        "notes": "No notes"
       },
       "items": [
         {
           "id": 1,
-          "name": "Laptop Backpack",
+          "name": "Laptop Backpack (Size: One Size, Color: Black)",
           "quantity": 1,
-          "size": "One Size",
-          "color": "Black",
           "unitPrice": 65,
           "total": 65
         },
@@ -257,18 +265,19 @@
           "id": 2,
           "name": "Shipping Cost",
           "quantity": 1,
-          "size": null,
-          "color": null,
           "unitPrice": 5,
           "total": 5
         }
       ],
-      "subtotal": 65,
-      "shipping": 5,
-      "tax": 12.35,
       "discount": 0,
-      "total": 82.35,
-      "currency": "EUR"
+      "shipping": 5,
+      "subtotal": 65,
+      "taxTotal": 12.35,
+      "invoiceTotal": 82.35,
+      "amountPaid": 0,
+      "currency": "EUR",
+      "companyName": "Sofia Rossi",
+      "companyLogoUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80"
     }
   },
   {
@@ -330,20 +339,22 @@
       "rating": 4.4
     },
     "receipt": {
-      "number": "#553268",
-      "date": "February 1, 2026",
-      "seller": {
-        "name": "Max Fischer",
-        "email": "support@sportshop-muenchen.de",
-        "phone": "+49 89 44556677"
+      "invoiceNumber": "553268",
+      "issueDate": "February 1, 2026",
+      "status": "Paid",
+      "orderLocation": "Online app",
+      "customer": {
+        "name": "Finn Wagner",
+        "phone": "+49 176 5551234",
+        "email": "finn.wagner@example.com",
+        "address": "Maximilianstraße 14, 80539 München",
+        "notes": "No notes"
       },
       "items": [
         {
           "id": 1,
-          "name": "Running Shoes",
+          "name": "Running Shoes (Size: 42, Color: Blue)",
           "quantity": 1,
-          "size": "42",
-          "color": "Blue",
           "unitPrice": 110,
           "total": 110
         },
@@ -351,18 +362,19 @@
           "id": 2,
           "name": "Shipping Cost",
           "quantity": 1,
-          "size": null,
-          "color": null,
           "unitPrice": 5,
           "total": 5
         }
       ],
-      "subtotal": 110,
-      "shipping": 5,
-      "tax": 20.9,
       "discount": 10,
-      "total": 125.9,
-      "currency": "EUR"
+      "shipping": 5,
+      "subtotal": 110,
+      "taxTotal": 20.9,
+      "invoiceTotal": 125.9,
+      "amountPaid": 125.9,
+      "currency": "EUR",
+      "companyName": "Max Fischer",
+      "companyLogoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80"
     }
   },
   {
@@ -422,20 +434,22 @@
       "rating": 4.7
     },
     "receipt": {
-      "number": "#553269",
-      "date": "March 1, 2026",
-      "seller": {
-        "name": "Nina Keller",
-        "email": "info@fitgear-muenchen.de",
-        "phone": "+49 89 55667788"
+      "invoiceNumber": "553269",
+      "issueDate": "March 1, 2026",
+      "status": "Paid",
+      "orderLocation": "Online app",
+      "customer": {
+        "name": "Finn Wagner",
+        "phone": "+49 176 5551234",
+        "email": "finn.wagner@example.com",
+        "address": "Maximilianstraße 14, 80539 München",
+        "notes": "No notes"
       },
       "items": [
         {
           "id": 1,
-          "name": "Fitness Watch",
+          "name": "Fitness Watch (Color: Black)",
           "quantity": 1,
-          "size": null,
-          "color": "Black",
           "unitPrice": 150,
           "total": 150
         },
@@ -443,18 +457,19 @@
           "id": 2,
           "name": "Shipping Cost",
           "quantity": 1,
-          "size": null,
-          "color": null,
           "unitPrice": 0,
           "total": 0
         }
       ],
-      "subtotal": 150,
-      "shipping": 0,
-      "tax": 28.5,
       "discount": 0,
-      "total": 178.5,
-      "currency": "EUR"
+      "shipping": 0,
+      "subtotal": 150,
+      "taxTotal": 28.5,
+      "invoiceTotal": 178.5,
+      "amountPaid": 178.5,
+      "currency": "EUR",
+      "companyName": "Nina Keller",
+      "companyLogoUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&q=80"
     }
   },
   {
@@ -516,20 +531,22 @@
       "rating": 4.3
     },
     "receipt": {
-      "number": "#553270",
-      "date": "January 20, 2026",
-      "seller": {
-        "name": "Paul Richter",
-        "email": "kontakt@yogawelt-muenchen.de",
-        "phone": "+49 89 66778899"
+      "invoiceNumber": "553270",
+      "issueDate": "January 20, 2026",
+      "status": "Paid",
+      "orderLocation": "Online app",
+      "customer": {
+        "name": "Finn Wagner",
+        "phone": "+49 176 5551234",
+        "email": "finn.wagner@example.com",
+        "address": "Maximilianstraße 14, 80539 München",
+        "notes": "No notes"
       },
       "items": [
         {
           "id": 1,
-          "name": "Yoga Mat",
+          "name": "Yoga Mat (Color: Purple)",
           "quantity": 1,
-          "size": null,
-          "color": "Purple",
           "unitPrice": 35,
           "total": 35
         },
@@ -537,18 +554,19 @@
           "id": 2,
           "name": "Shipping Cost",
           "quantity": 1,
-          "size": null,
-          "color": null,
           "unitPrice": 5,
           "total": 5
         }
       ],
-      "subtotal": 35,
-      "shipping": 5,
-      "tax": 6.65,
       "discount": 0,
-      "total": 46.65,
-      "currency": "EUR"
+      "shipping": 5,
+      "subtotal": 35,
+      "taxTotal": 6.65,
+      "invoiceTotal": 46.65,
+      "amountPaid": 46.65,
+      "currency": "EUR",
+      "companyName": "Paul Richter",
+      "companyLogoUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80"
     }
   },
   {
@@ -610,20 +628,22 @@
       "rating": 4.5
     },
     "receipt": {
-      "number": "#553271",
-      "date": "February 10, 2026",
-      "seller": {
-        "name": "Laura Bauer",
-        "email": "info@gamershop-hh.de",
-        "phone": "+49 40 77889900"
+      "invoiceNumber": "553271",
+      "issueDate": "February 10, 2026",
+      "status": "Paid",
+      "orderLocation": "Online app",
+      "customer": {
+        "name": "Finn Wagner",
+        "phone": "+49 176 5551234",
+        "email": "finn.wagner@example.com",
+        "address": "Mönckebergstraße 7, 20095 Hamburg",
+        "notes": "No notes"
       },
       "items": [
         {
           "id": 1,
-          "name": "Gaming Keyboard",
+          "name": "Gaming Keyboard (Color: Black)",
           "quantity": 1,
-          "size": null,
-          "color": "Black",
           "unitPrice": 89,
           "total": 89
         },
@@ -631,18 +651,19 @@
           "id": 2,
           "name": "Shipping Cost",
           "quantity": 1,
-          "size": null,
-          "color": null,
           "unitPrice": 5,
           "total": 5
         }
       ],
-      "subtotal": 89,
-      "shipping": 5,
-      "tax": 16.91,
       "discount": 0,
-      "total": 110.91,
-      "currency": "EUR"
+      "shipping": 5,
+      "subtotal": 89,
+      "taxTotal": 16.91,
+      "invoiceTotal": 110.91,
+      "amountPaid": 110.91,
+      "currency": "EUR",
+      "companyName": "Laura Bauer",
+      "companyLogoUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80"
     }
   },
   {
@@ -698,20 +719,22 @@
       "rating": 4.2
     },
     "receipt": {
-      "number": "#553272",
-      "date": "March 5, 2026",
-      "seller": {
-        "name": "Jan Krüger",
-        "email": "kontakt@gamershop-hh.de",
-        "phone": "+49 40 88990011"
+      "invoiceNumber": "553272",
+      "issueDate": "March 5, 2026",
+      "status": "Pending",
+      "orderLocation": "Online app",
+      "customer": {
+        "name": "Finn Wagner",
+        "phone": "+49 176 5551234",
+        "email": "finn.wagner@example.com",
+        "address": "Mönckebergstraße 7, 20095 Hamburg",
+        "notes": "No notes"
       },
       "items": [
         {
           "id": 1,
-          "name": "Gaming Mouse",
+          "name": "Gaming Mouse (Color: Black)",
           "quantity": 1,
-          "size": null,
-          "color": "Black",
           "unitPrice": 45,
           "total": 45
         },
@@ -719,18 +742,19 @@
           "id": 2,
           "name": "Shipping Cost",
           "quantity": 1,
-          "size": null,
-          "color": null,
           "unitPrice": 5,
           "total": 5
         }
       ],
-      "subtotal": 45,
-      "shipping": 5,
-      "tax": 8.55,
       "discount": 0,
-      "total": 58.55,
-      "currency": "EUR"
+      "shipping": 5,
+      "subtotal": 45,
+      "taxTotal": 8.55,
+      "invoiceTotal": 58.55,
+      "amountPaid": 0,
+      "currency": "EUR",
+      "companyName": "Jan Krüger",
+      "companyLogoUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80"
     }
   },
   {
@@ -792,20 +816,22 @@
       "rating": 4.5
     },
     "receipt": {
-      "number": "#553273",
-      "date": "January 28, 2026",
-      "seller": {
-        "name": "Lukas Schneider",
-        "email": "info@technikwelt-hh.de",
-        "phone": "+49 40 99001122"
+      "invoiceNumber": "553273",
+      "issueDate": "January 28, 2026",
+      "status": "Paid",
+      "orderLocation": "Online app",
+      "customer": {
+        "name": "Finn Wagner",
+        "phone": "+49 176 5551234",
+        "email": "finn.wagner@example.com",
+        "address": "Mönckebergstraße 7, 20095 Hamburg",
+        "notes": "No notes"
       },
       "items": [
         {
           "id": 1,
-          "name": "27-inch Monitor",
+          "name": "27-inch Monitor (Color: Black)",
           "quantity": 1,
-          "size": null,
-          "color": "Black",
           "unitPrice": 249,
           "total": 249
         },
@@ -813,18 +839,19 @@
           "id": 2,
           "name": "Shipping Cost",
           "quantity": 1,
-          "size": null,
-          "color": null,
           "unitPrice": 0,
           "total": 0
         }
       ],
-      "subtotal": 249,
-      "shipping": 0,
-      "tax": 47.31,
       "discount": 20,
-      "total": 276.31,
-      "currency": "EUR"
+      "shipping": 0,
+      "subtotal": 249,
+      "taxTotal": 47.31,
+      "invoiceTotal": 276.31,
+      "amountPaid": 276.31,
+      "currency": "EUR",
+      "companyName": "Lukas Schneider",
+      "companyLogoUrl": "https://images.unsplash.com/photo-1646408999669-ee7d002cd3fa?w=400&q=80"
     }
   },
   {
@@ -886,20 +913,22 @@
       "rating": 4.8
     },
     "receipt": {
-      "number": "#553274",
-      "date": "February 5, 2026",
-      "seller": {
-        "name": "Anna Weber",
-        "email": "hello@ledertaschen-koeln.de",
-        "phone": "+49 221 1122334"
+      "invoiceNumber": "553274",
+      "issueDate": "February 5, 2026",
+      "status": "Paid",
+      "orderLocation": "Online app",
+      "customer": {
+        "name": "Finn Wagner",
+        "phone": "+49 176 5551234",
+        "email": "finn.wagner@example.com",
+        "address": "Hohe Straße 5, 50667 Köln",
+        "notes": "No notes"
       },
       "items": [
         {
           "id": 1,
-          "name": "Leather Handbag",
+          "name": "Leather Handbag (Size: One Size, Color: Tan)",
           "quantity": 1,
-          "size": "One Size",
-          "color": "Tan",
           "unitPrice": 180,
           "total": 180
         },
@@ -907,18 +936,19 @@
           "id": 2,
           "name": "Shipping Cost",
           "quantity": 1,
-          "size": null,
-          "color": null,
           "unitPrice": 5,
           "total": 5
         }
       ],
-      "subtotal": 180,
-      "shipping": 5,
-      "tax": 34.2,
       "discount": 0,
-      "total": 219.2,
-      "currency": "EUR"
+      "shipping": 5,
+      "subtotal": 180,
+      "taxTotal": 34.2,
+      "invoiceTotal": 219.2,
+      "amountPaid": 219.2,
+      "currency": "EUR",
+      "companyName": "Anna Weber",
+      "companyLogoUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80"
     }
   },
   {
@@ -964,20 +994,22 @@
       "rating": 4.6
     },
     "receipt": {
-      "number": "#553275",
-      "date": "February 20, 2026",
-      "seller": {
-        "name": "Sofia Rossi",
-        "email": "info@brillenshop-koeln.de",
-        "phone": "+49 221 2233445"
+      "invoiceNumber": "553275",
+      "issueDate": "February 20, 2026",
+      "status": "Cancelled",
+      "orderLocation": "Online app",
+      "customer": {
+        "name": "Finn Wagner",
+        "phone": "+49 176 5551234",
+        "email": "finn.wagner@example.com",
+        "address": "Hohe Straße 5, 50667 Köln",
+        "notes": "No notes"
       },
       "items": [
         {
           "id": 1,
-          "name": "Sunglasses",
+          "name": "Sunglasses (Size: One Size, Color: Black)",
           "quantity": 1,
-          "size": "One Size",
-          "color": "Black",
           "unitPrice": 60,
           "total": 60
         },
@@ -985,18 +1017,19 @@
           "id": 2,
           "name": "Shipping Cost",
           "quantity": 1,
-          "size": null,
-          "color": null,
           "unitPrice": 5,
           "total": 5
         }
       ],
-      "subtotal": 60,
-      "shipping": 5,
-      "tax": 11.4,
       "discount": 0,
-      "total": 76.4,
-      "currency": "EUR"
+      "shipping": 5,
+      "subtotal": 60,
+      "taxTotal": 11.4,
+      "invoiceTotal": 76.4,
+      "amountPaid": 0,
+      "currency": "EUR",
+      "companyName": "Sofia Rossi",
+      "companyLogoUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80"
     }
   },
   {
@@ -1058,20 +1091,22 @@
       "rating": 4.4
     },
     "receipt": {
-      "number": "#553276",
-      "date": "January 15, 2026",
-      "seller": {
-        "name": "Max Fischer",
-        "email": "kontakt@audiotech-ffm.de",
-        "phone": "+49 69 3344556"
+      "invoiceNumber": "553276",
+      "issueDate": "January 15, 2026",
+      "status": "Paid",
+      "orderLocation": "Online app",
+      "customer": {
+        "name": "Finn Wagner",
+        "phone": "+49 176 5551234",
+        "email": "finn.wagner@example.com",
+        "address": "Zeil 100, 60313 Frankfurt am Main",
+        "notes": "No notes"
       },
       "items": [
         {
           "id": 1,
-          "name": "Bluetooth Speaker",
+          "name": "Bluetooth Speaker (Color: Red)",
           "quantity": 1,
-          "size": null,
-          "color": "Red",
           "unitPrice": 79,
           "total": 79
         },
@@ -1079,18 +1114,19 @@
           "id": 2,
           "name": "Shipping Cost",
           "quantity": 1,
-          "size": null,
-          "color": null,
           "unitPrice": 5,
           "total": 5
         }
       ],
-      "subtotal": 79,
-      "shipping": 5,
-      "tax": 15.01,
       "discount": 0,
-      "total": 99.01,
-      "currency": "EUR"
+      "shipping": 5,
+      "subtotal": 79,
+      "taxTotal": 15.01,
+      "invoiceTotal": 99.01,
+      "amountPaid": 99.01,
+      "currency": "EUR",
+      "companyName": "Max Fischer",
+      "companyLogoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80"
     }
   },
   {
@@ -1150,20 +1186,22 @@
       "rating": 4.7
     },
     "receipt": {
-      "number": "#553277",
-      "date": "March 3, 2026",
-      "seller": {
-        "name": "Nina Keller",
-        "email": "info@elektromarkt-ffm.de",
-        "phone": "+49 69 4455667"
+      "invoiceNumber": "553277",
+      "issueDate": "March 3, 2026",
+      "status": "Paid",
+      "orderLocation": "Online app",
+      "customer": {
+        "name": "Finn Wagner",
+        "phone": "+49 176 5551234",
+        "email": "finn.wagner@example.com",
+        "address": "Zeil 100, 60313 Frankfurt am Main",
+        "notes": "No notes"
       },
       "items": [
         {
           "id": 1,
-          "name": "Smart TV",
+          "name": "Smart TV (Color: Black)",
           "quantity": 1,
-          "size": null,
-          "color": "Black",
           "unitPrice": 599,
           "total": 599
         },
@@ -1171,18 +1209,19 @@
           "id": 2,
           "name": "Shipping Cost",
           "quantity": 1,
-          "size": null,
-          "color": null,
           "unitPrice": 0,
           "total": 0
         }
       ],
-      "subtotal": 599,
-      "shipping": 0,
-      "tax": 113.81,
       "discount": 30,
-      "total": 682.81,
-      "currency": "EUR"
+      "shipping": 0,
+      "subtotal": 599,
+      "taxTotal": 113.81,
+      "invoiceTotal": 682.81,
+      "amountPaid": 682.81,
+      "currency": "EUR",
+      "companyName": "Nina Keller",
+      "companyLogoUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&q=80"
     }
   },
   {
@@ -1244,20 +1283,22 @@
       "rating": 4.3
     },
     "receipt": {
-      "number": "#553278",
-      "date": "February 12, 2026",
-      "seller": {
-        "name": "Paul Richter",
-        "email": "kontakt@kabelshop-ffm.de",
-        "phone": "+49 69 5566778"
+      "invoiceNumber": "553278",
+      "issueDate": "February 12, 2026",
+      "status": "Paid",
+      "orderLocation": "Online app",
+      "customer": {
+        "name": "Finn Wagner",
+        "phone": "+49 176 5551234",
+        "email": "finn.wagner@example.com",
+        "address": "Zeil 100, 60313 Frankfurt am Main",
+        "notes": "No notes"
       },
       "items": [
         {
           "id": 1,
-          "name": "HDMI Cable",
+          "name": "HDMI Cable (Color: Black)",
           "quantity": 1,
-          "size": null,
-          "color": "Black",
           "unitPrice": 12,
           "total": 12
         },
@@ -1265,18 +1306,19 @@
           "id": 2,
           "name": "Shipping Cost",
           "quantity": 1,
-          "size": null,
-          "color": null,
           "unitPrice": 5,
           "total": 5
         }
       ],
-      "subtotal": 12,
-      "shipping": 5,
-      "tax": 2.28,
       "discount": 0,
-      "total": 19.28,
-      "currency": "EUR"
+      "shipping": 5,
+      "subtotal": 12,
+      "taxTotal": 2.28,
+      "invoiceTotal": 19.28,
+      "amountPaid": 19.28,
+      "currency": "EUR",
+      "companyName": "Paul Richter",
+      "companyLogoUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80"
     }
   },
   {
@@ -1336,20 +1378,22 @@
       "rating": 4.5
     },
     "receipt": {
-      "number": "#553279",
-      "date": "February 25, 2026",
-      "seller": {
-        "name": "Laura Bauer",
-        "email": "info@haushaltswelt-stuttgart.de",
-        "phone": "+49 711 6677889"
+      "invoiceNumber": "553279",
+      "issueDate": "February 25, 2026",
+      "status": "Paid",
+      "orderLocation": "Online app",
+      "customer": {
+        "name": "Finn Wagner",
+        "phone": "+49 176 5551234",
+        "email": "finn.wagner@example.com",
+        "address": "Königstraße 30, 70173 Stuttgart",
+        "notes": "No notes"
       },
       "items": [
         {
           "id": 1,
-          "name": "Coffee Machine",
+          "name": "Coffee Machine (Color: Silver)",
           "quantity": 1,
-          "size": null,
-          "color": "Silver",
           "unitPrice": 129,
           "total": 129
         },
@@ -1357,18 +1401,19 @@
           "id": 2,
           "name": "Shipping Cost",
           "quantity": 1,
-          "size": null,
-          "color": null,
           "unitPrice": 5,
           "total": 5
         }
       ],
-      "subtotal": 129,
-      "shipping": 5,
-      "tax": 24.51,
       "discount": 0,
-      "total": 158.51,
-      "currency": "EUR"
+      "shipping": 5,
+      "subtotal": 129,
+      "taxTotal": 24.51,
+      "invoiceTotal": 158.51,
+      "amountPaid": 158.51,
+      "currency": "EUR",
+      "companyName": "Laura Bauer",
+      "companyLogoUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80"
     }
   },
   {
@@ -1430,20 +1475,22 @@
       "rating": 4.2
     },
     "receipt": {
-      "number": "#553280",
-      "date": "January 22, 2026",
-      "seller": {
-        "name": "Jan Krüger",
-        "email": "kontakt@haushaltswelt-stuttgart.de",
-        "phone": "+49 711 7788990"
+      "invoiceNumber": "553280",
+      "issueDate": "January 22, 2026",
+      "status": "Paid",
+      "orderLocation": "Online app",
+      "customer": {
+        "name": "Finn Wagner",
+        "phone": "+49 176 5551234",
+        "email": "finn.wagner@example.com",
+        "address": "Königstraße 30, 70173 Stuttgart",
+        "notes": "No notes"
       },
       "items": [
         {
           "id": 1,
-          "name": "Electric Kettle",
+          "name": "Electric Kettle (Color: White)",
           "quantity": 1,
-          "size": null,
-          "color": "White",
           "unitPrice": 39,
           "total": 39
         },
@@ -1451,18 +1498,19 @@
           "id": 2,
           "name": "Shipping Cost",
           "quantity": 1,
-          "size": null,
-          "color": null,
           "unitPrice": 5,
           "total": 5
         }
       ],
-      "subtotal": 39,
-      "shipping": 5,
-      "tax": 7.41,
       "discount": 0,
-      "total": 51.41,
-      "currency": "EUR"
+      "shipping": 5,
+      "subtotal": 39,
+      "taxTotal": 7.41,
+      "invoiceTotal": 51.41,
+      "amountPaid": 51.41,
+      "currency": "EUR",
+      "companyName": "Jan Krüger",
+      "companyLogoUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80"
     }
   },
   {
@@ -1524,20 +1572,22 @@
       "rating": 4.5
     },
     "receipt": {
-      "number": "#553281",
-      "date": "January 5, 2026",
-      "seller": {
-        "name": "Lukas Schneider",
-        "email": "info@modehaus-duesseldorf.de",
-        "phone": "+49 211 8899001"
+      "invoiceNumber": "553281",
+      "issueDate": "January 5, 2026",
+      "status": "Paid",
+      "orderLocation": "Online app",
+      "customer": {
+        "name": "Finn Wagner",
+        "phone": "+49 176 5551234",
+        "email": "finn.wagner@example.com",
+        "address": "Königsallee 12, 40212 Düsseldorf",
+        "notes": "No notes"
       },
       "items": [
         {
           "id": 1,
-          "name": "Winter Jacket",
+          "name": "Winter Jacket (Size: L, Color: Navy)",
           "quantity": 1,
-          "size": "L",
-          "color": "Navy",
           "unitPrice": 150,
           "total": 150
         },
@@ -1545,18 +1595,19 @@
           "id": 2,
           "name": "Shipping Cost",
           "quantity": 1,
-          "size": null,
-          "color": null,
           "unitPrice": 5,
           "total": 5
         }
       ],
-      "subtotal": 150,
-      "shipping": 5,
-      "tax": 28.5,
       "discount": 15,
-      "total": 168.5,
-      "currency": "EUR"
+      "shipping": 5,
+      "subtotal": 150,
+      "taxTotal": 28.5,
+      "invoiceTotal": 168.5,
+      "amountPaid": 168.5,
+      "currency": "EUR",
+      "companyName": "Lukas Schneider",
+      "companyLogoUrl": "https://images.unsplash.com/photo-1646408999669-ee7d002cd3fa?w=400&q=80"
     }
   },
   {
@@ -1612,20 +1663,22 @@
       "rating": 4.8
     },
     "receipt": {
-      "number": "#553282",
-      "date": "March 6, 2026",
-      "seller": {
-        "name": "Anna Weber",
-        "email": "hello@schuhwelt-duesseldorf.de",
-        "phone": "+49 211 9900112"
+      "invoiceNumber": "553282",
+      "issueDate": "March 6, 2026",
+      "status": "Pending",
+      "orderLocation": "Online app",
+      "customer": {
+        "name": "Finn Wagner",
+        "phone": "+49 176 5551234",
+        "email": "finn.wagner@example.com",
+        "address": "Königsallee 12, 40212 Düsseldorf",
+        "notes": "No notes"
       },
       "items": [
         {
           "id": 1,
-          "name": "Leather Boots",
+          "name": "Leather Boots (Size: 43, Color: Brown)",
           "quantity": 1,
-          "size": "43",
-          "color": "Brown",
           "unitPrice": 140,
           "total": 140
         },
@@ -1633,18 +1686,19 @@
           "id": 2,
           "name": "Shipping Cost",
           "quantity": 1,
-          "size": null,
-          "color": null,
           "unitPrice": 5,
           "total": 5
         }
       ],
-      "subtotal": 140,
-      "shipping": 5,
-      "tax": 26.6,
       "discount": 0,
-      "total": 171.6,
-      "currency": "EUR"
+      "shipping": 5,
+      "subtotal": 140,
+      "taxTotal": 26.6,
+      "invoiceTotal": 171.6,
+      "amountPaid": 0,
+      "currency": "EUR",
+      "companyName": "Anna Weber",
+      "companyLogoUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80"
     }
   },
   {
@@ -1706,20 +1760,22 @@
       "rating": 4.6
     },
     "receipt": {
-      "number": "#553283",
-      "date": "February 8, 2026",
-      "seller": {
-        "name": "Sofia Rossi",
-        "email": "info@beautyshop-leipzig.de",
-        "phone": "+49 341 1122334"
+      "invoiceNumber": "553283",
+      "issueDate": "February 8, 2026",
+      "status": "Paid",
+      "orderLocation": "Online app",
+      "customer": {
+        "name": "Finn Wagner",
+        "phone": "+49 176 5551234",
+        "email": "finn.wagner@example.com",
+        "address": "Grimmaische Straße 10, 04109 Leipzig",
+        "notes": "No notes"
       },
       "items": [
         {
           "id": 1,
           "name": "Skincare Set",
           "quantity": 1,
-          "size": null,
-          "color": null,
           "unitPrice": 55,
           "total": 55
         },
@@ -1727,18 +1783,19 @@
           "id": 2,
           "name": "Shipping Cost",
           "quantity": 1,
-          "size": null,
-          "color": null,
           "unitPrice": 5,
           "total": 5
         }
       ],
-      "subtotal": 55,
-      "shipping": 5,
-      "tax": 10.45,
       "discount": 0,
-      "total": 70.45,
-      "currency": "EUR"
+      "shipping": 5,
+      "subtotal": 55,
+      "taxTotal": 10.45,
+      "invoiceTotal": 70.45,
+      "amountPaid": 70.45,
+      "currency": "EUR",
+      "companyName": "Sofia Rossi",
+      "companyLogoUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80"
     }
   },
   {
@@ -1798,20 +1855,22 @@
       "rating": 4.4
     },
     "receipt": {
-      "number": "#553284",
-      "date": "March 4, 2026",
-      "seller": {
-        "name": "Max Fischer",
-        "email": "kontakt@parfuemerie-leipzig.de",
-        "phone": "+49 341 2233445"
+      "invoiceNumber": "553284",
+      "issueDate": "March 4, 2026",
+      "status": "Paid",
+      "orderLocation": "Online app",
+      "customer": {
+        "name": "Finn Wagner",
+        "phone": "+49 176 5551234",
+        "email": "finn.wagner@example.com",
+        "address": "Grimmaische Straße 10, 04109 Leipzig",
+        "notes": "No notes"
       },
       "items": [
         {
           "id": 1,
           "name": "Perfume",
           "quantity": 1,
-          "size": null,
-          "color": null,
           "unitPrice": 75,
           "total": 75
         },
@@ -1819,18 +1878,19 @@
           "id": 2,
           "name": "Shipping Cost",
           "quantity": 1,
-          "size": null,
-          "color": null,
           "unitPrice": 5,
           "total": 5
         }
       ],
-      "subtotal": 75,
-      "shipping": 5,
-      "tax": 14.25,
       "discount": 5,
-      "total": 89.25,
-      "currency": "EUR"
+      "shipping": 5,
+      "subtotal": 75,
+      "taxTotal": 14.25,
+      "invoiceTotal": 89.25,
+      "amountPaid": 89.25,
+      "currency": "EUR",
+      "companyName": "Max Fischer",
+      "companyLogoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80"
     }
   }
 ]
