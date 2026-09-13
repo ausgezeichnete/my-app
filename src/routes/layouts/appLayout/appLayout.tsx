@@ -6,16 +6,16 @@ import { Outlet } from "react-router-dom";
 
 export function AppLayout() {
   return (
-    <SidebarProvider>
+    <SidebarProvider className=" font-open-sans text-base font-normal">
       <AppSidebar />
 
-      <section className="bg-[#F3F6FE] w-full">
-        <div className="h-17.5 flex items-center justify-between">
+      <section className="bg-background w-full">
+        <div>
           <Navbar />
         </div>
 
         {/* Content */}
-        <div className="grid grid-cols-12 grid-row-12 mx-10">
+        <div className="grid grid-cols-12 grid-row-12 mx-10 ">
           <div className="col-start-1 col-end-13 row-start-1 row-end-13">
             <Outlet />
           </div>

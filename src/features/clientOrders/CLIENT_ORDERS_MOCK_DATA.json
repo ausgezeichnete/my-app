@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "orderNumber": "1",
+    "clientId": 1,
+    "clientName": "Lukas Müller",
+    "product": "Wireless Headphones",
+    "paymentMethod": "Credit Card",
+    "orderStatus": "delivered",
+    "receipt": "REC-10001"
+  },
+  {
+    "id": 2,
+    "orderNumber": "2",
+    "clientId": 1,
+    "clientName": "Lukas Müller",
+    "product": "Smartphone",
+    "paymentMethod": "PayPal",
+    "orderStatus": "delivered",
+    "receipt": "REC-10002"
+  },
+  {
+    "id": 3,
+    "orderNumber": "3",
+    "clientId": 1,
+    "clientName": "Lukas Müller",
+    "product": "Laptop Backpack",
+    "paymentMethod": "Credit Card",
+    "orderStatus": "pending",
+    "receipt": "REC-10003"
+  },
+  {
+    "id": 4,
+    "orderNumber": "4",
+    "clientId": 2,
+    "clientName": "Anna Schmidt",
+    "product": "Running Shoes",
+    "paymentMethod": "Debit Card",
+    "orderStatus": "delivered",
+    "receipt": "REC-10004"
+  },
+  {
+    "id": 5,
+    "orderNumber": "5",
+    "clientId": 2,
+    "clientName": "Anna Schmidt",
+    "product": "Fitness Watch",
+    "paymentMethod": "PayPal",
+    "orderStatus": "inTransit",
+    "receipt": "REC-10005"
+  },
+  {
+    "id": 6,
+    "orderNumber": "6",
+    "clientId": 2,
+    "clientName": "Anna Schmidt",
+    "product": "Yoga Mat",
+    "paymentMethod": "Credit Card",
+    "orderStatus": "delivered",
+    "receipt": "REC-10006"
+  },
+  {
+    "id": 7,
+    "orderNumber": "7",
+    "clientId": 3,
+    "clientName": "Jonas Weber",
+    "product": "Gaming Keyboard",
+    "paymentMethod": "Credit Card",
+    "orderStatus": "delivered",
+    "receipt": "REC-10007"
+  },
+  {
+    "id": 8,
+    "orderNumber": "8",
+    "clientId": 3,
+    "clientName": "Jonas Weber",
+    "product": "Gaming Mouse",
+    "paymentMethod": "PayPal",
+    "orderStatus": "pending",
+    "receipt": "REC-10008"
+  },
+  {
+    "id": 9,
+    "orderNumber": "9",
+    "clientId": 3,
+    "clientName": "Jonas Weber",
+    "product": "27-inch Monitor",
+    "paymentMethod": "Debit Card",
+    "orderStatus": "delivered",
+    "receipt": "REC-10009"
+  },
+  {
+    "id": 10,
+    "orderNumber": "10",
+    "clientId": 4,
+    "clientName": "Sophie Fischer",
+    "product": "Leather Handbag",
+    "paymentMethod": "Credit Card",
+    "orderStatus": "delivered",
+    "receipt": "REC-10010"
+  },
+  {
+    "id": 11,
+    "orderNumber": "11",
+    "clientId": 4,
+    "clientName": "Sophie Fischer",
+    "product": "Sunglasses",
+    "paymentMethod": "PayPal",
+    "orderStatus": "cancelled",
+    "receipt": "REC-10011"
+  },
+  {
+    "id": 12,
+    "orderNumber": "12",
+    "clientId": 5,
+    "clientName": "Felix Schneider",
+    "product": "Bluetooth Speaker",
+    "paymentMethod": "Credit Card",
+    "orderStatus": "delivered",
+    "receipt": "REC-10012"
+  },
+  {
+    "id": 13,
+    "orderNumber": "13",
+    "clientId": 5,
+    "clientName": "Felix Schneider",
+    "product": "Smart TV",
+    "paymentMethod": "Debit Card",
+    "orderStatus": "inTransit",
+    "receipt": "REC-10013"
+  },
+  {
+    "id": 14,
+    "orderNumber": "14",
+    "clientId": 5,
+    "clientName": "Felix Schneider",
+    "product": "HDMI Cable",
+    "paymentMethod": "PayPal",
+    "orderStatus": "delivered",
+    "receipt": "REC-10014"
+  },
+  {
+    "id": 15,
+    "orderNumber": "15",
+    "clientId": 6,
+    "clientName": "Laura Wagner",
+    "product": "Coffee Machine",
+    "paymentMethod": "Credit Card",
+    "orderStatus": "delayed",
+    "receipt": "REC-10015"
+  },
+  {
+    "id": 16,
+    "orderNumber": "16",
+    "clientId": 6,
+    "clientName": "Laura Wagner",
+    "product": "Electric Kettle",
+    "paymentMethod": "PayPal",
+    "orderStatus": "delivered",
+    "receipt": "REC-10016"
+  },
+  {
+    "id": 17,
+    "orderNumber": "17",
+    "clientId": 7,
+    "clientName": "Maximilian Becker",
+    "product": "Winter Jacket",
+    "paymentMethod": "Debit Card",
+    "orderStatus": "delivered",
+    "receipt": "REC-10017"
+  },
+  {
+    "id": 18,
+    "orderNumber": "18",
+    "clientId": 7,
+    "clientName": "Maximilian Becker",
+    "product": "Leather Boots",
+    "paymentMethod": "Credit Card",
+    "orderStatus": "pending",
+    "receipt": "REC-10018"
+  },
+  {
+    "id": 19,
+    "orderNumber": "19",
+    "clientId": 8,
+    "clientName": "Emma Hoffmann",
+    "product": "Skincare Set",
+    "paymentMethod": "PayPal",
+    "orderStatus": "delivered",
+    "receipt": "REC-10019"
+  },
+  {
+    "id": 20,
+    "orderNumber": "20",
+    "clientId": 8,
+    "clientName": "Emma Hoffmann",
+    "product": "Perfume",
+    "paymentMethod": "Credit Card",
+    "orderStatus": "inTransit",
+    "receipt": "REC-10020"
+  }
+]
