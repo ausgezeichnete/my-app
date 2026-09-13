@@ -5,6 +5,6 @@ export type ClientTypes = {
   email: string;
   city: string;
   number_of_purchases: number;
-  status: "active" | "inActive" | "suspended";
+  status: "active" | "in active" | "suspended";
   image: string;
 };

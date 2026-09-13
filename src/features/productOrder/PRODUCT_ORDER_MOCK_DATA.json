@@ -1,82 +1,92 @@
 [
   {
-    "orderNumber": "ORD-1001",
+    "id": 1,
+    "orderNumber": "#5102",
     "clientName": "John Smith",
     "product": "Wireless Mouse",
-    "paymentOption": "Online",
-    "orderStatus": "Delivered",
+    "paymentOption": "paymentCompleted",
+    "orderStatus": "delivered",
     "receipt": "RCT-1001.pdf"
   },
   {
-    "orderNumber": "ORD-1002",
+    "id": 2,
+    "orderNumber": "#5103",
     "clientName": "Emma Johnson",
     "product": "Mechanical Keyboard",
-    "paymentOption": "Cash on Delivery",
-    "orderStatus": "Processing",
+    "paymentOption": "paymentPending",
+    "orderStatus": "processing",
     "receipt": "RCT-1002.pdf"
   },
   {
-    "orderNumber": "ORD-1003",
+    "id": 3,
+    "orderNumber": "#5104",
     "clientName": "Michael Brown",
     "product": "27-inch Monitor",
-    "paymentOption": "Online",
-    "orderStatus": "Shipped",
+    "paymentOption": "paymentCompleted",
+    "orderStatus": "shipped",
     "receipt": "RCT-1003.pdf"
   },
   {
-    "orderNumber": "ORD-1004",
+    "id": 4,
+    "orderNumber": "#5105",
     "clientName": "Sophia Davis",
     "product": "USB-C Hub",
-    "paymentOption": "Online",
-    "orderStatus": "Pending",
+    "paymentOption": "awaitingPayment",
+    "orderStatus": "pending",
     "receipt": null
   },
   {
-    "orderNumber": "ORD-1005",
+    "id": 5,
+    "orderNumber": "#5106",
     "clientName": "Daniel Wilson",
     "product": "Gaming Headset",
-    "paymentOption": "Cash on Delivery",
-    "orderStatus": "Cancelled",
+    "paymentOption": "paymentCancelled",
+    "orderStatus": "cancelled",
     "receipt": null
   },
   {
-    "orderNumber": "ORD-1006",
+    "id": 6,
+    "orderNumber": "#5107",
     "clientName": "Olivia Martinez",
     "product": "Laptop Stand",
-    "paymentOption": "Online",
-    "orderStatus": "Delivered",
+    "paymentOption": "paymentCompleted",
+    "orderStatus": "delivered",
     "receipt": "RCT-1006.pdf"
   },
   {
-    "orderNumber": "ORD-1007",
+    "id": 7,
+    "orderNumber": "#5108",
     "clientName": "James Anderson",
     "product": "External SSD 1TB",
-    "paymentOption": "Online",
-    "orderStatus": "Returned",
+    "paymentOption": "paymentRefunded",
+    "orderStatus": "returned",
     "receipt": "RCT-1007.pdf"
   },
   {
-    "orderNumber": "ORD-1008",
+    "id": 8,
+    "orderNumber": "#5109",
     "clientName": "Ava Thomas",
     "product": "Bluetooth Speaker",
-    "paymentOption": "Cash on Delivery",
-    "orderStatus": "Out for Delivery",
+    "paymentOption": "paymentCompleted",
+    "orderStatus": "outForDelivery",
     "receipt": "RCT-1008.pdf"
   },
   {
-    "orderNumber": "ORD-1009",
+    "id": 9,
+    "orderNumber": "#5110",
     "clientName": "William Taylor",
     "product": "Smart Watch",
-    "paymentOption": "Online",
-    "orderStatus": "Delivered",
+    "paymentOption": "paymentCompleted",
+    "orderStatus": "delivered",
     "receipt": "RCT-1009.pdf"
   },
   {
-    "orderNumber": "ORD-1010",
+    "id": 10,
+    "orderNumber": "#5111",
     "clientName": "Isabella Moore",
     "product": "Webcam HD",
-    "paymentOption": "Online",
-    "orderStatus": "Processing",
+    "paymentOption": "paymentFailed",
+    "orderStatus": "processing",
     "receipt": "RCT-1010.pdf"
   }
 ]

@@ -1,19 +1,26 @@
 import AppTable from "@/common/table/table.content";
-import type { ColumnDef } from "@tanstack/react-table";
-
 import SHIPMENT_MOCK_DATA from "./SHIPMENT_MOCK_DATA.json";
 import { useShipmentColumns } from "./columns";
-import type { ShipmentType } from "./shipmentTypes";
+import { AppSearchBar } from "@/common/appSearchBar/appSearchBar";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Shipment = () => {
-  const columns = useShipmentColumns();
+  const [searchQuery, setSearchQuery] = React.useState("");
+  const filteredData = SHIPMENT_MOCK_DATA.filter((shipment) =>
+    shipment.shipmentNumber.toLowerCase().includes(searchQuery.toLowerCase()),
+  );
 
+  const navigate = useNavigate();
+
+  const columns = useShipmentColumns((shipmentId) => {
+    navigate(`/shipment-order/${shipmentId}`);
+  });
   return (
     <div>
-      <AppTable
-        data={SHIPMENT_MOCK_DATA}
-        columns={columns as ColumnDef<ShipmentType>[]}
-      />
+      <h2>Shipments</h2>
+      <AppSearchBar query={searchQuery} onQueryChange={setSearchQuery} />
+      <AppTable data={filteredData} columns={columns} />
     </div>
   );
 };

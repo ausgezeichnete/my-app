@@ -1,42 +1,82 @@
 [
   {
     "id": 1,
-    "deliveryManName": "Ahmed Hassan",
+    "deliveryManName": "James Wilson",
     "numberOfShipments": 45,
     "numberOfSales": 38,
-    "commission": 1200,
-    "collectedAmount": 18500
+    "percentage": 6.5,
+    "totalDue": 1200
   },
   {
     "id": 2,
-    "deliveryManName": "Mohamed Ali",
+    "deliveryManName": "Michael Brown",
     "numberOfShipments": 52,
     "numberOfSales": 47,
-    "commission": 1450,
-    "collectedAmount": 22300
+    "percentage": 7.0,
+    "totalDue": 1450
   },
   {
     "id": 3,
-    "deliveryManName": "Omar Khaled",
+    "deliveryManName": "Daniel Smith",
     "numberOfShipments": 31,
     "numberOfSales": 26,
-    "commission": 900,
-    "collectedAmount": 14200
+    "percentage": 5.5,
+    "totalDue": 900
   },
   {
     "id": 4,
-    "deliveryManName": "Karim Mostafa",
+    "deliveryManName": "William Taylor",
     "numberOfShipments": 67,
     "numberOfSales": 61,
-    "commission": 1800,
-    "collectedAmount": 30100
+    "percentage": 7.5,
+    "totalDue": 1800
   },
   {
     "id": 5,
-    "deliveryManName": "Mahmoud Samir",
+    "deliveryManName": "Robert Johnson",
     "numberOfShipments": 28,
     "numberOfSales": 24,
-    "commission": 750,
-    "collectedAmount": 11700
+    "percentage": 5.0,
+    "totalDue": 750
+  },
+  {
+    "id": 6,
+    "deliveryManName": "Thomas Anderson",
+    "numberOfShipments": 41,
+    "numberOfSales": 35,
+    "percentage": 6.0,
+    "totalDue": 1080
+  },
+  {
+    "id": 7,
+    "deliveryManName": "Christopher Martin",
+    "numberOfShipments": 59,
+    "numberOfSales": 53,
+    "percentage": 7.25,
+    "totalDue": 1625
+  },
+  {
+    "id": 8,
+    "deliveryManName": "Matthew Thompson",
+    "numberOfShipments": 36,
+    "numberOfSales": 30,
+    "percentage": 5.75,
+    "totalDue": 980
+  },
+  {
+    "id": 9,
+    "deliveryManName": "David Harris",
+    "numberOfShipments": 48,
+    "numberOfSales": 42,
+    "percentage": 6.75,
+    "totalDue": 1320
+  },
+  {
+    "id": 10,
+    "deliveryManName": "Andrew Clark",
+    "numberOfShipments": 63,
+    "numberOfSales": 57,
+    "percentage": 8.0,
+    "totalDue": 1950
   }
 ]
