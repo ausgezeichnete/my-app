@@ -56,7 +56,7 @@ export const useProductColumns = () => {
         <AppButton
           buttonText="Edit"
           variant="contained"
-          width="medium"
+          width="short"
           endIcon={<ChevronDown size={18} />}
         />
       ),

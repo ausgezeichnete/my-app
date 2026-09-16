@@ -207,7 +207,7 @@ export const Receipt = ({ receipt }: ReceiptProps) => {
         <AppButton
           buttonText={isDownloading ? "Preparing…" : "Download"}
           variant="contained"
-          width="medium"
+          width="short"
           disabled={isDownloading}
           onClick={() =>
             downloadReceipt("order-receipt", {
@@ -221,7 +221,7 @@ export const Receipt = ({ receipt }: ReceiptProps) => {
         <AppButton
           buttonText="Print"
           variant="contained"
-          width="medium"
+          width="short"
           color="secondary"
           onClick={() => window.print()}
         />

@@ -40,7 +40,7 @@ export const useDeliveryMenColumns = (
           <AppButton
             buttonText="View"
             variant="contained"
-            width="medium"
+            width="short"
             onClick={() => onView(deliverymenId)}
           />
         );

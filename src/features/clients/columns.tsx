@@ -80,7 +80,7 @@ export const useClientColumns = (onView: (clientId: number) => void) => {
           <AppButton
             buttonText="View"
             variant="contained"
-            width="medium"
+            width="short"
             onClick={() => onView(clientId)}
           />
         );
