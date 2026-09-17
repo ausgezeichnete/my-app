@@ -1,5 +1,4 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
-import { LogOut } from "lucide-react";
 
 type User = {
   id: number;
