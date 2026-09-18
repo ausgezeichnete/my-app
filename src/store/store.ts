@@ -10,37 +10,32 @@ import {
   PURGE,
   REGISTER,
 } from "redux-persist";
-
-//import storage from "redux-persist/lib/storage";
-import * as storage from "redux-persist/lib/storage";
+import storage from "redux-persist/lib/storage"; // defaults to localStorage for the web
 import authReducer from "./authSlice";
 
-const persistConfig = {
+const presistConfig = {
   key: "root",
   storage,
-  whitelist: ["auth"],
+  whiteList: ["auth"],
 };
 
 const rootReducer = combineReducers({
   auth: authReducer,
 });
 
-const persistedReducer = persistReducer(persistConfig, rootReducer);
+const presistReducer = persistReducer(presistConfig, rootReducer);
 
 export const store = configureStore({
-  reducer: persistedReducer,
-
+  reducer: presistReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     }),
-
   devTools: import.meta.env.DEV,
 });
-
-export const persistor = persistStore(store);
+export const presistor = persistStore(store);
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
