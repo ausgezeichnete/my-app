@@ -14,8 +14,8 @@ type AppButtonProps = PropsWithChildren<{
   ButtonHTMLAttributes<HTMLButtonElement>;
 
 const widthStyles: Record<Width, string> = {
-  short: "w-[50px]",
-  medium: "w-[101px]",
+  short: "w-[101px]",
+  medium: "w-[304px]",
   long: "w-[598px]",
 };
 

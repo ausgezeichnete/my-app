@@ -41,7 +41,7 @@ export const useFixTransactionsColumns = (
           <AppButton
             buttonText="Transafer"
             variant="contained"
-            width="medium"
+            width="short"
             onClick={() => onView(transactionId)}
           />
         );

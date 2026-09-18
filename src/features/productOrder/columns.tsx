@@ -47,7 +47,7 @@ export const useProductOrderColumns = (onView: (orderId: string) => void) => {
             <AppButton
               buttonText="View"
               variant="contained"
-              width="medium"
+              width="short"
               onClick={() => onView(orderId)}
             />
           </div>

@@ -50,6 +50,7 @@
   --secondary: #3aa3a3;
   --accent: #3984e3;
   --secondary-accent: #01c0aa26;
+  --accent-primary: #3aa3a3;
 
   /* ---- Sidebar ---------------------------------------------------- */
   --sidebar: #1f263e;
@@ -83,7 +84,9 @@
   --dark-grey: #737373;
   --hightlight: #fcd13d;
   --highlight-green: #01c0aa;
-  --muted-foreground: #121212;
+  --muted-foreground: #cdcdcd;
+  --input: #cdcdcd;
+
   /* ---- Border Radius ---------------------------------------------------- */
   --radius-sm: 0.25rem;
   --radius-md: 0.375rem;

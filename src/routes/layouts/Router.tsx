@@ -12,6 +12,7 @@ import { Product } from "@/features/productManagement/product";
 import { OrderDetails } from "@/features/orderDetails/orderDetails";
 import { HomePage } from "@/features/home/HomePage";
 import { ShipmentOrder } from "@/features/ShipmentOrder/ShipmentOrder";
+import { ProductForm } from "@/features/ProductForm/ProductForm";
 
 export const AppRouter = () => {
   return (
@@ -29,6 +30,7 @@ export const AppRouter = () => {
         <Route path="reports" element={<Reports />} />
         <Route path="order-details/:id" element={<OrderDetails />} />
         <Route path="product-management" element={<Product />} />
+        <Route path="product" element={<ProductForm />} />
       </Route>
     </Routes>
   );

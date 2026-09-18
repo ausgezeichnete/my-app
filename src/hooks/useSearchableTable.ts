@@ -1,16 +1,23 @@
-// hooks/useSearchableTable.ts
 import { useMemo, useState } from "react";
 
-export function useSearchableTable<T>(
-  data: T[],
-  predicate: (item: T, query: string) => boolean,
-) {
+export function useSearchableTable<T>(data: T[]) {
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredData = useMemo(() => {
-    if (!searchQuery.trim()) return data;
-    return data.filter((item) => predicate(item, searchQuery));
-  }, [data, searchQuery, predicate]);
+    const query = searchQuery.trim().toLowerCase();
 
-  return { searchQuery, setSearchQuery, filteredData };
+    if (!query) return data;
+
+    return data.filter((item) =>
+      Object.values(item as Record<string, unknown>).some((value) =>
+        String(value).toLowerCase().includes(query),
+      ),
+    );
+  }, [data, searchQuery]);
+
+  return {
+    searchQuery,
+    setSearchQuery,
+    filteredData,
+  };
 }
