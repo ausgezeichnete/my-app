@@ -21,31 +21,32 @@ export const ProductForm = () => {
         {/* ------------------------------------------------------------------ */}
 
         <div className="flex items-start gap-3">
-          <div className="relative h-[115px] w-[205px] overflow-hidden rounded-lg border bg-white">
-            <img
-              src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=150&auto=format&fit=crop&q=80"
-              alt="Product"
-              className="w-[105px] h-[105px]"
-            />
-
-            <div>
-              {" "}
-              <span>Image Name</span>
-              <span>Date</span>
-              <span>Image Size</span>
-              <button
-                type="button"
-                className="absolute left-2 top-2 flex h-7 w-7 items-center justify-center rounded-full bg-white text-red-500 shadow-sm transition hover:bg-red-50"
-              >
-                <Trash2 className="h-4 w-4" />
-              </button>
+          <div className="relative h-[137px] w-[244.44px] overflow-hidden rounded-lg border-1 border-light-grey">
+            <div className="flex py-3 px-3 justify-between items-center">
+              <img
+                src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=150&auto=format&fit=crop&q=80"
+                alt="Product"
+                className="w-[105px] h-[105px]"
+              />{" "}
+              <div>
+                <p className="">Image Name</p>
+                <p className="text-[10px]">Date</p>
+                <p className="text-[10px]">Image Size</p>
+              </div>
             </div>
+
+            <button
+              type="button"
+              className="absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-full bg-white text-red-500 shadow-sm transition hover:bg-red-50"
+            >
+              <Trash2 className="h-4 w-4" />
+            </button>
           </div>
 
-          <label className="flex h-[115px] w-[165px] cursor-pointer flex-col items-center justify-center rounded-lg border border-dashed bg-muted/40 transition hover:bg-muted">
-            <Upload className="mb-2 h-7 w-7 text-muted-foreground" />
+          <label className="flex h-[137px] w-[201px] cursor-pointer flex-col items-center justify-center rounded-lg border border-dashed bg-muted/40 transition hover:bg-muted bg-[#F5F6F8]">
+            <Upload className="mb-2 h-7 w-7 text-muted-foreground " />
 
-            <span className="text-sm text-muted-foreground">Add image</span>
+            <span className="text-sm text-muted-foreground ">Add image</span>
 
             <input type="file" accept="image/*" multiple className="hidden" />
           </label>
