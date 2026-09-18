@@ -10,7 +10,9 @@ import {
   PURGE,
   REGISTER,
 } from "redux-persist";
-import storage from "redux-persist/lib/storage"; // defaults to localStorage for the web
+
+//import storage from "redux-persist/lib/storage";
+import * as storage from "redux-persist/lib/storage";
 import authReducer from "./authSlice";
 
 const presistConfig = {
