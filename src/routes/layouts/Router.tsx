@@ -8,11 +8,11 @@ import { Shipment } from "@/features/shipment/shipment";
 import { FixTransactions } from "@/features/fixTransactions/fixTransactions";
 import { LoginForm } from "@/components/login-form";
 import { Reports } from "@/features/reports/reports";
-import { Product } from "@/features/productManagement/product";
 import { OrderDetails } from "@/features/orderDetails/orderDetails";
 import { HomePage } from "@/features/home/HomePage";
 import { ShipmentOrder } from "@/features/ShipmentOrder/ShipmentOrder";
 import { ProductForm } from "@/features/ProductForm/ProductForm";
+import { ProductManagement } from "@/features/products/productManagement/productManagement";
 
 export const AppRouter = () => {
   return (
@@ -29,8 +29,8 @@ export const AppRouter = () => {
         <Route path="fix-transactions" element={<FixTransactions />} />
         <Route path="reports" element={<Reports />} />
         <Route path="order-details/:id" element={<OrderDetails />} />
-        <Route path="product-management" element={<Product />} />
-        <Route path="product" element={<ProductForm />} />
+        <Route path="product-management" element={<ProductManagement />} />
+        <Route path="product/add-new-product" element={<ProductForm />} />
       </Route>
     </Routes>
   );
