@@ -1,4 +1,4 @@
-export type DeliveryMenType = {
+export type AgentType = {
   id: number;
   name: string;
   telephone: string;

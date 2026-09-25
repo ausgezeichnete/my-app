@@ -1,5 +1,5 @@
 import { createColumnHelper } from "@tanstack/react-table";
-import type { ProductOrderType } from "./productOrderTypes";
+import type { ProductOrderType } from "./productOrderType";
 import { AppButton } from "@/common/appButton/appButton";
 import { AppStateCard } from "@/common/appStateCard/appStateCard";
 

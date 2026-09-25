@@ -1,5 +1,5 @@
 import { createColumnHelper } from "@tanstack/react-table";
-import type { ProductType } from "./productTypes";
+import type { ProductType } from "./productType";
 import { AppButton } from "@/common/appButton/appButton";
 import { ChevronDown } from "lucide-react";
 
@@ -8,7 +8,7 @@ const columnHelper = createColumnHelper<ProductType>();
 export const useProductColumns = () => {
   return [
     columnHelper.accessor("name", {
-      header: () => <span>Product Name</span>,
+      header: () => <span className="flex justify-start">Product Name</span>,
       cell: (info) => (
         <div className="flex gap-2 justify-start">
           <img
