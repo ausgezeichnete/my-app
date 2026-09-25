@@ -1,6 +1,6 @@
-export type FixTransactionType = {
+export type ReceivablesType = {
   id: number;
-  deliveryManName: string;
+  agentName: string;
   numberOfShipments: number;
   numberOfSales: number;
   percentage: number;

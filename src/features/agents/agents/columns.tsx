@@ -1,13 +1,11 @@
 import { createColumnHelper } from "@tanstack/react-table";
-import type { DeliveryMenType } from "./deliveryMenTypes";
 import { AppButton } from "@/common/appButton/appButton";
 import { AppStateCard } from "@/common/appStateCard/appStateCard";
+import type { AgentType } from "./agentType";
 
-const columnHelper = createColumnHelper<DeliveryMenType>();
+const columnHelper = createColumnHelper<AgentType>();
 
-export const useDeliveryMenColumns = (
-  OnView: (deliverymenId: DeliveryMenType) => void,
-) => {
+export const useAgentsColumns = (OnView: (Id: AgentType) => void) => {
   return [
     columnHelper.accessor("name", {
       header: () => <span>Name</span>,
@@ -35,13 +33,13 @@ export const useDeliveryMenColumns = (
     columnHelper.accessor("Profile", {
       header: () => <span> Profile</span>,
       cell: (info) => {
-        const deliverymenId = info.row.original.id;
+        const agentId = info.row.original.id;
         return (
           <AppButton
             buttonText="View"
             variant="contained"
             width="short"
-            onClick={() => onView(deliverymenId)}
+            onClick={() => OnView(agentId)}
           />
         );
       },

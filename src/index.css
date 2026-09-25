@@ -219,3 +219,7 @@ h3 {
     break-inside: avoid;
   }
 }
+
+button {
+  cursor: pointer;
+}

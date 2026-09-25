@@ -41,10 +41,10 @@ const statusLabels: Record<Status, string> = {
   shipped: "Shipped",
   returned: "Returned",
   outForDelivery: "Out for Delivery",
-  failedDelivery: "Delivery Failed",
+  failedDelivery: "Failed",
   processing: "Processing",
   onHold: "On Hold",
-  awaitingPayment: "Awaiting Payment",
+  awaitingPayment: "Awaiting",
   paymentFailed: "Failed",
   paymentPending: "Pending",
   paymentCompleted: "Completed",
@@ -56,6 +56,7 @@ const statusLabels: Record<Status, string> = {
   inTransit: "In Transit",
   FullTime: "Full Time",
   PartTime: "Part Time",
+  Contract: "Contract",
 };
 type AppStateProps = {
   status?: Status;
