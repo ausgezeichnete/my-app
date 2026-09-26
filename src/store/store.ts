@@ -12,7 +12,7 @@ import {
 } from "redux-persist";
 
 //import storage from "redux-persist/lib/storage";
-import * as storage from "redux-persist/lib/storage";
+import storage from "redux-persist/lib/storage";
 import authReducer from "./authSlice";
 
 const presistConfig = {
