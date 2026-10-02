@@ -6,10 +6,8 @@ import {
 } from "@/components/ui/card";
 import type { ShipmentDetailsCardProps } from "./ShipmentDetailsCard.types";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { AppButton } from "@/common/appButton/appButton";
-import { Package, Phone, PhoneCall, PhoneIcon, Truck } from "lucide-react";
+import { Package, Phone, Truck } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
 import { Section } from "@/common/appSection/appSection";
 import { LocationSection } from "./LocationSection";
 import { Button } from "@/components/ui/button";
