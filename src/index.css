@@ -1,10 +1,11 @@
+
 /* =========================================================
    Tailwind / Plugins
    ========================================================= */
 
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "shadcn/tailwind.css";
+/* @import "shadcn/tailwind.css"; */
 
 /* =========================================================
    Custom Variants
