@@ -16,12 +16,12 @@ export const AppSidebar = () => {
   const { pathname } = useLocation();
 
   return (
-    <Sidebar className="bg-primary  ">
-      <SidebarHeader className="bg-primary">
+    <Sidebar className="  ">
+      <SidebarHeader className="">
         <img src={logoImg} alt="Logo" className="bg-transparent" />
       </SidebarHeader>
 
-      <SidebarContent className="bg-primary ">
+      <SidebarContent className=" ">
         <SidebarGroup className="m-0 p-0">
           <SidebarGroupContent>
             <SidebarMenu>
@@ -37,23 +37,21 @@ export const AppSidebar = () => {
                       <NavLink
                         to={url}
                         className={`
-                                    group
-                                    text-sidebar-foreground
-                                    hover:text-sidebar-accent-foreground
-                                    hover:bg-sidebar
+                          
                                     hover:border-sidebar-border
                                     rounded-none
                                     border-l-4
-                                    p-2.5
                                     ${
                                       isActive
-                                        ? "bg-sidebar text-sidebar-foreground border-sidebar-border"
+                                        ? "bg-sidebar text-white border-sidebar-border "
                                         : "border-transparent"
                                     }
                                   `}
                       >
                         <Icon />
-                        <span className="uppercase">{name}</span>
+                        <span className="uppercase text-sidebar-foreground ">
+                          {name}
+                        </span>
                       </NavLink>
                     </SidebarMenuButton>
                   </SidebarMenuItem>

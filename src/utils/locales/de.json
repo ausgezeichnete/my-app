@@ -1,3 +1,6 @@
 {
-    "wird_geladen" :"Wird geladen"
+    "wird_geladen": "Wird geladen",
+    "client": {
+        "error_loading_clients": "Kunden konnten nicht geladen werden."
+    }
 }

@@ -1,27 +1,64 @@
 import AppTable from "@/common/table/table.content";
-import CLIENT_MOCK_DATA from "./CLIENTS_MOCK_DATA.json";
+import { useGetClients } from "./apis/useGetClients";
 import { useClientColumns } from "./columns";
 import { AppSearchBar } from "@/common/appSearchBar/appSearchBar";
 import { useNavigate } from "react-router-dom";
-import { useSearchableTable } from "@/hooks/useSearchableTable";
+import { useMemo, useState } from "react";
+import type { ClientTypes } from "./clients.types";
+
+const CLIENT_SEARCH_FIELDS: (keyof ClientTypes)[] = [
+  "id",
+  "name",
+  "phone",
+  "email",
+  "status",
+  "number_of_purchases",
+  "number_of_products",
+];
 
 export const Clients = () => {
+  const [search, setSearch] = useState("");
+  const [filteredClients, setFilteredClients] = useState<ClientTypes[]>([]);
+
+  const { data, isPending, isError, isFetchingNextPage, hasNextPage, ref } =
+    useGetClients("");
+
+  const clients = useMemo(() => data?.pages.flat() ?? [], [data?.pages]);
+  const visibleClients = search.trim() ? filteredClients : clients;
+
   const navigate = useNavigate();
 
   const columns = useClientColumns((clientId) => {
     navigate(`/client-orders/${clientId}`);
   });
 
-  //filter the data based on the search query
-  const { searchQuery, setSearchQuery, filteredData } =
-    useSearchableTable(CLIENT_MOCK_DATA);
-
   return (
     <div>
       <h2>Clients</h2>
-      <AppSearchBar query={searchQuery} onQueryChange={setSearchQuery} />
+      <AppSearchBar
+        query={search}
+        onQueryChange={setSearch}
+        searchableData={clients}
+        searchableFields={CLIENT_SEARCH_FIELDS}
+        onFilteredDataChange={setFilteredClients}
+      />
 
-      <AppTable data={filteredData} columns={columns} />
+      {isPending ? (
+        <p role="status">Loading clients...</p>
+      ) : isError ? (
+        <p role="alert">Unable to load clients.</p>
+      ) : visibleClients.length === 0 ? (
+        <p>No clients found.</p>
+      ) : (
+        <>
+          <AppTable data={visibleClients} columns={columns} />
+          {hasNextPage && (
+            <div ref={ref} className="py-4 text-center" aria-live="polite">
+              {isFetchingNextPage ? "Loading more clients..." : null}
+            </div>
+          )}
+        </>
+      )}
     </div>
   );
 };

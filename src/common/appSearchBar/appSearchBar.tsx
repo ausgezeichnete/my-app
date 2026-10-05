@@ -1,19 +1,67 @@
 import { Search } from "lucide-react";
-interface AppSearchBarProps {
+import { useEffect } from "react";
+
+interface AppSearchBarProps<T> {
   placeholder?: string;
   query?: string;
   onQueryChange?: (query: string) => void;
+  searchableData?: readonly T[];
+  searchableFields?: readonly (keyof T)[];
+  onFilteredDataChange?: (filteredData: T[]) => void;
 }
 
-export const AppSearchBar: React.FC<AppSearchBarProps> = ({
+const filterItems = <T,>(
+  items: readonly T[],
+  query: string,
+  searchableFields?: readonly (keyof T)[],
+): T[] => {
+  const normalizedQuery = query.trim().toLowerCase();
+
+  if (!normalizedQuery) return [...items];
+
+  return items.filter((item) => {
+    const values =
+      typeof item === "object" && item !== null
+        ? (searchableFields?.map((field) => item[field]) ?? Object.values(item))
+        : [item];
+
+    return values.some(
+      (value) =>
+        (typeof value === "string" ||
+          typeof value === "number" ||
+          typeof value === "boolean") &&
+        String(value).toLowerCase().includes(normalizedQuery),
+    );
+  });
+};
+
+export const AppSearchBar = <T = unknown,>({
+  placeholder = "Search...",
   query,
   onQueryChange,
-}) => {
+  searchableData,
+  searchableFields,
+  onFilteredDataChange,
+}: AppSearchBarProps<T>) => {
+  useEffect(() => {
+    if (searchableData && onFilteredDataChange) {
+      onFilteredDataChange(
+        filterItems(searchableData, query ?? "", searchableFields),
+      );
+    }
+  }, [searchableData, searchableFields, query, onFilteredDataChange]);
+
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    onQueryChange?.(event.target.value);
+    const nextQuery = event.target.value;
+    onQueryChange?.(nextQuery);
+    if (searchableData && onFilteredDataChange) {
+      onFilteredDataChange(
+        filterItems(searchableData, nextQuery, searchableFields),
+      );
+    }
   };
 
-  const handleFormSubmit = (event: React.ChangeEvent<HTMLFormElement>) => {
+  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
   };
 
@@ -26,8 +74,8 @@ export const AppSearchBar: React.FC<AppSearchBarProps> = ({
         />{" "}
         <input
           type="text"
-          value={query}
-          placeholder="Search..."
+          value={query ?? ""}
+          placeholder={placeholder}
           onChange={handleInputChange}
           className="bg-white border-0 rounded-2xl py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full "
         />

@@ -1,6 +1,6 @@
 import { createColumnHelper } from "@tanstack/react-table";
-import { features } from "@/common/table/table.content";
 import type { ClientTypes } from "./clients.types";
+import { features } from "@/common/table/table.content";
 import { AvatarImage, Avatar } from "@/components/ui/avatar";
 import { AppButton } from "@/common/appButton/appButton";
 import { AppStateCard } from "@/common/appStateCard/appStateCard";
@@ -10,66 +10,63 @@ const columnHelper = createColumnHelper<typeof features, ClientTypes>();
 export const useClientColumns = (onView: (clientId: number) => void) => {
   return [
     columnHelper.accessor("name", {
-      header: () => <span>name</span>,
+      header: () => <span>Name</span>,
       cell: (info) => {
+        const client = info.row.original;
+
         return (
-          <div className="flex gap-2 justify-center">
+          <div className="flex gap-2 items-center justify-center">
             <Avatar>
-              <AvatarImage src={info.row.original?.image ?? " "} />
+              <AvatarImage src={client.image || undefined} />
             </Avatar>
-            <div>{info.row.original.name}</div>
+
+            <div>{client.name}</div>
           </div>
         );
       },
     }),
 
     columnHelper.accessor("phone", {
-      header: () => <span>phone</span>,
-      cell: (info) => (
-        <div>
-          <div>{info.row.original.phone}</div>
-        </div>
-      ),
-    }),
-    columnHelper.accessor("email", {
-      header: () => <span>email</span>,
-      cell: (info) => (
-        <div>
-          <div>{info.row.original.email}</div>
-        </div>
-      ),
+      header: () => <span>Phone</span>,
+      cell: (info) => <div>{info.getValue()}</div>,
     }),
 
-    columnHelper.accessor("city", {
-      header: () => <span>city</span>,
-      cell: (info) => (
-        <div>
-          <div>{info.row.original.city}</div>
-        </div>
-      ),
+    columnHelper.accessor("email", {
+      header: () => <span>Email</span>,
+      cell: (info) => <div>{info.getValue()}</div>,
     }),
+
     columnHelper.accessor("status", {
       header: () => <span>Status</span>,
       cell: (info) => {
         const status = info.getValue();
 
+        if (status !== 0 && status !== 1) {
+          return <span>{status}</span>;
+        }
+
+        const isActive = status === 1;
+
         return (
           <AppStateCard
-            cardText={status}
-            status={status}
+            cardText={isActive ? "Active" : "Inactive"}
+            status={isActive ? "active" : "inActive"}
             className="px-2 py-1 rounded-full text-xs font-medium block text-center"
           />
         );
       },
     }),
+
     columnHelper.accessor("number_of_purchases", {
-      header: () => <span>Purchase</span>,
-      cell: (info) => (
-        <div>
-          <div>{info.getValue()}</div>
-        </div>
-      ),
+      header: () => <span>Purchases</span>,
+      cell: (info) => <div>{info.getValue()}</div>,
     }),
+
+    columnHelper.accessor("number_of_products", {
+      header: () => <span>Products</span>,
+      cell: (info) => <div>{info.getValue()}</div>,
+    }),
+
     columnHelper.display({
       id: "profile",
       header: () => <span>Profile</span>,

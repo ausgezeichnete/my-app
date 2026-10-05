@@ -1,3 +1,6 @@
 {
-    "loading": "Loading..."
+    "loading": "Loading...",
+    "client": {
+        "error_loading_clients": "Failed to load clients."
+    }
 }

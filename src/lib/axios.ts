@@ -1,16 +1,18 @@
 import axios from "axios";
-import { store } from "@/store/store";
 import i18n from "./i18n";
 
 const axioInstance = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL,
+  baseURL: import.meta.env.DEV
+    ? "/apiAdmin"
+    : import.meta.env.VITE_API_BASE_URL,
 });
 axioInstance.interceptors.request.use(
   (config) => {
-    const token = store.getState().auth.token;
+    // const token = store.getState().auth.token;
+    const token = import.meta.env.VITE_API_TOKEN;
     if (token) {
       config.headers = config.headers || {};
-      config.headers["Authorization"] = `Breaer ${token}`;
+      config.headers["Authorization"] = `Bearer ${token}`;
     }
     config.headers["lang"] = i18n.language;
     if (config.params) {

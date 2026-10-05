@@ -14,7 +14,7 @@ export const appToast = ({
       hotToast.success(message);
       break;
     case "error":
-      hotToast.success(message);
+      hotToast.error(message);
       break;
     case "loading":
       hotToast.success(message);

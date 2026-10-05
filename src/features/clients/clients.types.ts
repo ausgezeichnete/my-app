@@ -6,33 +6,43 @@ export type ClientTypes = {
   status: number;
   type: number;
   number_of_purchases: number;
+  number_of_products: number;
   isCompletedDriverInformation: number;
   image: string;
-  firebase: string;
+  firebase: string | null;
   msgCode: number;
   token: string | null;
-  driverInformation: {
-    id: number;
-    carModel: number;
-    carType: number;
-    carLicenceFront: string;
-    carLicenceBack: string;
-    driverLicenceFront: string;
-    driverLicenceBack: string;
-    bloodTest: string;
-    psychologicalHealth: string;
-    currentOrder: null; // not clear from example
-    my_wallet: number;
+  driver_counts: {
+    products_count: number;
+    money_transactions_count: number;
+    driver_products_orders_count: number;
+    total_money: number;
   };
+  driverInformation: null;
   country: {
     id: number;
-    name: string;
     icon: string;
     status: number;
     countryCode: string;
-    name_ar: string;
-    name_en: string;
+    name: string;
+    cities: unknown[];
   };
+  addresses: unknown[];
+  default_address: unknown | null;
+};
+
+export type ClientsPagination = {
+  total: number;
+  count: number;
+  per_page: number;
+  current_page: number;
+  total_pages: number;
+  is_pagination: boolean;
+};
+
+export type ClientsResponseData = {
+  data: ClientTypes[];
+  pagination: ClientsPagination;
 };
 
 export type TClientColumns = ClientTypes & {

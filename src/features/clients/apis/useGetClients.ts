@@ -17,7 +17,10 @@ export const useGetClients = (search: string) => {
     refetchOnWindowFocus: false,
     queryKey: [CLIENT_KEY, search],
     queryFn: ({ pageParam }) =>
-      getAllClients(pageParam, search)?.then((res) => res?.data?.data),
+      getAllClients({
+        pageParam,
+        search,
+      }).then((res) => res?.data?.data),
     initialPageParam: 1,
     getNextPageParam: (lastPage, allPages) => {
       if (!lastPage || lastPage.length < 10) {
