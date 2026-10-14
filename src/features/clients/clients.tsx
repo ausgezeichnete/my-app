@@ -3,28 +3,19 @@ import { useGetClients } from "./apis/useGetClients";
 import { useClientColumns } from "./columns";
 import { AppSearchBar } from "@/common/appSearchBar/appSearchBar";
 import { useNavigate } from "react-router-dom";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import type { ClientTypes } from "./clients.types";
-
-const CLIENT_SEARCH_FIELDS: (keyof ClientTypes)[] = [
-  "id",
-  "name",
-  "phone",
-  "email",
-  "status",
-  "number_of_purchases",
-  "number_of_products",
-];
+import type { ColumnDef } from "@tanstack/react-table";
+import { useDebounce } from "@/hooks/useDebounce";
 
 export const Clients = () => {
-  const [search, setSearch] = useState("");
-  const [filteredClients, setFilteredClients] = useState<ClientTypes[]>([]);
+  const [searchQuery, setSearchQuery] = useState("");
+  const debouncdSearchQuery = useDebounce(searchQuery, 500);
+  const { data, isPending, isFetchingNextPage, hasNextPage, ref } =
+    useGetClients(debouncdSearchQuery);
 
-  const { data, isPending, isError, isFetchingNextPage, hasNextPage, ref } =
-    useGetClients("");
-
-  const clients = useMemo(() => data?.pages.flat() ?? [], [data?.pages]);
-  const visibleClients = search.trim() ? filteredClients : clients;
+  const clients = () => data?.pages.flat() ?? [];
+  // const visibleClients = search.trim() ? filteredClients : clients;
 
   const navigate = useNavigate();
 
@@ -35,30 +26,19 @@ export const Clients = () => {
   return (
     <div>
       <h2>Clients</h2>
-      <AppSearchBar
-        query={search}
-        onQueryChange={setSearch}
-        searchableData={clients}
-        searchableFields={CLIENT_SEARCH_FIELDS}
-        onFilteredDataChange={setFilteredClients}
-      />
+      <AppSearchBar query={searchQuery} onQueryChange={setSearchQuery} />
 
-      {isPending ? (
-        <p role="status">Loading clients...</p>
-      ) : isError ? (
-        <p role="alert">Unable to load clients.</p>
-      ) : visibleClients.length === 0 ? (
-        <p>No clients found.</p>
-      ) : (
-        <>
-          <AppTable data={visibleClients} columns={columns} />
-          {hasNextPage && (
-            <div ref={ref} className="py-4 text-center" aria-live="polite">
-              {isFetchingNextPage ? "Loading more clients..." : null}
-            </div>
-          )}
-        </>
-      )}
+      <>
+        <AppTable
+          data={clients}
+          columns={columns as ColumnDef<ClientTypes>[]}
+        />
+        {hasNextPage && (
+          <div ref={ref} className="py-4 text-center" aria-live="polite">
+            {isFetchingNextPage ? "Loading more clients..." : null}
+          </div>
+        )}
+      </>
     </div>
   );
 };

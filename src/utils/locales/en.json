@@ -1,6 +1,7 @@
 {
-    "loading": "Loading...",
-    "client": {
-        "error_loading_clients": "Failed to load clients."
-    }
+  "loading": "Loading...",
+  "placeholder": "Search",
+  "clients": {
+    "error_loading_clients": "Failed to load clients."
+  }
 }

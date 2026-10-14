@@ -10,7 +10,11 @@ export const features = tableFeatures({});
 
 type AppTableProps<T> = {
   data: T[];
-  columns: ColumnDef<typeof features, T>[];
+  columns: ColumnDef<typeof features, T>[]; // TODO:: Check This Type
+  isLoading?: boolean;
+  loadingSkeletonsNumber?: number;
+  paginationRef?: (node?: Element | null) => void;
+  onRowClick?: (row: T) => void;
 };
 
 const tableStyles: CSSProperties = {
@@ -55,26 +59,31 @@ const tdStyles: CSSProperties = {
 export default function AppTable<T>({
   data,
   columns,
+  isLoading = false,
+  loadingSkeletonsNumber = 10,
+  paginationRef,
+  onRowClick,
 }: Readonly<AppTableProps<T>>) {
   const table = useTable({
-    features,
-    rowModels: {},
     data,
     columns,
   });
+
   return (
-    <div className="rounded-tl-xl rounded-tr-xl overflow-x-auto w-full">
+    <div className="w-full overflow-x-auto rounded-tl-xl rounded-tr-xl">
       <table style={tableStyles}>
-        <thead style={theadStyles} className="bg-secondary">
+        <thead style={theadStyles} className="bg-gray-50 hover:bg-zinc-200">
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>
               {headerGroup.headers.map((header) => (
-                <th style={thStyles} key={header.id}>
+                <th key={header.id} style={thStyles}>
                   <div style={thDivStyles}>
-                    {flexRender(
-                      header.column.columnDef.header,
-                      header.getContext(),
-                    )}
+                    {header.isPlaceholder
+                      ? null
+                      : flexRender(
+                          header.column.columnDef.header,
+                          header.getContext(),
+                        )}
                   </div>
                 </th>
               ))}
@@ -83,17 +92,57 @@ export default function AppTable<T>({
         </thead>
 
         <tbody style={tBodyStyles}>
-          {table.getRowModel().rows.map((row) => (
-            <tr key={row.id} style={trStyles}>
-              {row.getAllCells().map((cell) => (
-                <td key={cell.id} style={tdStyles}>
-                  {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                </td>
-              ))}
+          {isLoading ? (
+            Array.from({ length: loadingSkeletonsNumber }).map(
+              (_, rowIndex) => {
+                const rowKey = `skeleton-row-${rowIndex}`;
+
+                return (
+                  <tr key={rowKey} style={trStyles}>
+                    {columns.map((_, colIndex) => {
+                      const columnKey = `skeleton-col-${colIndex}`;
+
+                      return (
+                        <td key={`${rowKey}-${columnKey}`} style={tdStyles}>
+                          <div className="mx-auto h-4 w-3/4 animate-pulse rounded-full bg-[#E5EEEB]" />
+                        </td>
+                      );
+                    })}
+                  </tr>
+                );
+              },
+            )
+          ) : 
+          data.length === 0 ? (
+            <tr>
+              <td
+                colSpan={columns.length}
+                style={tdStyles}
+                className="text-center"
+              >
+                No Data
+              </td>
             </tr>
-          ))}
+          ) : (
+            table.getRowModel().rows.map((row) => (
+              <tr
+                key={row.id}
+                style={trStyles}
+                onClick={() => onRowClick?.(row.original)}
+                className={onRowClick ? "cursor-pointer" : undefined}
+              >
+                {row.getVisibleCells().map((cell) => (
+                  <td key={cell.id} style={tdStyles}>
+                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                  </td>
+                ))}
+              </tr>
+            ))
+          )}
         </tbody>
       </table>
+
+      <div ref={paginationRef} />
     </div>
   );
 }

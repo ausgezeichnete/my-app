@@ -1,6 +1,7 @@
 {
-    "wird_geladen": "Wird geladen",
-    "client": {
-        "error_loading_clients": "Kunden konnten nicht geladen werden."
-    }
+  "loading": "Wird geladen",
+  "placeholder": "Such",
+  "clients": {
+    "error_loading_clients": "Kunden konnten nicht geladen werden."
+  }
 }
