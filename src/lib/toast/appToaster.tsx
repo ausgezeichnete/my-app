@@ -1,8 +1,9 @@
 import { Toaster } from "react-hot-toast";
+// AppToaster is a component that renders a Toaster component from the react-hot-toast library. It is used to display toast notifications in the application.
 export const AppToaster = () => {
   return (
     <Toaster
-      position={"top-left"}
+      position={"top-center"}
       toastOptions={{
         duration: 5000,
         style: {
