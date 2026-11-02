@@ -4,40 +4,55 @@ import { features } from "@/common/table/table.content";
 import { AvatarImage, Avatar } from "@/components/ui/avatar";
 import { AppButton } from "@/common/appButton/appButton";
 import { AppStateCard } from "@/common/appStateCard/appStateCard";
-
+import { t } from "i18next";
+import { useNavigate } from "react-router-dom";
+// TODO:: Check why this got a wierd message ?? with on args typeof features,
 const columnHelper = createColumnHelper<typeof features, ClientTypes>();
 
-export const useClientColumns = (onView: (clientId: number) => void) => {
+export const useClientColumns = (
+  onStatusChangeRequest: (client: ClientTypes, newStatus: number) => void,
+) => {
+  const navigate = useNavigate();
   return [
     columnHelper.accessor("name", {
-      header: () => <span>Name</span>,
+      header: () => <span>{t("clients.name")}</span>,
       cell: (info) => {
         const client = info.row.original;
-
         return (
           <div className="flex gap-2 items-center justify-center">
             <Avatar>
-              <AvatarImage src={client.image || undefined} />
+              <AvatarImage src={client?.image || undefined} />
             </Avatar>
 
-            <div>{client.name}</div>
+            <div>{info.getValue() ?? "------"}</div>
           </div>
         );
       },
     }),
 
     columnHelper.accessor("phone", {
-      header: () => <span>Phone</span>,
-      cell: (info) => <div>{info.getValue()}</div>,
+      header: () => (
+        <span className="flex justify-center">{t("clients.phone")}</span>
+      ),
+      cell: (info) => info.getValue(),
     }),
 
     columnHelper.accessor("email", {
       header: () => <span>Email</span>,
-      cell: (info) => <div>{info.getValue()}</div>,
+      cell: (info) => <div>info.getValue()</div>,
+    }),
+    columnHelper.accessor("country.name", {
+      header: () => <span>City</span>,
+      cell: (info) => <div>info.getValue()</div>,
+    }),
+
+    columnHelper.accessor("type", {
+      header: () => <span>{t("clients.payment_method")}</span>,
+      cell: (info) => info.getValue(),
     }),
 
     columnHelper.accessor("status", {
-      header: () => <span>Status</span>,
+      header: () => <span>{t("clients.payment_method")}</span>,
       cell: (info) => {
         const status = info.getValue();
 
@@ -55,16 +70,6 @@ export const useClientColumns = (onView: (clientId: number) => void) => {
           />
         );
       },
-    }),
-
-    columnHelper.accessor("number_of_purchases", {
-      header: () => <span>Purchases</span>,
-      cell: (info) => <div>{info.getValue()}</div>,
-    }),
-
-    columnHelper.accessor("number_of_products", {
-      header: () => <span>Products</span>,
-      cell: (info) => <div>{info.getValue()}</div>,
     }),
 
     columnHelper.display({

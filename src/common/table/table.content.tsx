@@ -10,7 +10,7 @@ export const features = tableFeatures({});
 
 type AppTableProps<T> = {
   data: T[];
-  columns: ColumnDef<typeof features, T>[]; // TODO:: Check This Type
+  columns: ColumnDef<T, unknown>[]; // TODO:: Check This Type
   isLoading?: boolean;
   loadingSkeletonsNumber?: number;
   paginationRef?: (node?: Element | null) => void;
@@ -112,8 +112,7 @@ export default function AppTable<T>({
                 );
               },
             )
-          ) : 
-          data.length === 0 ? (
+          ) : !isLoading && data.length === 0 ? (
             <tr>
               <td
                 colSpan={columns.length}

@@ -14,8 +14,9 @@ export const Clients = () => {
   const { data, isPending, isFetchingNextPage, hasNextPage, ref } =
     useGetClients(debouncdSearchQuery);
 
-  const clients = () => data?.pages.flat() ?? [];
+  const clients = data?.pages.flat() ?? [];
   // const visibleClients = search.trim() ? filteredClients : clients;
+  console.log(data);
 
   const navigate = useNavigate();
 
@@ -32,6 +33,8 @@ export const Clients = () => {
         <AppTable
           data={clients}
           columns={columns as ColumnDef<ClientTypes>[]}
+          isLoading={isPending}
+          paginationRef={ref}
         />
         {hasNextPage && (
           <div ref={ref} className="py-4 text-center" aria-live="polite">
