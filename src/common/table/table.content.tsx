@@ -2,12 +2,13 @@ import {
   useTable,
   tableFeatures,
   flexRender,
+  columnVisibilityFeature,
   type ColumnDef,
 } from "@tanstack/react-table";
-import type { CSSProperties } from "react";
 
-export const features = tableFeatures({});
-
+export const features = tableFeatures({
+  columnVisibilityFeature,
+});
 type AppTableProps<T> = {
   data: T[];
   columns: ColumnDef<T, unknown>[]; // TODO:: Check This Type
@@ -67,6 +68,7 @@ export default function AppTable<T>({
   const table = useTable({
     data,
     columns,
+    features,
   });
 
   return (
