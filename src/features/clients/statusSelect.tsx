@@ -1,30 +1,41 @@
 import {
   AppChipSelect,
   type AppChipOption,
-  type AppChipSelectProps,
 } from "@/common/appChip/appChipSelect";
+import { CLIENT_STATUS } from "@/constants/status.constant";
 import type { TFunction } from "i18next";
+import { useTranslation } from "react-i18next";
 
 const statusOptions = (t: TFunction): AppChipOption<number>[] => [
   {
-    value: 0,
-    Label: t("inactive"),
+    value: CLIENT_STATUS.INACTIVE,
+    Label: t("chips.inactive"),
     status: "inActive",
   },
   {
-    value: 1,
-    Label: t("active"),
+    value: CLIENT_STATUS.ACTIVE,
+    Label: t("chips.active"),
     status: "active",
   },
 ];
-const statusSelect = ({ value, onChange, t }: AppChipSelectProps<number>) => {
+interface StatusSelectProps {
+  value: ClientTypes;
+  onChange: (newStatus: number) => void;
+  // onStatusChangeRequest: (value: ClientTypes, newStatus: CLIENT_STATUS) => void;
+}
+
+export const StatusSelect = ({
+  value,
+  onChange,
+  // onStatusChangeRequest,
+}: StatusSelectProps) => {
+  const { t } = useTranslation();
+
   return (
     <AppChipSelect
       value={value}
-      onChange={onChange}
       options={statusOptions(t)}
+      onChange={onChange}
     />
   );
 };
-
-export default statusSelect;

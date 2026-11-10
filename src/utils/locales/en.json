@@ -2,8 +2,13 @@
   "loading": "Loading...",
   "placeholder": "Search",
   "clients": {
-    "name":"Name",
+    "name": "Name",
     "phone": "Phone",
-    "error_loading_clients": "Failed to load clients."
+    "error_loading_clients": "Failed to load clients.",
+    "change_status": "Change Status"
+  },
+  "chips": {
+    "active": "active",
+    "inactive": "inactive"
   }
 }

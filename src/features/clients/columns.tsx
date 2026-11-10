@@ -4,7 +4,8 @@ import { features } from "@/common/table/table.content";
 import { AvatarImage, Avatar } from "@/components/ui/avatar";
 import { AppButton } from "@/common/appButton/appButton";
 import { t } from "i18next";
-import StatusSelect from "./statusSelect";
+import { StatusSelect } from "./statusSelect";
+import { useNavigate } from "react-router-dom";
 // TODO:: Check why this got a wierd message ?? with on args typeof features,
 const columnHelper = createColumnHelper<typeof features, ClientTypes>();
 
@@ -12,6 +13,7 @@ export const useClientColumns = (
   onView: (clientId: number) => void,
   onStatusChangeRequest: (client: ClientTypes, newStatus: number) => void,
 ) => {
+  const navigate = useNavigate();
   return [
     columnHelper.accessor("name", {
       header: () => <span>{t("clients.name")}</span>,
@@ -51,21 +53,37 @@ export const useClientColumns = (
     }),
 
     columnHelper.accessor("status", {
-      header: () => <span>{t("status")}</span>,
-      cell: (info) => {
-        const status = info.getValue();
+      header: () => <span>{t("purchases")}</span>,
+      cell: (info) => (
+        <StatusSelect
+          value={info.row.original}
+          onStatusChangeRequest={onStatusChangeRequest}
+        />
+      ),
+    }),
 
-        if (status !== 0 && status !== 1) {
-          // if the status is not active or inactive, we just display the status as text
-          return <span>{status}</span>;
-        }
+    columnHelper.display({
+      id: "order_history",
+      header: () => <span>{t("status")}</span>,
+      cell: (params) => {
+        // const status = info.getValue();
+
+        // if (status !== 0 && status !== 1) {
+        //   // if the status is not active or inactive, we just display the status as text
+        //   return <span>{status}</span>;
+        // }
+        const clientId = params?.row?.original?.id;
         return (
           <div>
-            <StatusSelect
-              value={status}
-              t={t}
-              onChange={(newStatus) => {
-                onStatusChangeRequest(info.row.original, newStatus);
+            <AppButton
+              width="short"
+              buttonText="show"
+              onClick={() => {
+                navigate(`/clients/${clientId}`, {
+                  state: {
+                    ...params.row.original,
+                  },
+                });
               }}
             />
           </div>
