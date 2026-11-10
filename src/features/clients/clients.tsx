@@ -10,6 +10,7 @@ import { useDebounce } from "@/hooks/useDebounce";
 import { LayoutTitle } from "@/common/layoutTitle/layoutTitle";
 import { useTranslation } from "react-i18next";
 import { ConfirmStatusModal } from "./confirmStatusModal";
+import { AppHeader } from "@/common/appHeader/appHeader";
 
 export const Clients = () => {
   const [statusModal, setStatusModal] = useState<{
@@ -57,6 +58,7 @@ export const Clients = () => {
   return (
     <div>
       <LayoutTitle title="Clients" />
+      <AppHeader title="Try Header" />
       <AppSearchBar query={searchQuery} onQueryChange={setSearchQuery} />
 
       <>

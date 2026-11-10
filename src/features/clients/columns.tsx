@@ -10,7 +10,6 @@ import { useNavigate } from "react-router-dom";
 const columnHelper = createColumnHelper<typeof features, ClientTypes>();
 
 export const useClientColumns = (
-  onView: (clientId: number) => void,
   onStatusChangeRequest: (client: ClientTypes, newStatus: number) => void,
 ) => {
   const navigate = useNavigate();
@@ -53,25 +52,21 @@ export const useClientColumns = (
     }),
 
     columnHelper.accessor("status", {
-      header: () => <span>{t("purchases")}</span>,
+      header: () => <span>{t("status")}</span>,
       cell: (info) => (
         <StatusSelect
-          value={info.row.original}
-          onStatusChangeRequest={onStatusChangeRequest}
+          value={info.row.original.status}
+          onChange={(newStatus) => {
+            onStatusChangeRequest(info.row.original, newStatus);
+          }}
         />
       ),
     }),
 
     columnHelper.display({
-      id: "order_history",
-      header: () => <span>{t("status")}</span>,
+      id: "profile",
+      header: () => <span>{t("profile")}</span>,
       cell: (params) => {
-        // const status = info.getValue();
-
-        // if (status !== 0 && status !== 1) {
-        //   // if the status is not active or inactive, we just display the status as text
-        //   return <span>{status}</span>;
-        // }
         const clientId = params?.row?.original?.id;
         return (
           <div>
@@ -79,7 +74,7 @@ export const useClientColumns = (
               width="short"
               buttonText="show"
               onClick={() => {
-                navigate(`/clients/${clientId}`, {
+                navigate(`/client-orders/${clientId}`, {
                   state: {
                     ...params.row.original,
                   },
@@ -87,23 +82,6 @@ export const useClientColumns = (
               }}
             />
           </div>
-        );
-      },
-    }),
-
-    columnHelper.display({
-      id: "profile",
-      header: () => <span>Profile</span>,
-      cell: ({ row }) => {
-        const clientId = row.original.id;
-
-        return (
-          <AppButton
-            buttonText="View"
-            variant="contained"
-            width="short"
-            onClick={() => onView(clientId)}
-          />
         );
       },
     }),

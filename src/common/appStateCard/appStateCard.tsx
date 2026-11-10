@@ -1,5 +1,10 @@
 import type { HTMLAttributes } from "react";
-type Status =
+type AppStateProps = {
+  status?: status;
+  cardText: React.ReactNode;
+} & HTMLAttributes<HTMLDivElement>;
+
+type status =
   | "active"
   | "inActive"
   | "accepted"
@@ -28,192 +33,64 @@ type Status =
   | "FullTime"
   | "PartTime"
   | "Contract";
-const statusLabels: Record<Status, string> = {
-  active: "active",
-  inActive: "In active",
-  accepted: "Accepted",
-  rejected: "Rejected",
-  pending: "Pending",
-  inProgress: "In Progress",
-  completed: "Completed",
-  cancelled: "Cancelled",
-  delivered: "Delivered",
-  shipped: "Shipped",
-  returned: "Returned",
-  outForDelivery: "Out for Delivery",
-  failedDelivery: "Failed",
-  processing: "Processing",
-  onHold: "On Hold",
-  awaitingPayment: "Awaiting",
-  paymentFailed: "Failed",
-  paymentPending: "Pending",
-  paymentCompleted: "Completed",
-  paymentRefunded: "Refunded",
-  paymentDisputed: "Disputed",
-  paymentChargeback: "Chargeback",
-  paymentCancelled: "Cancelled",
-  delayed: "Delayed",
-  inTransit: "In Transit",
-  FullTime: "Full Time",
-  PartTime: "Part Time",
-  Contract: "Contract",
-};
-type AppStateProps = {
-  status?: Status;
-  cardText: React.ReactNode;
-} & HTMLAttributes<HTMLDivElement>;
+
+const themes = {
+  green: { background: "#3aa3a31a", color: "#166534" },
+  amber: { background: "#ffc2461a", color: "#92400e" },
+  yellow: { background: "#fef3c7", color: "#92400e" },
+  gray: { background: "#e5e7eb", color: "#374151" },
+  indigo: { background: "#e0e7ff", color: "#3730a3" },
+  red: { background: "#fee2e2", color: "#991b1b" },
+  cyan: { background: "#cffafe", color: "#155e75" },
+  emerald: { background: "#d1fae5", color: "#065f46" },
+  orange: { background: "#ffedd5", color: "#9a3412" },
+  blue: { background: "#dbeafe", color: "#1e3a8a" },
+  teal: { background: "#ccfbf1", color: "#115e59" },
+  purple: { background: "#ede9fe", color: "#5b21b6" },
+  lightGray: { background: "#f3f4f6", color: "#374151" },
+} satisfies Record<string, { background: string; color: string }>;
+
+const statusConfig = {
+  active: { label: "Active", theme: "green" },
+  inActive: { label: "In Active", theme: "amber" },
+  accepted: { label: "Accepted", theme: "green" },
+  rejected: { label: "Rejected", theme: "amber" },
+  pending: { label: "Pending", theme: "yellow" },
+  inProgress: { label: "In Progress", theme: "gray" },
+  completed: { label: "Completed", theme: "indigo" },
+  cancelled: { label: "Cancelled", theme: "red" },
+  delivered: { label: "Delivered", theme: "cyan" },
+  shipped: { label: "Shipped", theme: "emerald" },
+  returned: { label: "Returned", theme: "orange" },
+  outForDelivery: { label: "Out for Delivery", theme: "red" },
+  failedDelivery: { label: "Failed", theme: "emerald" },
+  processing: { label: "Processing", theme: "blue" },
+  onHold: { label: "On Hold", theme: "yellow" },
+  awaitingPayment: { label: "Awaiting", theme: "teal" },
+  paymentFailed: { label: "Failed", theme: "red" },
+  paymentPending: { label: "Pending", theme: "yellow" },
+  paymentCompleted: { label: "Completed", theme: "emerald" },
+  paymentRefunded: { label: "Refunded", theme: "lightGray" },
+  paymentDisputed: { label: "Disputed", theme: "purple" },
+  paymentChargeback: { label: "Chargeback", theme: "orange" },
+  paymentCancelled: { label: "Cancelled", theme: "red" },
+  delayed: { label: "Delayed", theme: "yellow" },
+  inTransit: { label: "In Transit", theme: "blue" },
+  FullTime: { label: "Full Time", theme: "yellow" },
+  PartTime: { label: "Part Time", theme: "orange" },
+  Contract: { label: "Contract", theme: "lightGray" },
+} satisfies Record<status, { label: string; theme: keyof typeof themes }>;
 
 const baseStyle: React.CSSProperties = {
   fontSize: "16px",
-  fontWeight: "light",
+  fontWeight: 300,
   borderRadius: "12px",
   display: "inline-flex",
   alignItems: "center",
   justifyContent: "center",
   height: "38px",
   padding: "10px",
-  //minWidth: "150px",
-};
-
-const colorStyles: Record<
-  Status,
-  { background: string; color: string; cursor?: string }
-> = {
-  active: {
-    background: "#3aa3a31a",
-    color: "#166534",
-  },
-  inActive: {
-    background: "#ffc2461a",
-    color: "#92400e",
-  },
-
-  accepted: {
-    background: "#3aa3a31a",
-    color: "#166534",
-  },
-
-  rejected: {
-    background: "#ffc2461a",
-    color: "#92400e",
-  },
-
-  pending: {
-    background: "#fef3c7",
-    color: "#92400e",
-  },
-
-  inProgress: {
-    background: "#e5e7eb",
-    color: "#374151",
-    cursor: "not-allowed",
-  },
-
-  completed: {
-    background: "#e0e7ff",
-    color: "#3730a3",
-  },
-
-  cancelled: {
-    background: "#fee2e2",
-    color: "#991b1b",
-  },
-
-  delivered: {
-    background: "#cffafe",
-    color: "#155e75",
-  },
-
-  shipped: {
-    background: "#d1fae5",
-    color: "#065f46",
-  },
-
-  returned: {
-    background: "#ffedd5",
-    color: "#9a3412",
-  },
-
-  outForDelivery: {
-    background: "#fee2e2",
-    color: "#991b1b",
-  },
-
-  failedDelivery: {
-    background: "#dcfce7",
-    color: "#166534",
-  },
-
-  processing: {
-    background: "#dbeafe",
-    color: "#1e3a8a",
-  },
-
-  onHold: {
-    background: "#fef3c7",
-    color: "#92400e",
-  },
-
-  awaitingPayment: {
-    background: "#ccfbf1",
-    color: "#115e59",
-  },
-
-  paymentFailed: {
-    background: "#fee2e2",
-    color: "#991b1b",
-  },
-
-  paymentPending: {
-    background: "#fef3c7",
-    color: "#92400e",
-  },
-
-  paymentCompleted: {
-    background: "#dcfce7",
-    color: "#166534",
-  },
-
-  paymentRefunded: {
-    background: "#f3f4f6",
-    color: "#374151",
-    cursor: "not-allowed",
-  },
-
-  paymentDisputed: {
-    background: "#ede9fe",
-    color: "#5b21b6",
-  },
-
-  paymentChargeback: {
-    background: "#ffedd5",
-    color: "#9a3412",
-  },
-
-  paymentCancelled: {
-    background: "#fee2e2",
-    color: "#991b1b",
-  },
-  delayed: {
-    background: "#fef3c7",
-    color: "#92400e",
-  },
-  inTransit: {
-    background: "#dbeafe",
-    color: "#1e3a8a",
-  },
-  FullTime: {
-    background: "#fef3c7",
-    color: "#92400e",
-  },
-  PartTime: {
-    background: "#ffedd5",
-    color: "#9a3412",
-  },
-  Contract: {
-    background: "#f3f4f6",
-    color: "#374151",
-  },
+  minWidth: "100px",
 };
 
 export const AppStateCard = ({
@@ -221,15 +98,10 @@ export const AppStateCard = ({
   cardText,
   ...props
 }: AppStateProps) => {
+  const { label, theme } = statusConfig[status];
   return (
-    <div
-      {...props}
-      style={{
-        ...baseStyle,
-        ...colorStyles[status],
-      }}
-    >
-      {statusLabels[status] ?? cardText}
+    <div {...props} style={{ ...baseStyle, ...themes[theme] }}>
+      {label || cardText}
     </div>
   );
 };

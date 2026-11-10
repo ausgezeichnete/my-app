@@ -1,4 +1,5 @@
 export type ClientTypes = {
+  value: number;
   id: number;
   name: string;
   phone: string;
