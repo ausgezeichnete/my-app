@@ -8,14 +8,12 @@ import { useTranslation } from "react-i18next";
 
 const statusOptions = (t: TFunction): AppChipOption<number>[] => [
   {
-    //value: CLIENT_STATUS.INACTIVE,
-    value: 0,
+    value: CLIENT_STATUS.INACTIVE,
     Label: t("chips.inactive"),
     status: "inActive",
   },
   {
-    //value: CLIENT_STATUS.ACTIVE,
-    value: 1,
+    value: CLIENT_STATUS.ACTIVE,
     Label: t("chips.active"),
     status: "active",
   },
@@ -35,7 +33,6 @@ export const StatusSelect = ({
 
   return (
     <div>
-      {" "}
       <AppChipSelect
         value={value}
         options={statusOptions(t)}

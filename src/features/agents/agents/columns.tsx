@@ -1,7 +1,7 @@
 import { createColumnHelper } from "@tanstack/react-table";
 import { AppButton } from "@/common/appButton/appButton";
-import { AppStateCard } from "@/common/appStateCard/appStateCard";
 import type { AgentType } from "./agentType";
+import { AppStateCardSelect } from "@/common/appStateCard/appStateCardSelect";
 
 const columnHelper = createColumnHelper<AgentType>();
 
@@ -22,11 +22,21 @@ export const useAgentsColumns = (OnView: (Id: AgentType) => void) => {
       cell: (info) => <div>{info.getValue()}</div>,
     }),
 
-    columnHelper.accessor("activityType", {
-      header: () => <span>Activity</span>,
+    columnHelper.accessor("status", {
+      header: () => <span>status</span>,
       cell: (info) => {
-        const activityType = info.getValue();
-        return <AppStateCard status={activityType} cardText={activityType} />;
+        const status = info.getValue();
+        return (
+          <>
+            <AppStateCardSelect
+              status={status}
+              onChange={(newStatus) => {
+                // updateStatus(info.row.original.id, newStatus);
+                // handle status change
+              }}
+            />
+          </>
+        );
       },
     }),
 

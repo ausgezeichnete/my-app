@@ -56,6 +56,7 @@ export function AppChipSelect<T>({
   return (
     <div ref={dropdownRef} className="relative">
       {/* <div className={` ${className}`} role="listbox"> */}
+
       <button
         type="button"
         onClick={handleToggle}

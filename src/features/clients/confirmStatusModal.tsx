@@ -23,10 +23,10 @@ export const ConfirmStatusModal = ({
   const { t } = useTranslation();
 
   if (!client || newStatus === null) return null;
-//   const statuslabel =
-//     newStatus === CLIENT_STATUS.ACTIVE
-//       ? t("chips.active")
-//       : t("chips.inactive");
+  //   const statuslabel =
+  //     newStatus === CLIENT_STATUS.ACTIVE
+  //       ? t("chips.active")
+  //       : t("chips.inactive");
 
   return (
     <AppModal
@@ -53,7 +53,7 @@ export const ConfirmStatusModal = ({
       }
     >
       <div>
-        <p></p>
+        <p>{"Are you sure you want to change the status?"}</p>
         {/* {
         //   ("Are you sure you want to change the status?",
           {
