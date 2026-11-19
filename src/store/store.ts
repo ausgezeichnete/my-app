@@ -13,7 +13,7 @@ import {
   REGISTER,
 } from "redux-persist";
 
-const storage = storageModule.default;
+const storage = storageModule;
 
 const presistConfig = {
   key: "root",

@@ -6,7 +6,7 @@ import { mockReceipt } from "./mockReceipt";
 import { ShipmentReceipt } from "./ShipmentReceipt";
 
 export const ShipmentOrder = () => {
-  const { id: shipmentId, entity: shipment } =
+  const { entity: shipment } =
     useEntityFromParams<ShipmentDetailsCardProps>(
       SHIPMENT_ORDERS_MOCKDATA as ShipmentDetailsCardProps[],
       "shipmentId",

@@ -1,17 +1,13 @@
 import {
-  useTable,
-  tableFeatures,
+  useReactTable,
+  getCoreRowModel,
   flexRender,
-  columnVisibilityFeature,
   type ColumnDef,
 } from "@tanstack/react-table";
-
-export const features = tableFeatures({
-  columnVisibilityFeature,
-});
+import type { CSSProperties } from "react";
 type AppTableProps<T> = {
   data: T[];
-  columns: ColumnDef<T, unknown>[]; // TODO:: Check This Type
+  columns: ColumnDef<T, any>[];
   isLoading?: boolean;
   loadingSkeletonsNumber?: number;
   paginationRef?: (node?: Element | null) => void;
@@ -65,10 +61,10 @@ export default function AppTable<T>({
   paginationRef,
   onRowClick,
 }: Readonly<AppTableProps<T>>) {
-  const table = useTable({
+  const table = useReactTable({
     data,
     columns,
-    features,
+    getCoreRowModel: getCoreRowModel(),
   });
 
   return (

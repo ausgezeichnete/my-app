@@ -12,7 +12,7 @@ export const Products = () => {
   return (
     <div>
       <div className="flex justify-between">
-        <AppSearchBar />
+        <AppSearchBar query="" />
         <div className="mb-4">
           <Button
             onClick={() => {

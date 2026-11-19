@@ -8,7 +8,6 @@ import type { ClientTypes } from "./clients.types";
 import type { ColumnDef } from "@tanstack/react-table";
 import { useDebounce } from "@/hooks/useDebounce";
 import { LayoutTitle } from "@/common/layoutTitle/layoutTitle";
-import { useTranslation } from "react-i18next";
 import { ConfirmStatusModal } from "./confirmStatusModal";
 import { AppHeader } from "@/common/appHeader/appHeader";
 
@@ -39,7 +38,6 @@ export const Clients = () => {
   };
 
   const columns = useClientColumns(handleStatusChangeRequest);
-  const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState("");
   const debouncdSearchQuery = useDebounce(searchQuery, 500);
   const { data, isPending, isFetchingNextPage, hasNextPage, ref } =
@@ -62,9 +60,9 @@ export const Clients = () => {
       <AppSearchBar query={searchQuery} onQueryChange={setSearchQuery} />
 
       <>
-        <AppTable
+        <AppTable<ClientTypes>
           data={clients}
-          columns={columns as ColumnDef<ClientTypes>[]}
+          columns={columns as ColumnDef<ClientTypes, any>[]}
           isLoading={isPending}
           paginationRef={ref}
         />
@@ -76,8 +74,8 @@ export const Clients = () => {
 
         <ConfirmStatusModal
           isOpen={statusModal.isOpen}
-          client={statusModal.client}
-          newStatus={statusModal.newStatus}
+          client={statusModal.client as ClientTypes | null}
+          newStatus={statusModal.newStatus as 0 | 1 | null}
           onClose={() => setStatusModal((prev) => ({ ...prev, isOpen: false }))}
           onConfirm={handleConfirmStatusChange}
         />

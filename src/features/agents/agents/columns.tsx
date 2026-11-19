@@ -2,10 +2,11 @@ import { createColumnHelper } from "@tanstack/react-table";
 import { AppButton } from "@/common/appButton/appButton";
 import type { AgentType } from "./agentType";
 import { AppStateCardSelect } from "@/common/appStateCard/appStateCardSelect";
+import type { ComponentProps } from "react";
 
 const columnHelper = createColumnHelper<AgentType>();
 
-export const useAgentsColumns = (OnView: (Id: AgentType) => void) => {
+export const useAgentsColumns = (OnView: (Id: number) => void) => {
   return [
     columnHelper.accessor("name", {
       header: () => <span>Name</span>,
@@ -25,12 +26,14 @@ export const useAgentsColumns = (OnView: (Id: AgentType) => void) => {
     columnHelper.accessor("status", {
       header: () => <span>status</span>,
       cell: (info) => {
-        const status = info.getValue();
+        const status = info.getValue() as ComponentProps<
+          typeof AppStateCardSelect
+        >["status"];
         return (
           <>
             <AppStateCardSelect
               status={status}
-              onChange={(newStatus) => {
+              onChange={() => {
                 // updateStatus(info.row.original.id, newStatus);
                 // handle status change
               }}
@@ -40,7 +43,7 @@ export const useAgentsColumns = (OnView: (Id: AgentType) => void) => {
       },
     }),
 
-    columnHelper.accessor("Profile", {
+    columnHelper.accessor("profile", {
       header: () => <span> Profile</span>,
       cell: (info) => {
         const agentId = info.row.original.id;

@@ -1,12 +1,11 @@
 import type { ApiResponse } from "./../../../types/types.d";
-import type { ClientsResponseData } from "../clients.types";
 import { appFetch } from "@/utils/appFetch.util";
 import { appToast } from "@/lib/toast/toast";
 import { t } from "i18next";
 export const getAllClients = async (props: {
   pageParam: number | false;
   search?: string;
-}): Promise<ApiResponse<{ data: ClientsResponseData[] }>> => {
+}): Promise<ApiResponse<{ data: import("../clients.types").ClientTypes[] }>> => {
   return appFetch({
     //fetch data from the api using the appFetch utility function
     url: "/user/get",

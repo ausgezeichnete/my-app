@@ -1,11 +1,10 @@
 import { createColumnHelper } from "@tanstack/react-table";
 import type { ProductOrderType } from "./productOrderType";
 import { AppButton } from "@/common/appButton/appButton";
-import { AppStateCard } from "@/common/appStateCard/appStateCard";
 
 const columnHelper = createColumnHelper<ProductOrderType>();
 
-export const useProductOrderColumns = (onView: (orderId: string) => void) => {
+export const useProductOrderColumns = (onView: (orderId: number) => void) => {
   return [
     columnHelper.accessor("orderNumber", {
       header: () => <span>Order Number</span>,
@@ -26,7 +25,7 @@ export const useProductOrderColumns = (onView: (orderId: string) => void) => {
       header: () => <span>Payment</span>,
       cell: (info) => {
         const paymentOption = info.getValue();
-        return <AppStateCard status={paymentOption} cardText={paymentOption} />;
+        return <span>{paymentOption}</span>;
       },
     }),
 
@@ -34,7 +33,7 @@ export const useProductOrderColumns = (onView: (orderId: string) => void) => {
       header: () => <span>Status</span>,
       cell: (info) => {
         const status = info.getValue();
-        return <AppStateCard status={status} cardText={status} />;
+        return <span>{status}</span>;
       },
     }),
     columnHelper.accessor("receipt", {

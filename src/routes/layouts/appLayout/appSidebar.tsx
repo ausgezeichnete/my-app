@@ -25,7 +25,7 @@ export const AppSidebar = () => {
         <SidebarGroup className="m-0 p-0">
           <SidebarGroupContent>
             <SidebarMenu>
-              {items.map(({ id, icon: Icon, title, url, name }) => {
+              {items.map(({ icon: Icon, title, url, name }) => {
                 const isActive = !!matchPath(
                   { path: url, end: true },
                   pathname,

@@ -1,7 +1,7 @@
 import { Phone, MapPin, Clock, Calendar } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import type { LocationInfo } from "./Shipmentdetailscard.types";
+import type { LocationInfo } from "./ShipmentDetailsCard.types";
 
 export interface LocationSectionProps {
   data: LocationInfo;

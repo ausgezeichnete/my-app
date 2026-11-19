@@ -6,7 +6,7 @@ import { AppButton } from "@/common/appButton/appButton";
 const columnHelper = createColumnHelper<ShipmentType>();
 
 export const useShipmentColumns = (
-  onView: (shipmentId: ShipmentType) => void,
+  onView: (shipmentId: number) => void,
 ) => {
   return [
     columnHelper.accessor("shipmentNumber", {

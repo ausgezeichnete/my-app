@@ -5,7 +5,7 @@ type OrderProductData = {
   price: number;
   quantity: number;
   color: string;
-  size: string;
+  size: string | null;
   currency: string;
 };
 
