@@ -41,8 +41,8 @@ export const OrderDetails = () => {
         </aside>
 
         <section className="min-w-0 space-y-6 lg:order-2 order-1 ">
-          <OrderProduct product={order.product} />
-          <OrderTimeline items={order.timeline} />
+          <OrderProduct product={order.product as React.ComponentProps<typeof OrderProduct>["product"]} />
+          <OrderTimeline items={order.timeline as React.ComponentProps<typeof OrderTimeline>["items"]} />
           <SellerCard seller={order.seller} />
         </section>
       </div>

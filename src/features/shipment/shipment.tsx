@@ -18,7 +18,7 @@ export const Shipment = () => {
     <div>
       <h2>Shipments</h2>
       <AppSearchBar query={searchQuery} onQueryChange={setSearchQuery} />
-      <AppTable data={filteredData} columns={columns} />
+      <AppTable data={filteredData as unknown as import("./shipmentTypes").ShipmentType[]} columns={columns} />
     </div>
   );
 };

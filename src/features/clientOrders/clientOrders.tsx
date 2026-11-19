@@ -53,7 +53,7 @@ export const ClientOrders = () => {
         </button>
       </div>
       <AppSearchBar query={searchQuery} onQueryChange={setSearchQuery} />
-      <AppTable data={filteredData} columns={columns} />
+      <AppTable data={filteredData as typeof CLIENT_ORDERS_MOCK_DATA} columns={columns} />
     </div>
   );
 };

@@ -3,6 +3,7 @@ export type AgentType = {
   name: string;
   telephone: string;
   email: string;
-  activityType: "Full Time" | "Part Time" | "Contract";
+  activityType?: "Full Time" | "Part Time" | "Contract";
+  status?: string;
   profile: string;
 };

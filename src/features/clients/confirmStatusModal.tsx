@@ -1,11 +1,11 @@
 import { AppButton } from "@/common/appButton/appButton";
 import AppModal from "@/common/modal/AppModal";
 import { CLIENT_STATUS } from "@/constants/status.constant";
-import { useTranslation } from "react-i18next";
+import type { ClientTypes } from "./clients.types";
 
 interface ConfirmStatusModalProps {
   client: ClientTypes | null;
-  newStatus: CLIENT_STATUS | null;
+  newStatus: (typeof CLIENT_STATUS)[keyof typeof CLIENT_STATUS] | null;
   isOpen: boolean;
   onClose: () => void;
   onConfirm: () => void;
@@ -16,11 +16,10 @@ export const ConfirmStatusModal = ({
   client,
   newStatus,
   isOpen,
-  onCLose,
+  onClose,
   onConfirm,
   isLoading = false,
 }: ConfirmStatusModalProps) => {
-  const { t } = useTranslation();
 
   if (!client || newStatus === null) return null;
   //   const statuslabel =
@@ -31,7 +30,7 @@ export const ConfirmStatusModal = ({
   return (
     <AppModal
       isOpen={isOpen}
-      onOpenChange={(open) => !open && onCLose()}
+      onOpenChange={(open) => !open && onClose()}
       //   title={t(clients.change_status)}
       width="lg:w-[450px]"
       footer={
@@ -39,7 +38,7 @@ export const ConfirmStatusModal = ({
           <AppButton
             variant="outlined"
             buttonText="Cancel"
-            onClick={onCLose}
+            onClick={onClose}
             width="short"
             disabled={isLoading}
           ></AppButton>

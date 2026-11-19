@@ -5,7 +5,7 @@ import { AppButton } from "@/common/appButton/appButton";
 const columnHelper = createColumnHelper<ReceivablesType>();
 
 export const useReceivablesColumns = (
-  onView: (transactionId: number) => void,
+  onView: (transactionId: number) => void = () => {},
 ) => {
   return [
     columnHelper.accessor("agentName", {
@@ -33,7 +33,8 @@ export const useReceivablesColumns = (
       cell: (info) => <div>{info.getValue()} Euro</div>,
     }),
 
-    columnHelper.accessor("Actions", {
+    columnHelper.display({
+      id: "Actions",
       header: () => <span> Action</span>,
       cell: (info) => {
         const Id = info.row.original.id;

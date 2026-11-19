@@ -12,7 +12,7 @@ export const ProductCategorization = () => {
   return (
     <div>
       <div className="flex justify-between">
-        <AppSearchBar />
+        <AppSearchBar query="" />
         <div className="mb-4">
           <Button
             onClick={() => {
@@ -27,8 +27,8 @@ export const ProductCategorization = () => {
       </div>
 
       <AppTable
-        columns={columns as ColumnDef<any>[]}
-        data={CATEGORIES_MOCK_DATA}
+        columns={columns}
+        data={CATEGORIES_MOCK_DATA as typeof CATEGORIES_MOCK_DATA}
       />
     </div>
   );

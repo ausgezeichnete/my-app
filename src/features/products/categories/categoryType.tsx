@@ -8,7 +8,8 @@ export type CategoryName =
   | "Gaming"
   | "Cameras"
   | "Wearables"
-  | "Home Appliances";
+  | "Home Appliances"
+  | string;
 
 export type CategoryType = {
   id: string | number;

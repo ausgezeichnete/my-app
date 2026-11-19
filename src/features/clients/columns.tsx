@@ -1,13 +1,12 @@
 import { createColumnHelper } from "@tanstack/react-table";
 import type { ClientTypes } from "./clients.types";
-import { features } from "@/common/table/table.content";
 import { AvatarImage, Avatar } from "@/components/ui/avatar";
 import { AppButton } from "@/common/appButton/appButton";
 import { t } from "i18next";
 import { StatusSelect } from "./statusSelect";
 import { useNavigate } from "react-router-dom";
 // TODO:: Check why this got a wierd message ?? with on args typeof features,
-const columnHelper = createColumnHelper<typeof features, ClientTypes>();
+const columnHelper = createColumnHelper<ClientTypes>();
 
 export const useClientColumns = (
   onStatusChangeRequest: (client: ClientTypes, newStatus: number) => void,

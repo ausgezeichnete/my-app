@@ -19,7 +19,7 @@ export const appFetch = async ({
     const response = await axioInstance(url, {
       ...apiOptions,
       params,
-    });
+    } as AxiosRequestConfig<any, any>);
     const data = await response.data;
     return data;
   } catch (error) {

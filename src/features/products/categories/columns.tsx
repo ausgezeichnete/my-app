@@ -3,8 +3,7 @@ import { AppButton } from "@/common/appButton/appButton";
 import type { CategoryType } from "./categoryType";
 import { ChevronDown } from "lucide-react";
 
-const columnHelper = createColumnHelper<CategoryType, unknown>();
-
+const columnHelper = createColumnHelper<CategoryType>();
 export const useProductColumns = () => {
   return [
     columnHelper.accessor("name", {
@@ -21,9 +20,10 @@ export const useProductColumns = () => {
       ),
     }),
 
-    columnHelper.accessor("numbers", {
+    columnHelper.display({
+      id: "numbers",
       header: () => <span>Number of Products</span>,
-      cell: (info) => <div>30</div>,
+      cell: () => <div>30</div>,
     }),
 
     columnHelper.display({

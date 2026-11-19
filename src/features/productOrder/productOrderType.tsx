@@ -3,14 +3,7 @@ export type ProductOrderType = {
   orderNumber: string;
   clientName: string;
   product: string;
-  paymentOption: "Online" | "Cash on Delivery";
-  orderStatus:
-    | "Pending"
-    | "Processing"
-    | "Shipped"
-    | "Out for Delivery"
-    | "Delivered"
-    | "Cancelled"
-    | "Returned";
+  paymentOption: string;
+  orderStatus: string;
   receipt: string | null;
 };

@@ -11,7 +11,7 @@ export type ClientOrderType = {
   id: number;
   orderNumber: string;
   product: string;
-  paymentMethod: PaymentMethod;
-  orderStatus: OrderStatus;
+  paymentMethod: string;
+  orderStatus: string;
   receipt: string;
 };
