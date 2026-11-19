@@ -22,7 +22,7 @@ export function AppStateCardSelect({
 }: AppStateCardSelectProps) {
   // find the option matching the current status, fallback to the first one
   const selectedOption =
-    options.find(option) => option.status === status) || options[0];
+    options.find((option) => option.status === status) || options[0];
 
   // State to manage the dropdown open/close status
   const [isOpen, setIsOpen] = useState(false);
