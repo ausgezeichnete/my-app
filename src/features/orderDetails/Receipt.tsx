@@ -51,10 +51,7 @@ export const Receipt = ({ receipt }: ReceiptProps) => {
   const { downloadReceipt, isDownloading, error } = useDownloadReceipt();
 
   return (
-    <div
-      id="order-receipt"
-      className="rounded-xl bg-white p-8 shadow-sm text-muted-foreground"
-    >
+    <div id="order-receipt" className="rounded-xl bg-white p-8 shadow-sm">
       {/* Header */}
       <div className="mb-1">
         <div className="flex justify-end">
@@ -71,36 +68,28 @@ export const Receipt = ({ receipt }: ReceiptProps) => {
             <span className="shrink-0 font-bold text-foreground">
               Invoice Number
             </span>
-            <span className="min-w-0 text-muted-foreground">
-              #{receipt.invoiceNumber}
-            </span>
+            <span className="min-w-0 ">#{receipt.invoiceNumber}</span>
           </div>
 
           <div className="flex min-w-0 gap-1  text-[10px]">
             <span className="shrink-0 font-bold text-foreground">
               Order Location
             </span>
-            <span className="min-w-0 text-muted-foreground">
-              {receipt.orderLocation}
-            </span>
+            <span className="min-w-0 ">{receipt.orderLocation}</span>
           </div>
 
           <div className="flex min-w-0 gap-1  text-[10px]">
             <span className="shrink-0 font-bold text-foreground">
               Issue Date
             </span>
-            <span className="min-w-0 text-muted-foreground">
-              {receipt.issueDate}
-            </span>
+            <span className="min-w-0 ">{receipt.issueDate}</span>
           </div>
 
           <div className="flex min-w-0 gap-1  text-[10px]">
             <span className="shrink-0 font-bold text-foreground">
               Invoice Status
             </span>
-            <span className="min-w-0 text-muted-foreground">
-              {receipt.status}
-            </span>
+            <span className="min-w-0 ">{receipt.status}</span>
           </div>
         </div>
       </div>
@@ -137,7 +126,7 @@ export const Receipt = ({ receipt }: ReceiptProps) => {
       </div>
 
       {/* Items */}
-      <table className="w-full">
+      <table className="w-full rounded-2xl">
         <thead>
           <tr className=" bg-[#D9D9D9] text-[12px]">
             <th className="px-3 py-3 text-left">Product</th>

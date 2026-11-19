@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 const reportCards = [
   { title: "Clients", icon: Users, to: "/clients" },
-  { title: "Delivery Men", icon: UserCheck, to: "/delivery-men" },
-  { title: "Products", icon: Package, to: "/products" },
+  { title: "Agents", icon: UserCheck, to: "/agents" },
+  { title: "Products", icon: Package, to: "/product-management" },
   { title: "Shipments", icon: Truck, to: "/shipments" },
 ];
 

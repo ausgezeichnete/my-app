@@ -1,88 +1,87 @@
 import { createColumnHelper } from "@tanstack/react-table";
-import { features } from "@/common/table/table.content";
 import type { ClientTypes } from "./clients.types";
+import { features } from "@/common/table/table.content";
 import { AvatarImage, Avatar } from "@/components/ui/avatar";
 import { AppButton } from "@/common/appButton/appButton";
-import { AppStateCard } from "@/common/appStateCard/appStateCard";
-
+import { t } from "i18next";
+import { StatusSelect } from "./statusSelect";
+import { useNavigate } from "react-router-dom";
+// TODO:: Check why this got a wierd message ?? with on args typeof features,
 const columnHelper = createColumnHelper<typeof features, ClientTypes>();
 
-export const useClientColumns = (onView: (clientId: number) => void) => {
+export const useClientColumns = (
+  onStatusChangeRequest: (client: ClientTypes, newStatus: number) => void,
+) => {
+  const navigate = useNavigate();
   return [
     columnHelper.accessor("name", {
-      header: () => <span>name</span>,
+      header: () => <span>{t("clients.name")}</span>,
       cell: (info) => {
+        const client = info.row.original;
         return (
-          <div className="flex gap-2 justify-center">
+          <div className="flex gap-2 items-center justify-center">
             <Avatar>
-              <AvatarImage src={info.row.original?.image ?? " "} />
+              <AvatarImage src={client?.image || undefined} />
             </Avatar>
-            <div>{info.row.original.name}</div>
+
+            <div>{info.getValue() ?? "------"}</div>
           </div>
         );
       },
     }),
 
     columnHelper.accessor("phone", {
-      header: () => <span>phone</span>,
-      cell: (info) => (
-        <div>
-          <div>{info.row.original.phone}</div>
-        </div>
+      header: () => (
+        <span className="flex justify-center">{t("clients.phone")}</span>
       ),
+      cell: (info) => info.getValue(),
     }),
+
     columnHelper.accessor("email", {
-      header: () => <span>email</span>,
-      cell: (info) => (
-        <div>
-          <div>{info.row.original.email}</div>
-        </div>
-      ),
+      header: () => <span>Email</span>,
+      cell: (info) => <div>{info.getValue()}</div>,
+    }),
+    columnHelper.accessor("country.name", {
+      header: () => <span>City</span>,
+      cell: (info) => <div>{info.getValue()}</div>,
     }),
 
-    columnHelper.accessor("city", {
-      header: () => <span>city</span>,
-      cell: (info) => (
-        <div>
-          <div>{info.row.original.city}</div>
-        </div>
-      ),
-    }),
-    columnHelper.accessor("status", {
-      header: () => <span>Status</span>,
-      cell: (info) => {
-        const status = info.getValue();
-
-        return (
-          <AppStateCard
-            cardText={status}
-            status={status}
-            className="px-2 py-1 rounded-full text-xs font-medium block text-center"
-          />
-        );
-      },
-    }),
     columnHelper.accessor("number_of_purchases", {
-      header: () => <span>Purchase</span>,
+      header: () => <span>{t("purchases")}</span>,
+      cell: (info) => <div>{info.getValue()}</div>,
+    }),
+
+    columnHelper.accessor("status", {
+      header: () => <span>{t("status")}</span>,
       cell: (info) => (
-        <div>
-          <div>{info.getValue()}</div>
-        </div>
+        <StatusSelect
+          value={info.row.original.status}
+          onChange={(newStatus) => {
+            onStatusChangeRequest(info.row.original, newStatus);
+          }}
+        />
       ),
     }),
+
     columnHelper.display({
       id: "profile",
-      header: () => <span>Profile</span>,
-      cell: ({ row }) => {
-        const clientId = row.original.id;
-
+      header: () => <span>{t("profile")}</span>,
+      cell: (params) => {
+        const clientId = params?.row?.original?.id;
         return (
-          <AppButton
-            buttonText="View"
-            variant="contained"
-            width="short"
-            onClick={() => onView(clientId)}
-          />
+          <div>
+            <AppButton
+              width="short"
+              buttonText="show"
+              onClick={() => {
+                navigate(`/client-orders/${clientId}`, {
+                  state: {
+                    ...params.row.original,
+                  },
+                });
+              }}
+            />
+          </div>
         );
       },
     }),

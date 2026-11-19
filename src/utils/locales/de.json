@@ -1,0 +1,12 @@
+{
+  "loading": "Wird geladen",
+  "placeholder": "Such",
+  "clients": {
+    "name": "Name",
+    "error_loading_clients": "Kunden konnten nicht geladen werden."
+  },
+  "chips": {
+    "active": "active",
+    "inactive": "inactive"
+  }
+}

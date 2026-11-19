@@ -10,6 +10,7 @@ type AppButtonProps = PropsWithChildren<{
   color?: Color;
   width?: Width;
   endIcon?: ReactNode;
+  processing?: boolean;
 }> &
   ButtonHTMLAttributes<HTMLButtonElement>;
 
@@ -39,6 +40,8 @@ export const AppButton = ({
   variant = "contained",
   color = "primary",
   width,
+  processing,
+  disabled,
   endIcon,
   className = "",
   ...props
@@ -47,6 +50,7 @@ export const AppButton = ({
     <div className="flex justify-center">
       <button
         {...props}
+        disabled={disabled || processing}
         className={`
         h-9.5
         rounded-xl

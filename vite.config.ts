@@ -11,4 +11,12 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url))
     },
   },
+  server: {
+    proxy: {
+      "/apiAdmin": {
+        target: "https://nekdemak.mycashtest.com",
+        changeOrigin: true,
+      },
+    },
+  },
 })

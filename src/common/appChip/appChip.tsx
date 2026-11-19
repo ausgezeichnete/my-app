@@ -1,6 +1,6 @@
 import type { CSSProperties, HTMLAttributes } from "react";
 
-type Status =
+export type Status =
   | "disabled"
   | "active"
   | "inActive"

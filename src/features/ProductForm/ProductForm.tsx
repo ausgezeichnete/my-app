@@ -16,6 +16,7 @@ export const ProductForm = () => {
   return (
     <div className="mx-auto flex w-full justify-center bg-white">
       <form className="w-full max-w-[630px] space-y-6">
+        
         {/* ------------------------------------------------------------------ */}
         {/* Images                                                             */}
         {/* ------------------------------------------------------------------ */}

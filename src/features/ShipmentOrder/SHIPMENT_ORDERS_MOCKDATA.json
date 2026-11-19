@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "sender": {
+      "name": "James Wilson",
+      "avatarUrl": "https://i.pravatar.cc/100?img=12"
+    },
+    "pickup": {
+      "label": "Pickup location",
+      "city": "New York",
+      "address": "125 Madison Avenue",
+      "time": "09:30:00 AM",
+      "date": "06/15/2026",
+      "phone": "+12125550142"
+    },
+    "dropoff": {
+      "label": "Drop-off location",
+      "city": "Brooklyn",
+      "address": "45 Atlantic Avenue",
+      "time": "11:45:00 AM",
+      "date": "06/15/2026",
+      "phone": "+17185550186"
+    },
+    "shipmentType": "Electronics",
+    "shipmentDescription": "Electronic devices packed securely for transportation.",
+    "dimensions": {
+      "weight": "20 kg",
+      "length": "160 cm",
+      "width": "80 cm"
+    },
+    "photos": [
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=200&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=200&h=200&fit=crop"
+    ],
+    "vehicleType": "Small Van",
+    "price": 90
+  },
+  {
+    "id": 2,
+    "sender": {
+      "name": "Emily Johnson",
+      "avatarUrl": "https://i.pravatar.cc/100?img=47"
+    },
+    "pickup": {
+      "label": "Pickup location",
+      "city": "Los Angeles",
+      "address": "850 Sunset Boulevard",
+      "time": "08:15:00 AM",
+      "date": "06/16/2026",
+      "phone": "+13105550123"
+    },
+    "dropoff": {
+      "label": "Drop-off location",
+      "city": "Santa Monica",
+      "address": "220 Ocean Avenue",
+      "time": "10:00:00 AM",
+      "date": "06/16/2026",
+      "phone": "+13105550456"
+    },
+    "shipmentType": "Furniture",
+    "shipmentDescription": "Small wooden furniture items carefully packed for delivery.",
+    "dimensions": {
+      "weight": "45 kg",
+      "length": "180 cm",
+      "width": "90 cm"
+    },
+    "photos": [
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=200&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=200&h=200&fit=crop"
+    ],
+    "vehicleType": "Medium Van",
+    "price": 140
+  },
+  {
+    "id": 3,
+    "sender": {
+      "name": "Michael Brown",
+      "avatarUrl": "https://i.pravatar.cc/100?img=33"
+    },
+    "pickup": {
+      "label": "Pickup location",
+      "city": "Chicago",
+      "address": "310 Michigan Avenue",
+      "time": "10:00:00 AM",
+      "date": "06/17/2026",
+      "phone": "+13125550178"
+    },
+    "dropoff": {
+      "label": "Drop-off location",
+      "city": "Evanston",
+      "address": "1200 Ridge Avenue",
+      "time": "12:30:00 PM",
+      "date": "06/17/2026",
+      "phone": "+18475550234"
+    },
+    "shipmentType": "Clothing",
+    "shipmentDescription": "Boxes containing clothing and personal accessories.",
+    "dimensions": {
+      "weight": "15 kg",
+      "length": "100 cm",
+      "width": "60 cm"
+    },
+    "photos": [
+      "https://images.unsplash.com/photo-1445205170230-053b83016050?w=200&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=200&h=200&fit=crop"
+    ],
+    "vehicleType": "Small Van",
+    "price": 75
+  },
+  {
+    "id": 4,
+    "sender": {
+      "name": "Sophia Davis",
+      "avatarUrl": "https://i.pravatar.cc/100?img=32"
+    },
+    "pickup": {
+      "label": "Pickup location",
+      "city": "Boston",
+      "address": "75 Newbury Street",
+      "time": "01:30:00 PM",
+      "date": "06/18/2026",
+      "phone": "+16175550112"
+    },
+    "dropoff": {
+      "label": "Drop-off location",
+      "city": "Cambridge",
+      "address": "450 Massachusetts Avenue",
+      "time": "03:15:00 PM",
+      "date": "06/18/2026",
+      "phone": "+16175550345"
+    },
+    "shipmentType": "Books",
+    "shipmentDescription": "Multiple boxes of books for a local bookstore.",
+    "dimensions": {
+      "weight": "35 kg",
+      "length": "120 cm",
+      "width": "70 cm"
+    },
+    "photos": [
+      "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=200&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=200&h=200&fit=crop"
+    ],
+    "vehicleType": "Medium Van",
+    "price": 110
+  },
+  {
+    "id": 5,
+    "sender": {
+      "name": "Daniel Miller",
+      "avatarUrl": "https://i.pravatar.cc/100?img=11"
+    },
+    "pickup": {
+      "label": "Pickup location",
+      "city": "Houston",
+      "address": "420 Main Street",
+      "time": "07:45:00 AM",
+      "date": "06/19/2026",
+      "phone": "+17135550189"
+    },
+    "dropoff": {
+      "label": "Drop-off location",
+      "city": "Katy",
+      "address": "2050 Kingsland Boulevard",
+      "time": "09:30:00 AM",
+      "date": "06/19/2026",
+      "phone": "+12815550267"
+    },
+    "shipmentType": "Home Appliances",
+    "shipmentDescription": "Kitchen appliances packed in protective boxes.",
+    "dimensions": {
+      "weight": "65 kg",
+      "length": "190 cm",
+      "width": "100 cm"
+    },
+    "photos": [
+      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=200&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=200&h=200&fit=crop"
+    ],
+    "vehicleType": "Large Van",
+    "price": 180
+  },
+  {
+    "id": 6,
+    "sender": {
+      "name": "Olivia Martinez",
+      "avatarUrl": "https://i.pravatar.cc/100?img=44"
+    },
+    "pickup": {
+      "label": "Pickup location",
+      "city": "Miami",
+      "address": "900 Brickell Avenue",
+      "time": "02:00:00 PM",
+      "date": "06/20/2026",
+      "phone": "+13055550176"
+    },
+    "dropoff": {
+      "label": "Drop-off location",
+      "city": "Coral Gables",
+      "address": "1200 Ponce de Leon Boulevard",
+      "time": "03:30:00 PM",
+      "date": "06/20/2026",
+      "phone": "+13055550321"
+    },
+    "shipmentType": "Sports Equipment",
+    "shipmentDescription": "Sports equipment including bicycles and training gear.",
+    "dimensions": {
+      "weight": "28 kg",
+      "length": "170 cm",
+      "width": "75 cm"
+    },
+    "photos": [
+      "https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=200&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=200&h=200&fit=crop"
+    ],
+    "vehicleType": "Small Van",
+    "price": 120
+  },
+  {
+    "id": 7,
+    "sender": {
+      "name": "William Anderson",
+      "avatarUrl": "https://i.pravatar.cc/100?img=68"
+    },
+    "pickup": {
+      "label": "Pickup location",
+      "city": "Seattle",
+      "address": "600 Pine Street",
+      "time": "11:00:00 AM",
+      "date": "06/21/2026",
+      "phone": "+12065550145"
+    },
+    "dropoff": {
+      "label": "Drop-off location",
+      "city": "Bellevue",
+      "address": "300 Bellevue Way NE",
+      "time": "12:45:00 PM",
+      "date": "06/21/2026",
+      "phone": "+14255550218"
+    },
+    "shipmentType": "Computer Equipment",
+    "shipmentDescription": "Desktop computers, monitors, and office equipment.",
+    "dimensions": {
+      "weight": "50 kg",
+      "length": "150 cm",
+      "width": "85 cm"
+    },
+    "photos": [
+      "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=200&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=200&h=200&fit=crop"
+    ],
+    "vehicleType": "Medium Van",
+    "price": 155
+  },
+  {
+    "id": 8,
+    "sender": {
+      "name": "Emma Taylor",
+      "avatarUrl": "https://i.pravatar.cc/100?img=49"
+    },
+    "pickup": {
+      "label": "Pickup location",
+      "city": "Denver",
+      "address": "1500 Larimer Street",
+      "time": "09:00:00 AM",
+      "date": "06/22/2026",
+      "phone": "+13035550132"
+    },
+    "dropoff": {
+      "label": "Drop-off location",
+      "city": "Aurora",
+      "address": "2500 South Havana Street",
+      "time": "11:00:00 AM",
+      "date": "06/22/2026",
+      "phone": "+13035550487"
+    },
+    "shipmentType": "Office Supplies",
+    "shipmentDescription": "Office supplies and stationery packed into several boxes.",
+    "dimensions": {
+      "weight": "22 kg",
+      "length": "110 cm",
+      "width": "65 cm"
+    },
+    "photos": [
+      "https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?w=200&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=200&h=200&fit=crop"
+    ],
+    "vehicleType": "Small Van",
+    "price": 85
+  },
+  {
+    "id": 9,
+    "sender": {
+      "name": "Alexander Thomas",
+      "avatarUrl": "https://i.pravatar.cc/100?img=59"
+    },
+    "pickup": {
+      "label": "Pickup location",
+      "city": "San Francisco",
+      "address": "500 Market Street",
+      "time": "03:00:00 PM",
+      "date": "06/23/2026",
+      "phone": "+14155550165"
+    },
+    "dropoff": {
+      "label": "Drop-off location",
+      "city": "Oakland",
+      "address": "200 Broadway",
+      "time": "04:45:00 PM",
+      "date": "06/23/2026",
+      "phone": "+15105550312"
+    },
+    "shipmentType": "Musical Instruments",
+    "shipmentDescription": "Fragile musical instruments requiring careful handling.",
+    "dimensions": {
+      "weight": "30 kg",
+      "length": "140 cm",
+      "width": "70 cm"
+    },
+    "photos": [
+      "https://images.unsplash.com/photo-1524650359799-842906ca1c06?w=200&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=200&h=200&fit=crop"
+    ],
+    "vehicleType": "Medium Van",
+    "price": 135
+  },
+  {
+    "id": 10,
+    "sender": {
+      "name": "Charlotte Moore",
+      "avatarUrl": "https://i.pravatar.cc/100?img=25"
+    },
+    "pickup": {
+      "label": "Pickup location",
+      "city": "Philadelphia",
+      "address": "1800 Market Street",
+      "time": "08:30:00 AM",
+      "date": "06/24/2026",
+      "phone": "+12155550198"
+    },
+    "dropoff": {
+      "label": "Drop-off location",
+      "city": "Wilmington",
+      "address": "100 Market Street",
+      "time": "10:45:00 AM",
+      "date": "06/24/2026",
+      "phone": "+13025550256"
+    },
+    "shipmentType": "Home Decor",
+    "shipmentDescription": "Decorative items and household accessories.",
+    "dimensions": {
+      "weight": "40 kg",
+      "length": "175 cm",
+      "width": "90 cm"
+    },
+    "photos": [
+      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=200&h=200&fit=crop",
+      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=200&h=200&fit=crop"
+    ],
+    "vehicleType": "Large Van",
+    "price": 160
+  }
+]
