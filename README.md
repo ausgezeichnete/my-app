@@ -19,24 +19,26 @@ Ein Admin-Dashboard für Logistik und Bestellverwaltung, entwickelt mit React un
   <img width="420" alt="Waslni screenshot 5" src="https://github.com/user-attachments/assets/0771faf0-b8d8-459e-b787-09e4412e1912" />
 </p>
 
+## Funktionen
 
+- Dashboard mit zentralen Kennzahlen und Diagrammen
+- Kundenliste mit Suche, Status und Profilansicht
+- Datentabellen mit verzögerter Suche (Debouncing) und Paginierung
+- Formulare und Authentifizierung
+- Wiederverwendbare UI-Komponenten (Button, Input, Field) mit typisierten Props
 
-## Features
-- Dashboard with key stats and charts
-- Client list with search, status and profile view
-- Data tables with debounced search and pagination
-- Forms and authentication
-- Reusable UI components (Button, Input, Field) with typed props
+## Tech-Stack
 
-## Tech stack
-React, TypeScript, Tailwind, Shadcn, Vite, TanStack Table, React Query
+React, TypeScript, Tailwind CSS, shadcn/ui, Vite, TanStack Table, React Query
 
-## Key decisions
-- Reusable, typed components to keep the UI consistent
-- Debounced search to avoid unnecessary API calls
-- A shared fetch helper for all API requests
+## Wichtige Entscheidungen
 
-## Run locally
+- Wiederverwendbare, typisierte Komponenten für eine konsistente Oberfläche
+- Debounced Search, um unnötige API-Aufrufe zu vermeiden
+- Ein gemeinsamer Fetch-Helper für alle API-Anfragen
+
+## Lokal starten
+
 bash
 npm install
 npm run dev
