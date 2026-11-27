@@ -1,8 +1,8 @@
-# Waslni: Admin Management System
+# Waslni: Logistik- und Bestellverwaltung Dashboard
 
-A React + TypeScript admin dashboard for managing clients, product orders and shipments. the project was built to practice building a real-world UI with reusable, typed components. The original design is from Figma file in Arabic (RTL)
+Ein Admin-Dashboard für Logistik und Bestellverwaltung, entwickelt mit React und TypeScript. Es dient zur Verwaltung von Kunden, Produktbestellungen und Lieferungen. Ziel des Projekts war es, eine praxisnahe Benutzeroberfläche mit wiederverwendbaren, typisierten Komponenten umzusetzen. Es ist in Zusammenarbeit mit einem erfahrenen Senior-Entwickler entstanden. Der enge Austausch und die Code-Reviews haben mir geholfen, Struktur, Codequalität und saubere Komponenten besser zu verstehen. Das ursprüngliche Design stammt aus einer arabischen (RTL) Figma-Datei. Die Screenshots unten sind eine englische Nachbildung davon
 
-*Live demo:* https://my-app-sable-kappa-33.vercel.app/
+*Live-Demo:* https://my-app-sable-kappa-33.vercel.app/
 
 ## Screenshots
 <p align="center">
